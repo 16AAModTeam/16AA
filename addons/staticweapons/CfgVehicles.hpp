@@ -1,5 +1,6 @@
 class CfgVehicles
 {
+    //Self Interactions
     class Man;
     class CAManBase: Man {
         class ACE_SelfActions {
@@ -11,23 +12,12 @@ class CfgVehicles
                     statement = QUOTE([ARR_3(_player,'16aa_tripod','16aa_tripod_low')] call FUNC(place));
                     showDisabled = 0;
                     priority = 2;
-                    icon = PATHTOF(UI\w_sniper_tripod_ca.paa);
+                    icon = PATHTOF(UI\tripod.paa);
                 };
             };
         };
     };
-    class LandVehicle;  // External class reference
-    class StaticWeapon : LandVehicle
-    {
-        class Turrets;  // External class reference
-        class MainTurret;   // External class reference
-        class ACE_Actions
-        {
-            class ACE_MainActions;
-        };
-    };
-    class StaticMGWeapon : StaticWeapon {};
-
+    //Items
     class Item_Base_F;
     class 16aa_tripod_item: Item_Base_F {
         scope = 2;
@@ -42,10 +32,120 @@ class CfgVehicles
             };
         };
     };
+    class 16aa_dummy_item_l2a1_barrel: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "L2A1 Barrel";
+        vehicleClass = "Items";
+        class TransportItems {
+            class 16aa_static_item_l2a1_barrel {
+                name = "16aa_static_item_l2a1_barrel";
+                count = 1;
+            };
+        };
+    };
+    class 16aa_dummy_item_l2a1_receiver: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "L2A1 Receiver";
+        vehicleClass = "Items";
+        class TransportItems {
+            class 16aa_static_item_l2a1_receiver {
+                name = "16aa_static_item_l2a1_reciever";
+                count = 1;
+            };
+        };
+    };
+    class 16aa_dummy_item_gmg_barrel: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "L134A1 Barrel";
+        vehicleClass = "Items";
+        class TransportItems {
+            class 16aa_static_item_gmg_barrel {
+                name = "16aa_static_item_gmg_barrel";
+                count = 1;
+            };
+        };
+    };
+    class 16aa_dummy_item_gmg_receiver: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "L134A1 Receiver";
+        vehicleClass = "Items";
+        class TransportItems {
+            class 16aa_static_item_gmg_receiver {
+                name = "16aa_static_item_gmg_reciever";
+                count = 1;
+            };
+        };
+    };
+    class 16aa_dummy_item_ammobox_50cal: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = ".50cal Ammo Box";
+        vehicleClass = "Items";
+        class TransportItems {
+            class 16aa_static_ammobox_50cal {
+                name = "16aa_static_ammobox_50cal";
+                count = 1;
+            };
+        };
+    };
+    class 16aa_dummy_item_ammobox_762: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "7.62mm Ammo Box";
+        vehicleClass = "Items";
+        class TransportItems {
+            class 16aa_static_ammobox_762 {
+                name = "16aa_static_ammobox_762";
+                count = 1;
+            };
+        };
+    };
+    class 16aa_dummy_item_ammobox_40mm: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "40mm Ammo Box";
+        vehicleClass = "Items";
+        class TransportItems {
+            class 16aa_static_ammobox_40mm {
+                name = "16aa_static_ammobox_40mm";
+                count = 1;
+            };
+        };
+    };
+    //Static Weapons & Tripods
+    class LandVehicle;  // External class reference
+    class StaticWeapon : LandVehicle
+    {
+        class Turrets;  // External class reference
+        class MainTurret;   // External class reference
+        class ACE_Actions
+        {
+            class ACE_MainActions;
+        };
+    };
+    class StaticMGWeapon : StaticWeapon {};
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
             MACRO_ADDITEM(16aa_tripod,5);
+            MACRO_ADDITEM(16aa_static_item_l2a1_barrel,5);
+            MACRO_ADDITEM(16aa_static_item_l2a1_receiver,5);
+            MACRO_ADDITEM(16aa_static_item_gmg_barrel,5);
+            MACRO_ADDITEM(16aa_static_item_gmg_receiver,5);
+            MACRO_ADDITEM(16aa_static_item_ammobox_50cal,5);
+            MACRO_ADDITEM(16aa_static_item_ammobox_762,5);
+            MACRO_ADDITEM(16aa_static_item_ammobox_40mm,5);
         };
     };
 
@@ -79,7 +179,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_sniper_tripod_ca.paa);
+                    icon = PATHTOF(UI\tripod.paa);
                 };
             };
         };
@@ -102,7 +202,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_sniper_tripod_ca.paa);
+                    icon = PATHTOF(UI\tripod.paa);
                 };
             };
         };
