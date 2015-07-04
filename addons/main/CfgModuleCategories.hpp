@@ -1,7 +1,7 @@
 class CfgFactionClasses {
     class NO_CATEGORY;
-    class 16AA: NO_CATEGORY {
-        displayName = "16AA";
+    class LSR: NO_CATEGORY {
+        displayName = "LSR";
         priority = 2;
         side = 7;
     };

@@ -16,9 +16,9 @@
 private ["_role", "_config", "_primairyWeapon", "_secondiaryWeapon", "_pistolWeapon", "_primairyWeaponItems", "_secondiaryWeaponItems", "_pistolWeaponItems", "_uniform", "_vest", "_backpack", "_helmet", "_goggles", "_nvg", "_assignNVG", "_uniformMagazines", "_vestMagazines", "_backpackMagazines", "_uniformItems", "_vestItems", "_backpackItems", "_primaryWeaponData", "_secondiaryWeaponData", "_pistolData", "_uniformData", "_vestData", "_backpackData", "_miscData"];
 _role = _this select 0;
 
-_config = (configfile >> "16AA_gearManagement" >> "roles" >> _role);
+_config = (configfile >> "LSR_gearManagement" >> "roles" >> _role);
 if !(isclass _config) then {
-    _config = (missionConfigFile >> "16AA_gearManagement" >> "roles" >> _role);
+    _config = (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role);
 };
 // not a valid role..
 if !(isClass _config) exitwith {[]};
@@ -47,7 +47,7 @@ _uniformItems = getArray (_config >> "uniformItems");
 _vestItems = getArray (_config >> "vestItems");
 _backpackItems = getArray (_config >> "backpackItems");
 
-_config = (missionConfigFile >> "16AA_gearManagement" >> "roles" >> _role);
+_config = (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role);
 if (isClass _config) then {
     _primairyWeapon = if (isArray (_config >> "primairyWeapon")) then { getArray (_config >> "primairyWeapon");} else {_primairyWeapon};
     _secondiaryWeapon = if (isArray (_config >> "secondairyWeapon")) then { getArray (_config >> "secondairyWeapon");} else {_secondiaryWeapon};

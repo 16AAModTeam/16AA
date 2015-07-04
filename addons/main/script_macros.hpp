@@ -12,8 +12,8 @@
 #define EGVAR(module,var) TRIPLES(PREFIX,module,var)
 #define QEGVAR(module,var) QUOTE(EGVAR(module,var))
 
-#define DGVAR(varName)    if(isNil "16AA_DEBUG_namespace") then { 16AA_DEBUG_namespace = []; }; if(!(QUOTE(GVAR(varName)) in 16AA_DEBUG_namespace)) then { PUSH(16AA_DEBUG_namespace, QUOTE(GVAR(varName))); }; GVAR(varName)
-#define DVAR(varName)     if(isNil "16AA_DEBUG_namespace") then { 16AA_DEBUG_namespace = []; }; if(!(QUOTE(varName) in 16AA_DEBUG_namespace)) then { PUSH(16AA_DEBUG_namespace, QUOTE(varName)); }; varName
+#define DGVAR(varName)    if(isNil "LSR_DEBUG_namespace") then { LSR_DEBUG_namespace = []; }; if(!(QUOTE(GVAR(varName)) in LSR_DEBUG_namespace)) then { PUSH(LSR_DEBUG_namespace, QUOTE(GVAR(varName))); }; GVAR(varName)
+#define DVAR(varName)     if(isNil "LSR_DEBUG_namespace") then { LSR_DEBUG_namespace = []; }; if(!(QUOTE(varName) in LSR_DEBUG_namespace)) then { PUSH(LSR_DEBUG_namespace, QUOTE(varName)); }; varName
 #define DFUNC(var1) TRIPLES(ADDON,fnc,var1)
 #define DEFUNC(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)
 
@@ -90,7 +90,7 @@
 #define HASHLIST_PUSH(hashList, value)            ([hashList, value, __FILE__, __LINE__] call EFUNC(common,hashListPush))
 
 // Time functions for accuracy per frame
-#define 16AA_tickTime (16AA_time + (diag_tickTime - 16AA_diagTime))
+#define LSR_tickTime (LSR_time + (diag_tickTime - LSR_diagTime))
 
 
 #include "script_debug.hpp"

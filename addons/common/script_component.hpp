@@ -1,5 +1,5 @@
 #define COMPONENT common
-#include "\z\16AA\addons\main\script_mod.hpp"
+#include "\z\LSR\addons\main\script_mod.hpp"
 
 #ifdef DEBUG_ENABLED_common
     #define DEBUG_MODE_FULL
@@ -9,5 +9,5 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_common
 #endif
 
-#include "\z\16AA\addons\main\script_macros.hpp"
+#include "\z\LSR\addons\main\script_macros.hpp"
 

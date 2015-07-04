@@ -1,1 +1,1 @@
-#include "\z\16AA\addons\blank\script_component.hpp"
+#include "\z\LSR\addons\blank\script_component.hpp"
