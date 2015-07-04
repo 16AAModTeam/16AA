@@ -19,7 +19,7 @@
              alt="16AA AddOns license">
     </a>
 </p>
-<p align="center"><sup><strong>Requires the latest version of <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a> and <a href="https://github.com/acemod/ACE3/releases/latest">ACE3</a></p>
+<p align="center"><sup><strong>Requires the latest version of <a href="http://www.armaholic.com/page.php?id=18767">CBA A3</a> and <a href="https://github.com/acemod/ACE3/releases/latest">ACE3</a><sup></strong></p>
 
 **16AA AddOns** is an Arma 3 AddOns pack containing scripts and modules.
 
