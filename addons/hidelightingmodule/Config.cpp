@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        units[] = {"ModuleLightning_F"};;
+        units[] = {"ModuleLightning_F"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"16AA_common"};
