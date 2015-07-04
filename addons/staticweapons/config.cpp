@@ -4,13 +4,13 @@ class CfgPatches {
     class ADDON {
         units[] = 
         {
-			"16aa_tripod_item",
-			"16aa_tripod_base",
-			"16aa_tripod_low",
-			"16aa_tripod_middle",
-			"16aa_tripod_raised"
+			"lsr_tripod_item",
+			"lsr_tripod_base",
+			"lsr_tripod_low",
+			"lsr_tripod_middle",
+			"lsr_tripod_raised"
 		};
-		weapons[] = {"16aa_tripod"};
+		weapons[] = {"lsr_tripod"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author[] = {"Grey"};

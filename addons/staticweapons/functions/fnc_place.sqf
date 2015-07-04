@@ -30,7 +30,7 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     _direction = getDir _unit;
     _position = (getPosASL _unit) vectorAdd [0.8 * sin(_direction), 0.8 * cos(_direction), 0.02];
 
-    _tripod = "16aa_tripod_low" createVehicle [0, 0, 0];
+    _tripod = "lsr_tripod_low" createVehicle [0, 0, 0];
     _tripod setPosASL _position;
     _tripod setDir _direction;
 

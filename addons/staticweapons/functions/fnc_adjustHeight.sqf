@@ -20,8 +20,11 @@ Return value:
 PARAMS_3(_staticOld,_staticNewClass,_unit);
 
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
-    _unit playMove "AmovPercMstpSrasWrflDnon_diary";
+    [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call ace_common_fnc_doAnimation;
 };
+
+// TODO kick out anyone inside the static weapon
+// TODO lock the static weapon
 
 [{
     PARAMS_3(_staticOld,_staticNewClass,_unit);
@@ -30,10 +33,8 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     _direction = getDir _staticOld;
     _position = getPosASL _staticOld;
     deletevehicle _staticOld;
-    //_staticNew = _staticNewClass createVehicle [0, 0, 0];
-    //_staticNew = createvehicle["16aa_tripod_middle",[0,0,0],[], 0, "CAN_COLLIDE"];
-    //_staticNew = createvehicle[getVariable '_staticNewClass',[0,0,0],[], 0, "CAN_COLLIDE"];
-    hint (getVariable _staticNewClass);
+
+    _staticNew = _staticNewClass createVehicle _position;
     _staticNew = (typeOf staticNewClass) createVehicle [0, 0, 0];
     _staticNew setPosASL _position;
     _staticNew setDir _direction;
@@ -54,21 +55,21 @@ _position = getPosASL _static;
 deletevehicle _static;
 switch (_phase) do {
     case 0: {
-    _newStatic = createvehicle["16aa_Static_GPMG_BLU", [0,0,0],[], 0, "CAN_COLLIDE"];
+    _newStatic = createvehicle["lsr_Static_GPMG_BLU", [0,0,0],[], 0, "CAN_COLLIDE"];
     _newStatic setDir _direction;
     _newStatic setPosASL _position;
     if ((getPosATL _newStatic select 2) - (getPos _newStatic select 2) < 1E-5) then {
         _newStatic setVectorUp (surfaceNormal (position _newStatic));};
     };
     case 1: {
-    _newStatic = createvehicle["16aa_Static_GPMG_Middle_BLU", [0,0,0],[], 0, "CAN_COLLIDE"];
+    _newStatic = createvehicle["lsr_Static_GPMG_Middle_BLU", [0,0,0],[], 0, "CAN_COLLIDE"];
     _newStatic setDir _direction;
     _newStatic setPosASL _position;
     if ((getPosATL _newStatic select 2) - (getPos _newStatic select 2) < 1E-5) then {
         _newStatic setVectorUp (surfaceNormal (position _newStatic));};
     };
     case 2: {
-    _newStatic = createvehicle["16aa_Static_GPMG_Raised_BLU", [0,0,0],[], 0, "CAN_COLLIDE"];
+    _newStatic = createvehicle["lsr_Static_GPMG_Raised_BLU", [0,0,0],[], 0, "CAN_COLLIDE"];
     _newStatic setDir _direction;
     _newStatic setPosASL _position;
     if ((getPosATL _newStatic select 2) - (getPos _newStatic select 2) < 1E-5) then {

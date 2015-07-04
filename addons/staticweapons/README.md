@@ -1,4 +1,4 @@
-16aa_static
+lsr_staticweapons
 =================
 
 ## Maintainers
