@@ -8,7 +8,7 @@ class CfgPatches {
         requiredAddons[] = {"ace_interaction"};
         author[] = {"Glowbal", "ACE Team"};
         authorUrl = "";
-        versionDesc = "16AA AddOns";
+        versionDesc = "LSR AddOns";
         VERSION_CONFIG;
     };
 };

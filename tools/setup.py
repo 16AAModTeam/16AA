@@ -13,7 +13,7 @@ import winreg
 
 ######## GLOBALS #########
 MAINDIR = "z"
-PROJECTDIR = "16AA"
+PROJECTDIR = "LSR"
 CBA = "P:\\x\\cba"
 ##########################
 
@@ -24,7 +24,7 @@ def main():
   # ACE Development Environment Setup #
   ######################################
 
-  This script will create your 16AA dev environment for you.
+  This script will create your LSR dev environment for you.
   
   Before you run this, you should already have:
     - The Arma 3 Tools installed properly via Steam
@@ -32,9 +32,9 @@ def main():
   
   If you have not done those things yet, please abort this script in the next step and do so first.
   
-  This script will create two hard links on your system, both pointing to your 16AA project folder:
-    [Arma 3 installation directory]\\{} => 16AA project folder
-    P:\\{}                              => 16AA project folder
+  This script will create two hard links on your system, both pointing to your LSR project folder:
+    [Arma 3 installation directory]\\{} => LSR project folder
+    P:\\{}                              => LSR project folder
   
   It will also copy the required CBA includes to {}, if you do not have the CBA source code already.""".format(FULLDIR,FULLDIR,CBA))
     print("\n") 

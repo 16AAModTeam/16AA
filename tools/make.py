@@ -57,8 +57,8 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
-project = "@16AA"
-m16AA_version = "3.0.0"
+project = "@LSR"
+mLSR_version = "3.0.0"
 arma3tools_path = ""
 work_drive = ""
 module_root = ""
@@ -66,13 +66,13 @@ make_root = ""
 release_dir = ""
 module_root_parent = ""
 optionals_root = ""
-key_name = "16AA"
+key_name = "LSR"
 key = ""
 dssignfile = ""
-prefix = "16AA"
-pbo_name_prefix = "16AA_"
-signature_blacklist = ["16AA_server.pbo"]
-importantFiles = ["mod.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_16AA_ca.paa"]
+prefix = "LSR"
+pbo_name_prefix = "LSR_"
+signature_blacklist = ["LSR_server.pbo"]
+importantFiles = ["mod.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_LSR_ca.paa"]
 versionFiles = ["README.md", "mod.cpp"]
 
 ###############################################################################
@@ -541,10 +541,10 @@ def addon_restore(modulePath):
     return True
 
 
-def get_m16AA_version():
-    global m16AA_version
-    versionStamp = m16AA_version
-    #do the magic based on https://github.com/acemod/16AA/issues/806#issuecomment-95639048
+def get_mLSR_version():
+    global mLSR_version
+    versionStamp = mLSR_version
+    #do the magic based on https://github.com/acemod/LSR/issues/806#issuecomment-95639048
 
     try:
         scriptModPath = os.path.join(work_drive, prefix, "main\script_mod.hpp")
@@ -568,19 +568,19 @@ def get_m16AA_version():
             raise FileNotFoundError("File Not Found: {}".format(scriptModPath))
 
     except Exception as e:
-        print_error("Get_m16AA_version error: {}".format(e))
+        print_error("Get_mLSR_version error: {}".format(e))
         print_error("Check the integrity of the file: {}".format(scriptModPath))
-        versionStamp = m16AA_version
+        versionStamp = mLSR_version
         print_error("Resetting to the default version stamp: {}".format(versionStamp))
         input("Press Enter to continue...")
         print("Resuming build...")
 
     print_yellow("{} VERSION set to {}".format(project.lstrip("@").upper(),versionStamp))
-    m16AA_version = versionStamp
-    return m16AA_version
+    mLSR_version = versionStamp
+    return mLSR_version
 
 
-def repl16AA_file(filePath, oldSubstring, newSubstring):
+def replLSR_file(filePath, oldSubstring, newSubstring):
     #Create temp file
     fh, absPath = mkstemp()
     with open(absPath,'w') as newFile:
@@ -595,7 +595,7 @@ def repl16AA_file(filePath, oldSubstring, newSubstring):
 
 
 def set_version_in_files():
-    newVersion = m16AA_version # MAJOR.MINOR.PATCH.BUILD
+    newVersion = mLSR_version # MAJOR.MINOR.PATCH.BUILD
     newVersionShort = newVersion[:-2] # MAJOR.MINOR.PATCH
 
     # Regex patterns
@@ -633,7 +633,7 @@ def set_version_in_files():
                         # Print change and modify the file if changed
                         if versionFound != newVersionUsed:
                             print_green("Changing version {} => {} in {}".format(versionFound, newVersionUsed, filePath))
-                            repl16AA_file(filePath, versionFound, newVersionUsed)
+                            replLSR_file(filePath, versionFound, newVersionUsed)
 
         except WindowsError as e:
             # Temporary file is still "in use" by Python, pass this exception
@@ -677,8 +677,8 @@ def restore_version_files():
 def get_private_keyname(commitID,module="main"):
     global pbo_name_prefix
 
-    m16AAversion = get_m16AA_version()
-    keyName = str("{prefix}{version}-{commit_id}".format(prefix=pbo_name_prefix,version=m16AAversion,commit_id=commitID))
+    mLSRversion = get_mLSR_version()
+    keyName = str("{prefix}{version}-{commit_id}".format(prefix=pbo_name_prefix,version=mLSRversion,commit_id=commitID))
     return keyName
 
 
@@ -754,7 +754,7 @@ def main(argv):
     """Build an Arma addon suite in a directory from rules in a make.cfg file."""
     print_blue("\nmake.py for Arma, modified for Advanced Combat Environment v{}".format(__version__))
 
-    global m16AA_version
+    global mLSR_version
     global arma3tools_path
     global work_drive
     global module_root
@@ -840,7 +840,7 @@ See the make.cfg file for additional build options.
         argv.remove("release")
     else:
         make_release_zip = False
-        release_version = m16AA_version
+        release_version = mLSR_version
 
     if "target" in argv:
         make_target = argv[argv.index("target") + 1]
@@ -1304,7 +1304,7 @@ See the make.cfg file for additional build options.
                     if ret == 0:
                         # Sign result
 
-                        #print_yellow("Sig_fileName: 16AA_{}.pbo".format(module))
+                        #print_yellow("Sig_fileName: LSR_{}.pbo".format(module))
                         if (key and not "{}{}.pbo".format(pbo_name_prefix,module) in signature_blacklist) :
                             print("Signing with {}.".format(key))
                             if pbo_name_prefix:
