@@ -17,16 +17,12 @@
     private ["_unit", "_roleInfo", "_uniformData", "_vestData", "_backpackData", "_primaryWeaponData", "_secondiaryWeaponData", "_pistolData", "_miscData", "_nvg", "_assignNVG", "_goggles", "_helmet"];
     _unit = _this select 0;
 
-    diag_log format["init gearscript: %1", _this];
-    systemChat format["init gearscript: %1", _this];
-
     if !(local _unit) exitwith {};
     if (isNil {_unit getvariable QGVAR(role)}) exitwith {};
     if (_unit getvariable [QGVAR(initalized), false]) exitwith {};
 
     _roleInfo = [_unit getvariable QGVAR(role)] call FUNC(getRole);
     if (count _roleInfo == 0) exitwith {}; // not a valid role..
-    diag_log format["Role info: %1", _roleInfo];
 
     [_unit] call FUNC(clearAllEquipment);
 
