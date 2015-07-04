@@ -1,0 +1,1 @@
+#include "\z\16AA\addons\medical\script_component.hpp"
