@@ -7,8 +7,8 @@ class CfgVehicles
                 class GVAR(place) {
                     //displayName = CSTRING(Placedown);
                     displayName = "Place Tripod";
-                    condition = QUOTE([ARR_2(_player,'lsr_tripod')] call EFUNC(common,hasItem));
-                    statement = QUOTE([ARR_2(_player,'lsr_tripod')] call FUNC(place));
+                    condition = QUOTE([ARR_2(_player,'16aa_tripod')] call ace_common_fnc_hasItem);
+                    statement = QUOTE([ARR_3(_player,'16aa_tripod','16aa_tripod_low')] call FUNC(place));
                     showDisabled = 0;
                     priority = 2;
                     icon = PATHTOF(UI\w_sniper_tripod_ca.paa);
@@ -29,15 +29,15 @@ class CfgVehicles
     class StaticMGWeapon : StaticWeapon {};
 
     class Item_Base_F;
-    class lsr_tripod_item: Item_Base_F {
+    class 16aa_tripod_item: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
         author = "3LSR";
         displayName = "Folded Tripod";
         vehicleClass = "Items";
         class TransportItems {
-            class lsr_tripod {
-                name = "lsr_tripod";
+            class 16aa_tripod {
+                name = "16aa_tripod";
                 count = 1;
             };
         };
@@ -45,19 +45,19 @@ class CfgVehicles
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
         class TransportItems {
-            MACRO_ADDITEM(lsr_tripod,5);
+            MACRO_ADDITEM(16aa_tripod,5);
         };
     };
 
-    class lsr_tripod_base : StaticMGWeapon {
+    class 16aa_tripod_base: StaticMGWeapon {
         author = "3LSR";
         model = "";
         mapSize = 2;
         scope = 1;
         scopeCurator = 1;
         displayName = "";
-        faction = lsr_Faction;
-        vehicleClass = "lsr_Static";
+        faction = 16aa_Faction;
+        vehicleClass = "16aa_Static";
         ace_dragging_canDrag = 1;
         ace_dragging_dragPosition[] = {0,1.5,0};
         ace_dragging_dragDirection = 0;
@@ -69,9 +69,9 @@ class CfgVehicles
                 selection = "";
                 distance = 5;
                 condition = "true";
-                class lsr_Pickup {
+                displayName = "Interact";
+                class 16aa_Pickup {
                     selection = "";
-                    //displayName = CSTRING(PickUp);
                     displayName = "Pick Up Tripod";
                     distance = 5;
                     condition = "true";
@@ -84,26 +84,21 @@ class CfgVehicles
             };
         };
     };
-    class lsr_tripod_low: lsr_tripod_base
-    {
+    class 16aa_tripod_low: 16aa_tripod_base {
         author = "3LSR";
         scope = 2;
         scopeCurator = 2;
-        model = "\lsr_weapons_support\Tripod\tripod_low.p3d";
+        model = "\16aa_weapons_support\Tripod\tripod_low.p3d";
         displayName = "Tripod - Low";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                selection = "";
-                distance = 5;
-                condition = "true";
-                class lsr_Pickup:lsr_Pickup{};
-                class lsr_AdjustHeightUp {
+                class 16aa_Pickup: 16aa_Pickup {};
+                class 16aa_AdjustHeightUp: 16aa_Pickup {
                     selection = "";
-                    //displayName = CSTRING(PickUp);
                     displayName = "Raise Tripod";
                     distance = 5;
                     condition = "true";
-                    statement = QUOTE([ARR_3(_target,'lsr_tripod_middle',_player)] call FUNC(adjustHeight));
+                    statement = QUOTE([ARR_3(_target,'16aa_tripod_middle',_player)] call FUNC(adjustHeight));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
@@ -112,20 +107,44 @@ class CfgVehicles
             };
         };
     };
-    class lsr_tripod_middle: lsr_tripod_base
-    {
+    class 16aa_tripod_middle: 16aa_tripod_base {
         author = "3LSR";
         scope = 2;
         scopeCurator = 2;
-        model = "\lsr_weapons_support\Tripod\tripod_middle.p3d";
+        model = "\16aa_weapons_support\Tripod\tripod_middle.p3d";
         displayName = "Tripod - Middle";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class 16aa_Pickup: 16aa_Pickup {};
+                class 16aa_AdjustHeightUp: 16aa_Pickup {
+                    displayName = "Raise Tripod";
+                    statement = QUOTE([ARR_3(_target,'16aa_tripod_raised',_player)] call FUNC(adjustHeight));
+                };
+                class 16aa_AdjustHeightLower: 16aa_AdjustHeightUp {
+                    displayName = "Lower Tripod";
+                    statement = QUOTE([ARR_3(_target,'16aa_tripod_low',_player)] call FUNC(adjustHeight));
+                };
+            };
+        };
     };
-    class lsr_tripod_raised: lsr_tripod_base
-    {
+    class 16aa_tripod_raised: 16aa_tripod_base {
         author = "3LSR";
         scope = 2;
         scopeCurator = 2;
-        model = "\lsr_weapons_support\Tripod\tripod_raised.p3d";
+        model = "\16aa_weapons_support\Tripod\tripod_raised.p3d";
         displayName = "Tripod - High";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class 16aa_Pickup: 16aa_Pickup {};
+                class 16aa_AdjustHeightUp: 16aa_Pickup {
+                    condition = "false";
+                };
+                class 16aa_AdjustHeightLower: 16aa_AdjustHeightUp {
+                    condition = "true";
+                    displayName = "Lower Tripod";
+                    statement = QUOTE([ARR_3(_target,'16aa_tripod_middle',_player)] call FUNC(adjustHeight));
+                };
+            };
+        };
     };
 };

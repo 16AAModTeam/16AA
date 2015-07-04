@@ -24,7 +24,7 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
 [{
     PARAMS_2(_tripod,_unit);
 
-    [_unit, "lsr_tripod"] call EFUNC(common,addToInventory);
+    [_unit, "16aa_tripod"] call ace_common_fnc_addToInventory;
     deleteVehicle _tripod;
 
-}, [_tripod, _unit], 1, 0]call EFUNC(common,waitAndExecute);
+}, [_tripod, _unit], 1, 0]call ace_common_fnc_waitAndExecute;

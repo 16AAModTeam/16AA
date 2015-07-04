@@ -4,20 +4,21 @@ class CfgPatches {
     class ADDON {
         units[] = 
         {
-			"lsr_tripod_item",
-			"lsr_tripod_base",
-			"lsr_tripod_low",
-			"lsr_tripod_middle",
-			"lsr_tripod_raised"
+			"16aa_tripod_item",
+			"16aa_tripod_base",
+			"16aa_tripod_low",
+			"16aa_tripod_middle",
+			"16aa_tripod_raised"
 		};
-		weapons[] = {"lsr_tripod"};
+		weapons[] = {"16aa_tripod"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_interaction"};
+        requiredAddons[] = {"LSR_common"};
         author[] = {"Grey"};
         authorUrl = "";
         VERSION_CONFIG;
     };
 };
+
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
