@@ -1,0 +1,10 @@
+﻿# GBL ADDONS CONTRIBUTOR LIST
+#
+# Feel free to add yourself to this when creating a pull
+# request, preferably including an email address.
+
+Core Developers
+Glowbal
+
+Contributors
+-
