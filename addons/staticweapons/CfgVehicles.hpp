@@ -12,7 +12,7 @@ class CfgVehicles
                     statement = QUOTE([ARR_3(_player,'16aa_tripod','16aa_tripod_low')] call FUNC(place));
                     showDisabled = 0;
                     priority = 2;
-                    icon = PATHTOF(UI\tripod.paa);
+                    icon = PATHTOF(UI\w_tripod_ca.paa);
                 };
             };
         };
@@ -143,9 +143,9 @@ class CfgVehicles
             MACRO_ADDITEM(16aa_static_item_l2a1_receiver,5);
             MACRO_ADDITEM(16aa_static_item_gmg_barrel,5);
             MACRO_ADDITEM(16aa_static_item_gmg_receiver,5);
-            MACRO_ADDITEM(16aa_static_item_ammobox_50cal,5);
-            MACRO_ADDITEM(16aa_static_item_ammobox_762,5);
-            MACRO_ADDITEM(16aa_static_item_ammobox_40mm,5);
+            MACRO_ADDMAGAZINE(16aa_static_item_ammobox_50cal,5);
+            MACRO_ADDMAGAZINE(16aa_static_item_ammobox_762,5);
+            MACRO_ADDMAGAZINE(16aa_static_item_ammobox_40mm,5);
         };
     };
 
@@ -179,7 +179,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\tripod.paa);
+                    icon = PATHTOF(UI\w_tripod_ca.paa);
                 };
             };
         };
@@ -202,7 +202,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\tripod.paa);
+                    icon = PATHTOF(UI\w_tripod_ca.paa);
                 };
             };
         };
