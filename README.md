@@ -1,5 +1,5 @@
 <p align="center">
-    # 16AA AddOns
+    <h2>16AA AddOns</h2>
 </p>
 <p align="center">
     <a href="https://github.com/16AAModTeam/16AA/releases">
