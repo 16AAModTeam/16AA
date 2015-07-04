@@ -6,7 +6,7 @@ import subprocess
 
 ######## GLOBALS #########
 MAINPREFIX = "z"
-PREFIX = "LSR_"
+PREFIX = "16AA_"
 ##########################
 
 def mod_time(path):

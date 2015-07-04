@@ -57,7 +57,7 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
-project = "@LSR"
+project = "@16AA"
 mLSR_version = "3.0.0"
 arma3tools_path = ""
 work_drive = ""
@@ -70,8 +70,8 @@ key_name = "LSR"
 key = ""
 dssignfile = ""
 prefix = "LSR"
-pbo_name_prefix = "LSR_"
-signature_blacklist = ["LSR_server.pbo"]
+pbo_name_prefix = "16AA_"
+signature_blacklist = ["16AA_server.pbo"]
 importantFiles = ["mod.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_LSR_ca.paa"]
 versionFiles = ["README.md", "mod.cpp"]
 
@@ -544,7 +544,7 @@ def addon_restore(modulePath):
 def get_mLSR_version():
     global mLSR_version
     versionStamp = mLSR_version
-    #do the magic based on https://github.com/acemod/LSR/issues/806#issuecomment-95639048
+    #do the magic based on https://github.com/acemod/ACE3/issues/806#issuecomment-95639048
 
     try:
         scriptModPath = os.path.join(work_drive, prefix, "main\script_mod.hpp")
@@ -1304,7 +1304,7 @@ See the make.cfg file for additional build options.
                     if ret == 0:
                         # Sign result
 
-                        #print_yellow("Sig_fileName: LSR_{}.pbo".format(module))
+                        #print_yellow("Sig_fileName: 16AA_{}.pbo".format(module))
                         if (key and not "{}{}.pbo".format(pbo_name_prefix,module) in signature_blacklist) :
                             print("Signing with {}.".format(key))
                             if pbo_name_prefix:
