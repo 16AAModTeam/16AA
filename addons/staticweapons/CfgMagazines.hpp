@@ -81,7 +81,7 @@ class CfgMagazines {
         scopeCurator = 2;
         author = "3LSR";
         displayName = "81mm Smoke - Red";
-        descriptionshort = "81mm White Smoke Mortar Round. White Smoke round used in L16 Mortar";
+        descriptionshort = "81mm Red Smoke Mortar Round. Red Smoke round used in L16 Mortar";
         model = PATHTOF(data\l16_ammo_smk_red.p3d);
         picture = PATHTOF(UI\w_l16_ammo_smk_red_ca.paa);
         magazines[] = {};

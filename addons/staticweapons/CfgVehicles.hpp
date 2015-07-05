@@ -430,6 +430,13 @@ class CfgVehicles
                     condition = QUOTE([ARR_2(_player,'16aa_static_item_l16_tube')] call ace_common_fnc_hasItem);
                     statement = QUOTE([ARR_4(_target,_player,'16AA_B_Mortar_01_F','16aa_static_item_l16_tube')] call FUNC(assemble));
                 };
+                 class 16aa_assemble_l2a1: 16aa_Pickup{
+                    condition = "false";
+                };
+                class 16aa_assemble_gmg: 16aa_Pickup{
+                    displayName = "Assemble L134A1";
+                    condition = "false";
+                };
             };
         };
     };
@@ -441,48 +448,238 @@ class CfgVehicles
                 position = "[0,0,0]";
                 class 16aa_Disassemble: 16aa_Pickup {
                     displayName = "Disassemble L16";
-                    condition = QUOTE(alive _target && count crew _target == 0);
-                    statement = QUOTE([ARR_4(_target,_player,'16aa_l16_baseplate_deployed',['16aa_static_item_l16_tube','16aa_static_item_l16_bipod','16aa_static_item_l16_tube'])] call FUNC(assemble));
+                    condition = QUOTE((alive _target) && (count crew _target == 0));
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_l16_baseplate_deployed',"['16aa_static_item_l16_tube','16aa_static_item_l16_bipod','16aa_static_item_l16_tube']"")] call FUNC(assemble));
                  };
             };
         };
     };
     */
     //L2A1
-    //TODO Fix the condition. Causes error saying Line 460, L encounted instead of =
     class 16aa_L2A1_Static_Base : StaticMGWeapon {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                class 16aa_Disassemble{
-                    position = "[0,0,0]";
+                class 16aa_AdjustHeightUp {
                     selection = "";
+                    displayName = "Raise Tripod";
                     distance = 5;
-                    displayName = "Disassemble L2A1";
-                    condition = QUOTE(alive _target AND count crew _target == 0);
-                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_low',['16aa_static_item_l2a1_barrel','16aa_static_item_l2a1_receiver'])] call FUNC(disassemble));
+                    condition = "true";
+                    statement = QUOTE([ARR_3(_target,'16aa_L2A1_Static_Base_middle',_player)] call FUNC(adjustHeight));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
                     icon = PATHTOF(UI\w_tripod_ca.paa);
-                 };
+                };
+                /*
+                class 16aa_Disassemble{
+                    position = "[0,0,0]";
+                    distance = 5;
+                    displayName = "Disassemble L2A1";
+                    condition = QUOTE([(alive _target) && (count crew _target == 0)]);
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_low',"['16aa_static_item_l2a1_barrel','16aa_static_item_l2a1_receiver']")] call FUNC(disassemble));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 5;
+                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                };
+                */
             };
         };
     };
     class 16aa_L2A1_Static_Base_middle: 16aa_L2A1_Static_Base{
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                class 16aa_Disassemble:16aa_Disassemble{
-                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_middle',['16aa_static_item_l2a1_barrel','16aa_static_item_l2a1_receiver'])] call FUNC(disassemble));
-                 };
+                class 16aa_AdjustHeight_Up: 16aa_AdjustHeightUp{
+                     statement = QUOTE([ARR_3(_target,'16aa_L2A1_Static_Base_raised',_player)] call FUNC(adjustHeight));
+                };
+                class 16aa_AdjustHeightDown: 16aa_AdjustHeight_Up{
+                    displayName = "Lower Tripod";
+                    statement = QUOTE([ARR_3(_target,'16aa_L2A1_Static_Base',_player)] call FUNC(adjustHeight));
+                };
             };
         };
     };
     class 16aa_L2A1_Static_Base_raised: 16aa_L2A1_Static_Base{
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                class 16aa_Disassemble:16aa_Disassemble{
-                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_raised',['16aa_static_item_l2a1_barrel','16aa_static_item_l2a1_receiver'])] call FUNC(disassemble));
-                 };
+                class 16aa_AdjustHeight_Up: 16aa_AdjustHeightUp{
+                     condition = "false";
+                };
+                class 16aa_AdjustHeightDown: 16aa_AdjustHeight_Up{
+                    displayName = "Lower Tripod";
+                    statement = QUOTE([ARR_3(_target,'16aa_L2A1_Static_Base_middle',_player)] call FUNC(adjustHeight));
+                };
+            };
+        };
+    };
+    //GMG
+    class 16aa_GMG_Static_Base : StaticMGWeapon {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class 16aa_AdjustHeightUp {
+                    selection = "";
+                    displayName = "Raise Tripod";
+                    distance = 5;
+                    condition = "true";
+                    statement = QUOTE([ARR_3(_target,'16aa_GMG_Static_Base_middle',_player)] call FUNC(adjustHeight));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 5;
+                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                };
+                /*
+                class 16aa_Disassemble{
+                    position = "[0,0,0]";
+                    distance = 5;
+                    displayName = "Disassemble L2A1";
+                    condition = QUOTE([(alive _target) && (count crew _target == 0)]);
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_low',"['16aa_static_item_l2a1_barrel','16aa_static_item_l2a1_receiver']")] call FUNC(disassemble));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 5;
+                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                };
+                */
+            };
+        };
+    };
+    class 16aa_GMG_Static_Base_middle: 16aa_GMG_Static_Base{
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class 16aa_AdjustHeight_Up: 16aa_AdjustHeightUp{
+                     statement = QUOTE([ARR_3(_target,'16aa_GMG_Static_Base_raised',_player)] call FUNC(adjustHeight));
+                };
+                class 16aa_AdjustHeightDown: 16aa_AdjustHeight_Up{
+                    displayName = "Lower Tripod";
+                    statement = QUOTE([ARR_3(_target,'16aa_GMG_Static_Base',_player)] call FUNC(adjustHeight));
+                };
+            };
+        };
+    };
+    class 16aa_GMG_Static_Base_raised: 16aa_GMG_Static_Base{
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class 16aa_AdjustHeight_Up: 16aa_AdjustHeightUp{
+                     condition = "false";
+                };
+                class 16aa_AdjustHeightDown: 16aa_AdjustHeight_Up{
+                    displayName = "Lower Tripod";
+                    statement = QUOTE([ARR_3(_target,'16aa_GMG_Static_Base_middle',_player)] call FUNC(adjustHeight));
+                };
+            };
+        };
+    };
+    //GPMG
+    class 16aa_GPMG_Static_base : StaticMGWeapon {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class 16aa_AdjustHeightUp {
+                    selection = "";
+                    displayName = "Raise Tripod";
+                    distance = 5;
+                    condition = "true";
+                    statement = QUOTE([ARR_3(_target,'16aa_GPMG_Static_base_middle',_player)] call FUNC(adjustHeight));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 5;
+                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                };
+                /*
+                class 16aa_Disassemble{
+                    position = "[0,0,0]";
+                    distance = 5;
+                    displayName = "Disassemble L2A1";
+                    condition = QUOTE([(alive _target) && (count crew _target == 0)]);
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_low',"['16aa_static_item_l2a1_barrel','16aa_static_item_l2a1_receiver']")] call FUNC(disassemble));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 5;
+                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                };
+                */
+            };
+        };
+    };
+    class 16aa_GPMG_Static_base_middle: 16aa_GPMG_Static_base{
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class 16aa_AdjustHeight_Up: 16aa_AdjustHeightUp{
+                     statement = QUOTE([ARR_3(_target,'16aa_GPMG_Static_base_raised',_player)] call FUNC(adjustHeight));
+                };
+                class 16aa_AdjustHeightDown: 16aa_AdjustHeight_Up{
+                    displayName = "Lower Tripod";
+                    statement = QUOTE([ARR_3(_target,'16aa_GPMG_Static_base',_player)] call FUNC(adjustHeight));
+                };
+            };
+        };
+    };
+    class 16aa_GPMG_Static_base_raised: 16aa_GPMG_Static_base{
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class 16aa_AdjustHeight_Up: 16aa_AdjustHeightUp{
+                     condition = "false";
+                };
+                class 16aa_AdjustHeightDown: 16aa_AdjustHeight_Up{
+                    displayName = "Lower Tripod";
+                    statement = QUOTE([ARR_3(_target,'16aa_GPMG_Static_base_middle',_player)] call FUNC(adjustHeight));
+                };
+            };
+        };
+    };
+    //Javelin
+    class 16aa_Javelin_Static_base : StaticMGWeapon {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class 16aa_AdjustHeightUp {
+                    selection = "";
+                    displayName = "Raise Tripod";
+                    distance = 5;
+                    condition = "true";
+                    statement = QUOTE([ARR_3(_target,'16aa_Javelin_Static_base_middle',_player)] call FUNC(adjustHeight));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 5;
+                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                };
+                /*
+                class 16aa_Disassemble{
+                    position = "[0,0,0]";
+                    distance = 5;
+                    displayName = "Disassemble L2A1";
+                    condition = QUOTE([(alive _target) && (count crew _target == 0)]);
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_low',"['16aa_static_item_l2a1_barrel','16aa_static_item_l2a1_receiver']")] call FUNC(disassemble));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 5;
+                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                };
+                */
+            };
+        };
+    };
+    class 16aa_Javelin_Static_base_middle: 16aa_Javelin_Static_base{
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class 16aa_AdjustHeight_Up: 16aa_AdjustHeightUp{
+                     statement = QUOTE([ARR_3(_target,'16aa_Javelin_Static_base_raised',_player)] call FUNC(adjustHeight));
+                };
+                class 16aa_AdjustHeightDown: 16aa_AdjustHeight_Up{
+                    displayName = "Lower Tripod";
+                    statement = QUOTE([ARR_3(_target,'16aa_Javelin_Static_base',_player)] call FUNC(adjustHeight));
+                };
+            };
+        };
+    };
+    class 16aa_Javelin_Static_base_raised: 16aa_Javelin_Static_base{
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class 16aa_AdjustHeight_Up: 16aa_AdjustHeightUp{
+                     condition = "false";
+                };
+                class 16aa_AdjustHeightDown: 16aa_AdjustHeight_Up{
+                    displayName = "Lower Tripod";
+                    statement = QUOTE([ARR_3(_target,'16aa_Javelin_Static_base_middle',_player)] call FUNC(adjustHeight));
+                };
             };
         };
     };
