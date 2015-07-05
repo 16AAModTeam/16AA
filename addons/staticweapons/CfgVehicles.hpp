@@ -84,6 +84,46 @@ class CfgVehicles
             };
         };
     };
+    class 16aa_dummy_item_l16_baseplate: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "L16 Base Plate";
+        vehicleClass = "Items";
+        class TransportItems {
+            class 16aa_static_item_l16_baseplate {
+                name = "16aa_static_item_l16_baseplate";
+                count = 1;
+            };
+        };
+    };
+    class 16aa_dummy_item_l16_bipod: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "L16 Bipod";
+        vehicleClass = "Items";
+        class TransportItems {
+            class 16aa_static_item_l16_bipod {
+                name = "16aa_static_item_l16_bipod";
+                count = 1;
+            };
+        };
+    };
+    class 16aa_dummy_item_l16_tube: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "L16 Tube";
+        vehicleClass = "Items";
+        class TransportItems {
+            class 16aa_static_item_l16_tube {
+                name = "16aa_static_item_l16_tube";
+                count = 1;
+            };
+        };
+    };
+    //Magazines
     class 16aa_dummy_item_ammobox_50cal: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
@@ -103,7 +143,7 @@ class CfgVehicles
         author = "3LSR";
         displayName = "7.62mm Ammo Box";
         vehicleClass = "Items";
-        class TransportItems {
+        class TransportMagazines {
             class 16aa_static_ammobox_762 {
                 name = "16aa_static_ammobox_762";
                 count = 1;
@@ -116,9 +156,74 @@ class CfgVehicles
         author = "3LSR";
         displayName = "40mm Ammo Box";
         vehicleClass = "Items";
-        class TransportItems {
+        class TransportMagazines {
             class 16aa_static_ammobox_40mm {
                 name = "16aa_static_ammobox_40mm";
+                count = 1;
+            };
+        };
+    };
+    class 16aa_dummy_item_l16_ammo_he: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "81mm HE Round";
+        vehicleClass = "Items";
+        class TransportMagazines {
+            class 16aa_static_magazine_l16_he {
+                name = "16aa_static_magazine_l16_he";
+                count = 1;
+            };
+        };
+    };
+    class 16aa_dummy_item_l16_ammo_illum: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "81mm Illum Round";
+        vehicleClass = "Items";
+        class TransportMagazines {
+            class 16aa_static_magazine_l16_illum {
+                name = "16aa_static_magazine_l16_illum";
+                count = 1;
+            };
+        };
+    };
+    class 16aa_dummy_item_l16_ammo_smk_white: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "81mm White Smoke Round";
+        vehicleClass = "Items";
+        class TransportMagazines {
+            class 16aa_static_magazine_l16_smoke_white {
+                name = "16aa_static_magazine_l16_smoke_white";
+                count = 1;
+            };
+        };
+    };
+    class 16aa_dummy_item_l16_ammo_smk_red: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "81mm Red Smoke Round";
+        vehicleClass = "Items";
+        class TransportMagazines {
+            class 16aa_static_magazine_l16_smoke_red {
+                name = "16aa_static_magazine_l16_smoke_red";
+                count = 1;
+            };
+        };
+    };
+    class 16aa_dummy_item_l16_ammo_smk_orange: Item_Base_F {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "81mm Orange Smoke Round";
+        vehicleClass = "Items";
+        class TransportMagazines {
+            class 16aa_static_magazine_l16_smoke_orange {
+                name = "16aa_static_magazine_l16_smoke_orange";
                 count = 1;
             };
         };
@@ -135,17 +240,27 @@ class CfgVehicles
         };
     };
     class StaticMGWeapon : StaticWeapon {};
-    class Box_NATO_Support_F;
-    class ACE_Box_Misc: Box_NATO_Support_F {
+    class 16aa_crate_empty_csw;
+    class 16AA_crate_csw : 16aa_crate_empty_csw {
         class TransportItems {
             MACRO_ADDITEM(16aa_tripod,5);
             MACRO_ADDITEM(16aa_static_item_l2a1_barrel,5);
             MACRO_ADDITEM(16aa_static_item_l2a1_receiver,5);
             MACRO_ADDITEM(16aa_static_item_gmg_barrel,5);
             MACRO_ADDITEM(16aa_static_item_gmg_receiver,5);
-            MACRO_ADDMAGAZINE(16aa_static_item_ammobox_50cal,5);
-            MACRO_ADDMAGAZINE(16aa_static_item_ammobox_762,5);
-            MACRO_ADDMAGAZINE(16aa_static_item_ammobox_40mm,5);
+            MACRO_ADDITEM(16aa_static_item_l16_baseplate,5);
+            MACRO_ADDITEM(16aa_static_item_l16_bipod,5);
+            MACRO_ADDITEM(16aa_static_item_l16_tube,5);
+        };
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_50cal,5);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_762,5);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_40mm,5);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_he,5);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_illum,5);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_white,5);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_red,5);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_orange,5);
         };
     };
 
