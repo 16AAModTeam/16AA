@@ -14,6 +14,15 @@ class CfgVehicles
                     priority = 2;
                     icon = PATHTOF(UI\w_tripod_ca.paa);
                 };
+                class GVAR(l16_place) {
+                    //displayName = CSTRING(Placedown);
+                    displayName = "Place Base Plate";
+                    condition = QUOTE([ARR_2(_player,'16aa_static_item_l16_baseplate')] call ace_common_fnc_hasItem);
+                    statement = QUOTE([ARR_3(_player,'16aa_static_item_l16_baseplate','16aa_l16_baseplate_deployed')] call FUNC(place));
+                    showDisabled = 0;
+                    priority = 2;
+                    icon = PATHTOF(UI\w_l16_baseplate_ca.paa);
+                };
             };
         };
     };
@@ -32,6 +41,7 @@ class CfgVehicles
             };
         };
     };
+    //L2A1
     class 16aa_dummy_item_l2a1_barrel: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
@@ -58,6 +68,7 @@ class CfgVehicles
             };
         };
     };
+    //GMG
     class 16aa_dummy_item_gmg_barrel: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
@@ -84,6 +95,7 @@ class CfgVehicles
             };
         };
     };
+    //L16 Mortar
     class 16aa_dummy_item_l16_baseplate: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
@@ -124,6 +136,7 @@ class CfgVehicles
         };
     };
     //Magazines
+    //Ammoboxes
     class 16aa_dummy_item_ammobox_50cal: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
@@ -163,6 +176,7 @@ class CfgVehicles
             };
         };
     };
+    //L16 Mortar
     class 16aa_dummy_item_l16_ammo_he: Item_Base_F {
         scope = 2;
         scopeCurator = 2;
@@ -263,7 +277,7 @@ class CfgVehicles
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_orange,5);
         };
     };
-
+    //Empty Tripods
     class 16aa_tripod_base: StaticMGWeapon {
         author = "3LSR";
         model = "";
@@ -290,11 +304,19 @@ class CfgVehicles
                     displayName = "Pick Up Tripod";
                     distance = 5;
                     condition = "true";
-                    statement = QUOTE([ARR_2(_target,_player)] call FUNC(pickup));
+                    statement = QUOTE([ARR_3(_target,_player,'16aa_tripod')] call FUNC(pickup));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
                     icon = PATHTOF(UI\w_tripod_ca.paa);
+                };
+                class 16aa_assemble_l2a1: 16aa_Pickup{
+                    displayName = "Assemble L2A1";
+                    condition = QUOTE([ARR_2(_player,'16aa_static_item_l2a1_receiver')] call ace_common_fnc_hasItem);
+                };
+                class 16aa_assemble_gmg: 16aa_Pickup{
+                    displayName = "Assemble L134A1";
+                    condition = QUOTE([ARR_2(_player,'16aa_static_item_gmg_receiver')] call ace_common_fnc_hasItem);
                 };
             };
         };
@@ -307,6 +329,7 @@ class CfgVehicles
         displayName = "Tripod - Low";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
+                position = "[0,0,0.4]";
                 class 16aa_Pickup: 16aa_Pickup {};
                 class 16aa_AdjustHeightUp: 16aa_Pickup {
                     selection = "";
@@ -319,6 +342,14 @@ class CfgVehicles
                     priority = 5;
                     icon = PATHTOF(UI\w_tripod_ca.paa);
                 };
+                class 16aa_assemble_l2a1: 16aa_assemble_l2a1{
+                    displayName = "Assemble L2A1";
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_L2A1_Static_Base','16aa_static_item_l2a1_receiver')] call FUNC(assemble));
+                };
+                class 16aa_assemble_gmg: 16aa_assemble_gmg{
+                    displayName = "Assemble L134A1";
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_GMG_Static_Base','16aa_static_item_gmg_receiver')] call FUNC(assemble));
+                };
             };
         };
     };
@@ -330,6 +361,7 @@ class CfgVehicles
         displayName = "Tripod - Middle";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
+                position = "[0,0,0.78]";
                 class 16aa_Pickup: 16aa_Pickup {};
                 class 16aa_AdjustHeightUp: 16aa_Pickup {
                     displayName = "Raise Tripod";
@@ -338,6 +370,14 @@ class CfgVehicles
                 class 16aa_AdjustHeightLower: 16aa_AdjustHeightUp {
                     displayName = "Lower Tripod";
                     statement = QUOTE([ARR_3(_target,'16aa_tripod_low',_player)] call FUNC(adjustHeight));
+                };
+                class 16aa_assemble_l2a1: 16aa_assemble_l2a1{
+                    displayName = "Assemble L2A1";
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_L2A1_Static_Base_middle','16aa_static_item_l2a1_receiver')] call FUNC(assemble));
+                };
+                class 16aa_assemble_gmg: 16aa_assemble_gmg{
+                    displayName = "Assemble L134A1";
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_GMG_Static_Base_middle','16aa_static_item_gmg_receiver')] call FUNC(assemble));
                 };
             };
         };
@@ -350,6 +390,7 @@ class CfgVehicles
         displayName = "Tripod - High";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
+                position = "[0,0,1.155]";
                 class 16aa_Pickup: 16aa_Pickup {};
                 class 16aa_AdjustHeightUp: 16aa_Pickup {
                     condition = "false";
@@ -359,6 +400,89 @@ class CfgVehicles
                     displayName = "Lower Tripod";
                     statement = QUOTE([ARR_3(_target,'16aa_tripod_middle',_player)] call FUNC(adjustHeight));
                 };
+                class 16aa_assemble_l2a1: 16aa_assemble_l2a1{
+                    displayName = "Assemble L2A1";
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_L2A1_Static_Base_raised','16aa_static_item_l2a1_receiver')] call FUNC(assemble));
+                };
+                class 16aa_assemble_gmg: 16aa_assemble_gmg{
+                    displayName = "Assemble L134A1";
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_GMG_Static_Base_raised','16aa_static_item_gmg_receiver')] call FUNC(assemble));
+                };
+            };
+        };
+    };
+    //L16 Mortar
+    class 16aa_l16_baseplate_deployed: 16aa_tripod_base
+    {
+        author = "3LSR";
+        scope = 2;
+        scopeCurator = 2;
+        model = PATHTOF(data\l16_baseplate_deployed);
+        displayName = "L16 Base Plate";
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0,0,0]";
+                class 16aa_Pickup: 16aa_Pickup {
+                    statement = QUOTE([ARR_3(_target,_player,'16aa_static_item_l16_baseplate')] call FUNC(pickup));
+                };
+                class 16aa_assemble_l16: 16aa_Pickup{
+                    displayName = "Assemble L16";
+                    condition = QUOTE([ARR_2(_player,'16aa_static_item_l16_tube')] call ace_common_fnc_hasItem);
+                    statement = QUOTE([ARR_4(_target,_player,'16AA_B_Mortar_01_F','16aa_static_item_l16_tube')] call FUNC(assemble));
+                };
+            };
+        };
+    };
+    /*
+    class B_Mortar_01_F;
+    class 16AA_B_Mortar_01_F : B_Mortar_01_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[0,0,0]";
+                class 16aa_Disassemble: 16aa_Pickup {
+                    displayName = "Disassemble L16";
+                    condition = QUOTE(alive _target && count crew _target == 0);
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_l16_baseplate_deployed',['16aa_static_item_l16_tube','16aa_static_item_l16_bipod','16aa_static_item_l16_tube'])] call FUNC(assemble));
+                 };
+            };
+        };
+    };
+    */
+    //L2A1
+    //TODO Fix the condition. Causes error saying Line 460, L encounted instead of =
+    class 16aa_L2A1_Static_Base : StaticMGWeapon {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class 16aa_Disassemble{
+                    position = "[0,0,0]";
+                    selection = "";
+                    distance = 5;
+                    displayName = "Disassemble L2A1";
+                    condition = QUOTE(alive _target AND count crew _target == 0);
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_low',['16aa_static_item_l2a1_barrel','16aa_static_item_l2a1_receiver'])] call FUNC(disassemble));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 5;
+                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                 };
+            };
+        };
+    };
+    class 16aa_L2A1_Static_Base_middle: 16aa_L2A1_Static_Base{
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class 16aa_Disassemble:16aa_Disassemble{
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_middle',['16aa_static_item_l2a1_barrel','16aa_static_item_l2a1_receiver'])] call FUNC(disassemble));
+                 };
+            };
+        };
+    };
+    class 16aa_L2A1_Static_Base_raised: 16aa_L2A1_Static_Base{
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class 16aa_Disassemble:16aa_Disassemble{
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_raised',['16aa_static_item_l2a1_barrel','16aa_static_item_l2a1_receiver'])] call FUNC(disassemble));
+                 };
             };
         };
     };

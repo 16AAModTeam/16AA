@@ -3,10 +3,10 @@ class CfgMagazines {
     class 150Rnd_762x51_Box;
     class 96Rnd_40mm_G_belt;
     class 8Rnd_82mm_Mo_shells;
-    class Smoke_82mm_AMOS_Red;
+    class 8Rnd_82mm_Mo_Smoke_red;
     class 8Rnd_82mm_Mo_Flare_white;
-    class Smoke_82mm_AMOS_White;
-    class Smoke_82mm_AMOS_Orange;
+    class 8Rnd_82mm_Mo_Smoke_white;
+    class 8Rnd_82mm_Mo_Smoke_orange;
     class 16aa_static_magazine_ammobox_50cal : 100Rnd_127x99_mag_Tracer_red   {
         scope = 2;
         scopeCurator = 2;
@@ -64,7 +64,7 @@ class CfgMagazines {
         mass = 20;
         count = 1;
     };
-    class 16aa_static_magazine_l16_smoke_white : Smoke_82mm_AMOS_White  {
+    class 16aa_static_magazine_l16_smoke_white : 8Rnd_82mm_Mo_Smoke_white  {
         scope = 2;
         scopeCurator = 2;
         author = "3LSR";
@@ -76,7 +76,7 @@ class CfgMagazines {
         mass = 20;
         count = 1;
     };
-    class 16aa_static_magazine_l16_smoke_red : Smoke_82mm_AMOS_Red  {
+    class 16aa_static_magazine_l16_smoke_red : 8Rnd_82mm_Mo_Smoke_red  {
         scope = 2;
         scopeCurator = 2;
         author = "3LSR";
@@ -88,7 +88,7 @@ class CfgMagazines {
         mass = 20;
         count = 1;
     };
-    class 16aa_static_magazine_l16_smoke_orange : Smoke_82mm_AMOS_Orange  {
+    class 16aa_static_magazine_l16_smoke_orange : 8Rnd_82mm_Mo_Smoke_orange  {
         scope = 2;
         scopeCurator = 2;
         author = "3LSR";

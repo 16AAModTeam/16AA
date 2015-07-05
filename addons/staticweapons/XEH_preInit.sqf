@@ -5,5 +5,7 @@ ADDON = false;
 PREP(pickup);
 PREP(place);
 PREP(adjustHeight);
+PREP(assemble);
+PREP(disassemble);
 
 ADDON = true;

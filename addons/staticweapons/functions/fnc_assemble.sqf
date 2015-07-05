@@ -1,13 +1,13 @@
 /*
 Author: Grey
 
-Raises or lowers static weapon/tripod
+Assembles static weapon using an item from the player inventory
 
 Arguments:
 0: staticOld <OBJECT>
-1: staticNewClass <STRING>
 2: unit <OBJECT>
-
+1: staticNewClass <STRING>
+2: staticItem <STRING>
 
 Return Value:
 Nothing
@@ -17,19 +17,17 @@ Return value:
 */
 #include "script_component.hpp"
 
-PARAMS_3(_staticOld,_staticNewClass,_unit);
+PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItem);
 
+_unit removeItem _staticItem;
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
-    [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call ace_common_fnc_doAnimation;
+    _unit playMove "AmovPercMstpSrasWrflDnon_diary";
 };
 
-// TODO kick out anyone inside the static weapon
-// TODO lock the static weapon
-
 [{
-    PARAMS_3(_staticOld,_staticNewClass,_unit);
+    PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItem);
 
-    private ["_direction", "_position","_staticNew"];
+     private ["_direction", "_position"];
     _direction = getDir _staticOld;
     _position = getPosASL _staticOld;
     deletevehicle _staticOld;
@@ -43,4 +41,5 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     };
     _staticNew setPosASL _position; // force that shit on the correct position
     _unit reveal _staticNew;
-}, [_staticOld,_staticNewClass,_unit], 1, 0] call ace_common_fnc_waitAndExecute;
+
+}, [_staticOld,_unit,_staticNewClass,_staticItem], 1, 0] call ace_common_fnc_waitAndExecute;
