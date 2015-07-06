@@ -481,21 +481,47 @@ class CfgVehicles
             };
         };
     };
-    /*
-    class B_Mortar_01_F;
+    class StaticMortar: StaticWeapon
+    {
+        class ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+    class Mortar_01_base_F: StaticMortar
+    {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+    class B_Mortar_01_F: Mortar_01_base_F
+    {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
     class 16AA_B_Mortar_01_F : B_Mortar_01_F {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                position = "[0,0,0]";
-                class 16aa_Disassemble: 16aa_Pickup {
+                position = "[0,-0.1,-0.6]";
+                condition = "true";
+                displayName = "Interact";
+                showDisabled = 0;
+                distance = 2;
+                priority = 2;
+                class 16aa_Disassemble{
+                     distance = 5;
                     displayName = "Disassemble L16";
-                    condition = QUOTE((alive _target) && (count crew _target == 0));
-                    statement = QUOTE([ARR_4(_target,_player,'16aa_l16_baseplate_deployed',"['16aa_static_item_l16_tube','16aa_static_item_l16_bipod','16aa_static_item_l16_tube']"")] call FUNC(assemble));
-                 };
+                    condition = "alive _target && count crew _target == 0";
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_l16_baseplate_deployed',['16aa_static_item_l16_tube'])] call FUNC(disassemble));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 6;
+                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                };
             };
         };
     };
-    */
+
     //L2A1
     class 16aa_L2A1_Static_Base : StaticMGWeapon {
         class ACE_Actions: ACE_Actions {
