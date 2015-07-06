@@ -5,9 +5,9 @@ Assembles static weapon using an item from the player inventory
 
 Arguments:
 0: staticOld <OBJECT>
-2: unit <OBJECT>
-1: staticNewClass <STRING>
-2: staticItem <STRING>
+1: unit <OBJECT>
+2: staticNewClass <STRING>
+3: staticItem <STRING>
 
 Return Value:
 Nothing
@@ -18,8 +18,21 @@ Return value:
 #include "script_component.hpp"
 
 PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItem);
+//TODO Add progress Bar / Delay to stop issue where weapon is spawned too quickly and flips in the air
 
-_unit removeItem _staticItem;
+
+_staticItemType = [_staticItem] call ace_common_fnc_getWeaponType;
+/* Debug stuff
+_debugText = format["Weapon Type: %1",_staticItemType];
+hint _debugText;
+*/
+if (_staticItemtype == -1) then {
+    _unit removeItem _staticItem;
+} else{
+    _unit removeWeapon _staticItem;
+};
+
+
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     _unit playMove "AmovPercMstpSrasWrflDnon_diary";
 };

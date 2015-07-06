@@ -18,7 +18,7 @@ Return value:
 #include "script_component.hpp"
 
 PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItems);
-
+//TODO Add progress bar / delay to make it more realistic
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     _unit playMove "AmovPercMstpSrasWrflDnon_diary";
 };
@@ -40,26 +40,15 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     };
     _staticNew setPosASL _position; // force that shit on the correct position
     _unit reveal _staticNew;
-    //TODO Improve how array of items is added to player inventory
-    switch (count _staticItems) do {
-        case 1: {
-            _item1 = _staticItems select 0;
-            [_unit, _item1] call ace_common_fnc_addToInventory;
+    {
+        //Checks whether the staticItem is actually an item or a weapon. Adds it the correct way depending on weapon type
+        _staticItemType = [_x] call ace_common_fnc_getWeaponType;
+        if (_staticItemtype == -1) then {
+            [_unit, _x] call ace_common_fnc_addToInventory;
+
+        } else{
+            _unit addWeapon _x;
         };
-        case 2: {
-            item1 = _staticItems select 0;
-            item2 = _staticItems select 1;
-            [_unit, _item1] call ace_common_fnc_addToInventory;
-            [_unit, _item2] call ace_common_fnc_addToInventory;
-        };
-        case 3: {
-            item1 = _staticItems select 0;
-            item2 = _staticItems select 1;
-            item3 = _staticItems select 2;
-            [_unit, _item1] call ace_common_fnc_addToInventory;
-            [_unit, _item2] call ace_common_fnc_addToInventory;
-            [_unit, _item3] call ace_common_fnc_addToInventory;
-        };
-    };
+    }foreach _staticItems;
 
 }, [_staticOld,_unit,_staticNewClass,_staticItems], 1, 0] call ace_common_fnc_waitAndExecute;
