@@ -67,4 +67,43 @@ class CfgWeapons {
             mass = 20;
         };
     };
+    class 16aa_static_item_l16_baseplate : ACE_ItemCore  {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "L16 Base Plate";
+        descriptionshort = "L16 Base Plate. Required to assemble L16 Mortar";
+        model = PATHTOF(data\l16_baseplate.p3d);
+        picture = PATHTOF(UI\w_l16_baseplate_ca.paa);
+        magazines[] = {};
+         class ItemInfo: InventoryItem_Base_F {
+            mass = 20;
+        };
+    };
+    class 16aa_static_item_l16_bipod : ACE_ItemCore  {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "L16 Bipod";
+        descriptionshort = "L16 Bipod. Required to assemble L16 Mortar";
+        model = PATHTOF(data\l16_bipod.p3d);
+        picture = PATHTOF(UI\w_l16_bipod_ca.paa);
+        magazines[] = {};
+         class ItemInfo: InventoryItem_Base_F {
+            mass = 20;
+        };
+    };
+    class 16aa_static_item_l16_tube : ACE_ItemCore  {
+        scope = 2;
+        scopeCurator = 2;
+        author = "3LSR";
+        displayName = "L16 Tube";
+        descriptionshort = "L16 Tube. Required to assemble L16 Mortar";
+        model = PATHTOF(data\l16_tube.p3d);
+        picture = PATHTOF(UI\w_l16_tube_ca.paa);
+        magazines[] = {};
+         class ItemInfo: InventoryItem_Base_F {
+            mass = 20;
+        };
+    };
 };
