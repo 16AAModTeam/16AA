@@ -47,7 +47,11 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
             [_unit, _x] call ace_common_fnc_addToInventory;
 
         } else{
-            _unit addWeapon _x;
+            //TODO Check if player has no weapon, if so , add the item that fnc is called with
+            _pos = _unit modelToWorldVisual [0,1,0.05];
+            _unit = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
+            _unit addWeaponCargoGlobal [_x,1];
+            _unit setPosATL _pos;
         };
     }foreach _staticItems;
 

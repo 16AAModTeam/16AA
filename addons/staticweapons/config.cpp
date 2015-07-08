@@ -45,7 +45,7 @@ class CfgPatches {
             "16aa_static_magazine_l16_smoke_orange"
         };
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"LSR_common"};
+        requiredAddons[] = {"LSR_common","16aa_crates_a3","16aa_weapons_support"};
         author[] = {"Grey"};
         authorUrl = "";
         VERSION_CONFIG;
