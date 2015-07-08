@@ -74,6 +74,45 @@ if (isClass _config) then {
     _backpackItems = if (isArray (_config >> "backpackItems")) then { getArray (_config >> "backpackItems");} else {_backpackItems};
 };
 
+// Uniform modifications
+private "_uniformModifier";
+_uniformModifier = getText (configfile >> "LSR_gearManagement" >> "modifiers" >> "uniform");
+if (isText (missionConfigFile >> "LSR_gearManagement" >> "modifiers" >> "uniform")) then {
+    _uniformModifier = getText (missionConfigFile >> "LSR_gearManagement" >> "modifiers" >> "uniform");
+};
+if (isText (configFile >> "LSR_gearManagement" >> "roles" >> _role >> "uniformModifier")) then {
+    _uniformModifier = getText (configFile >> "LSR_gearManagement" >> "roles" >> _role >> "uniformModifier");
+    if (isText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "uniformModifier")) then {
+        _uniformModifier = getText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "uniformModifier");
+    };
+};
+
+{
+    private "_classname";
+    _classname = [_x, "[type]", _uniformModifier] call CBA_fnc_replace;
+    _uniform set [_forEachIndex, _classname];
+}foreach _uniform;
+
+// Weapon modifications
+private "_weaponModifier";
+_weaponModifier = getText (configfile >> "LSR_gearManagement" >> "modifiers" >> "weapon");
+if (isText (missionConfigFile >> "LSR_gearManagement" >> "modifiers" >> "weapon")) then {
+    _weaponModifier = getText (missionConfigFile >> "LSR_gearManagement" >> "modifiers" >> "weapon");
+};
+if (isText (configFile >> "LSR_gearManagement" >> "roles" >> _role >> "weaponModifier")) then {
+    _weaponModifier = getText (configFile >> "LSR_gearManagement" >> "roles" >> _role >> "weaponModifier");
+    if (isText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "weaponModifier")) then {
+        _weaponModifier = getText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "weaponModifier");
+    };
+};
+
+{
+    private "_classname";
+    _classname = [_x, "[type]", _weaponModifier] call CBA_fnc_replace;
+    _primairyWeapon set [_forEachIndex, _classname];
+}foreach _primairyWeapon;
+
+
 // misc data
 _primaryWeaponData = [_primairyWeapon, _primairyWeaponItems];
 _secondiaryWeaponData = [_secondiaryWeapon, _secondiaryWeaponItems];
