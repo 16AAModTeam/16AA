@@ -326,10 +326,6 @@ class CfgVehicles
                     displayName = "Assemble Javelin";
                     condition = "'16aa_Javelin_Launcher' in (weapons _player)";
                 };
-                class 16aa_assemble_javelin_launch: 16aa_Pickup{
-                    displayName = "Assemble Javelin";
-                    condition = "'launch_Javelin_F' in (weapons _player)";
-                };
             };
         };
     };
@@ -370,10 +366,6 @@ class CfgVehicles
                     displayName = "Assemble Javelin";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_Javelin_Static_base','16aa_Javelin_Launcher')] call FUNC(assemble));
                 };
-                class 16aa_assemble_javelin_launch: 16aa_assemble_javelin_launch{
-                    displayName = "Assemble Javelin";
-                    statement = QUOTE([ARR_4(_target,_player,'16aa_Javelin_Static_base','launch_Javelin_F')] call FUNC(assemble));
-                };
             };
         };
     };
@@ -411,10 +403,6 @@ class CfgVehicles
                     displayName = "Assemble Javelin";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_Javelin_Static_middle','16aa_Javelin_Launcher')] call FUNC(assemble));
                 };
-                class 16aa_assemble_javelin_launch: 16aa_assemble_javelin_launch{
-                    displayName = "Assemble Javelin";
-                    statement = QUOTE([ARR_4(_target,_player,'16aa_Javelin_Static_middle','launch_Javelin_F')] call FUNC(assemble));
-                };
             };
         };
     };
@@ -448,14 +436,6 @@ class CfgVehicles
                     displayName = "Assemble GPMG SF";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_GPMG_Static_base_raised','16aa_l7a2')] call FUNC(assemble));
                 };
-                class 16aa_assemble_javelin: 16aa_assemble_javelin{
-                    displayName = "Assemble Javelin";
-                    statement = QUOTE([ARR_4(_target,_player,'16aa_Javelin_Static_raised','16aa_Javelin_Launcher')] call FUNC(assemble));
-                };
-                class 16aa_assemble_javelin_launch: 16aa_assemble_javelin_launch{
-                    displayName = "Assemble Javelin";
-                    statement = QUOTE([ARR_4(_target,_player,'16aa_Javelin_Static_raised','launch_Javelin_F')] call FUNC(assemble));
-                };
             };
         };
     };
@@ -476,7 +456,7 @@ class CfgVehicles
                 class 16aa_assemble_l16: 16aa_Pickup{
                     displayName = "Assemble L16";
                     condition = QUOTE([ARR_2(_player,'16aa_static_item_l16_tube')] call ace_common_fnc_hasItem);
-                    statement = QUOTE([ARR_4(_target,_player,'16AA_B_Mortar_01_F','16aa_static_item_l16_tube')] call FUNC(assemble));
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_L16_Mortar','16aa_static_item_l16_tube')] call FUNC(assemble));
                 };
             };
         };
@@ -499,7 +479,7 @@ class CfgVehicles
             class ACE_MainActions;
         };
     };
-    class 16AA_B_Mortar_01_F : B_Mortar_01_F {
+    class 16aa_L16_Mortar : B_Mortar_01_F {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 position = "[0,-0.1,-0.6]";
