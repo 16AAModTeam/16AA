@@ -59,7 +59,7 @@ class CfgWeapons {
         scopeCurator = 2;
         author = "3LSR";
         displayName = "L134A1 Receiver";
-        descriptionshort = "L134A1 Receiver. Required to assemble L134A1 Heavy Machine Gun";
+        descriptionshort = "L134A1 Receiver. Required to assemble L134A1 Grenade Machine Gun";
         model = PATHTOF(data\gmg_receiver.p3d);
         picture = PATHTOF(UI\w_gmg_receiver_ca.paa);
         magazines[] = {};
