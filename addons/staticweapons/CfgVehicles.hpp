@@ -257,25 +257,27 @@ class CfgVehicles
     class 16aa_crate_empty_csw;
     class 16AA_crate_csw : 16aa_crate_empty_csw {
         class TransportItems {
-            MACRO_ADDITEM(16aa_tripod,5);
-            MACRO_ADDITEM(16aa_static_item_l2a1_barrel,5);
-            MACRO_ADDITEM(16aa_static_item_l2a1_receiver,5);
-            MACRO_ADDITEM(16aa_static_item_gmg_barrel,5);
+            MACRO_ADDITEM(16aa_tripod,45);
+            //MACRO_ADDITEM(16aa_static_item_l2a1_barrel,5);
+            MACRO_ADDITEM(16aa_static_item_l2a1_receiver,15);
+            //MACRO_ADDITEM(16aa_static_item_gmg_barrel,5);
             MACRO_ADDITEM(16aa_static_item_gmg_receiver,5);
-            MACRO_ADDITEM(16aa_static_item_l16_baseplate,5);
-            MACRO_ADDITEM(16aa_static_item_l16_bipod,5);
-            MACRO_ADDITEM(16aa_static_item_l16_tube,5);
+            MACRO_ADDITEM(16aa_static_item_l16_baseplate,15);
+            //MACRO_ADDITEM(16aa_static_item_l16_bipod,5);
+            MACRO_ADDITEM(16aa_static_item_l16_tube,15);
         };
+        /*
         class TransportMagazines{
-            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_50cal,5);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_762,5);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_40mm,5);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_he,5);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_illum,5);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_white,5);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_red,5);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_orange,5);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_50cal,50);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_762,50);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_40mm,50};
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_he,50);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_illum,50);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_white,50);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_red,50);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_orange,50);
         };
+        */
     };
     //Empty Tripods
     class 16aa_tripod_base: StaticMGWeapon {
@@ -324,7 +326,7 @@ class CfgVehicles
                 };
                 class 16aa_assemble_javelin: 16aa_Pickup{
                     displayName = "Assemble Javelin";
-                    condition = "'16aa_Javelin_Launcher' in (weapons _player)";
+                    condition = "'16aa_javelin_launcher' in (weapons _player)";
                 };
             };
         };
@@ -364,7 +366,7 @@ class CfgVehicles
                 };
                 class 16aa_assemble_javelin: 16aa_assemble_javelin{
                     displayName = "Assemble Javelin";
-                    statement = QUOTE([ARR_4(_target,_player,'16aa_Javelin_Static_base','16aa_Javelin_Launcher')] call FUNC(assemble));
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_Javelin_Static_base','16aa_javelin_launcher')] call FUNC(assemble));
                 };
             };
         };
@@ -401,7 +403,7 @@ class CfgVehicles
                 };
                 class 16aa_assemble_javelin: 16aa_assemble_javelin{
                     displayName = "Assemble Javelin";
-                    statement = QUOTE([ARR_4(_target,_player,'16aa_Javelin_Static_middle','16aa_Javelin_Launcher')] call FUNC(assemble));
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_Javelin_Static_middle','16aa_javelin_launcher')] call FUNC(assemble));
                 };
             };
         };
@@ -436,6 +438,10 @@ class CfgVehicles
                     displayName = "Assemble GPMG SF";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_GPMG_Static_base_raised','16aa_l7a2')] call FUNC(assemble));
                 };
+                 class 16aa_assemble_javelin: 16aa_assemble_javelin{
+                    displayName = "Assemble Javelin";
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_Javelin_Static_raised','16aa_javelin_launcher')] call FUNC(assemble));
+                };
             };
         };
     };
@@ -457,6 +463,18 @@ class CfgVehicles
                     displayName = "Assemble L16";
                     condition = QUOTE([ARR_2(_player,'16aa_static_item_l16_tube')] call ace_common_fnc_hasItem);
                     statement = QUOTE([ARR_4(_target,_player,'16aa_L16_Mortar','16aa_static_item_l16_tube')] call FUNC(assemble));
+                };
+                 class 16aa_assemble_l2a1{
+                    condition = "false";
+                };
+                class 16aa_assemble_gmg{
+                    condition = "false";
+                };
+                class 16aa_assemble_gpmg{
+                    condition = "false";
+                };
+                class 16aa_assemble_javelin{
+                    condition = "false";
                 };
             };
         };
@@ -586,7 +604,7 @@ class CfgVehicles
                 };
                 class 16aa_Disassemble_GMG{
                     distance = 5;
-                    displayName = "Disassemble GMG";
+                    displayName = "Disassemble L134A1";
                     condition = "alive _target && count crew _target == 0";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_low',['16aa_static_item_gmg_receiver'])] call FUNC(disassemble));
                     showDisabled = 0;
@@ -615,7 +633,7 @@ class CfgVehicles
                     displayName = "Lower Tripod";
                     statement = QUOTE([ARR_3(_target,'16aa_GMG_Static_Base',_player)] call FUNC(adjustHeight));
                 };
-                class 16aa_Disassemble_GMG:16aa_Disassemble_GMG{
+                class 16aa_Disassemble_GMG: 16aa_Disassemble_GMG{
                     statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_middle',['16aa_static_item_gmg_receiver'])] call FUNC(disassemble));
                 };
             };
@@ -725,7 +743,7 @@ class CfgVehicles
                     distance = 5;
                     displayName = "Disassemble Javelin";
                     condition = "alive _target && count crew _target == 0";
-                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_low',['16aa_Javelin_Launcher'])] call FUNC(disassemble));
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_low',['16aa_javelin_launcher'])] call FUNC(disassemble));
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 6;
@@ -752,7 +770,7 @@ class CfgVehicles
                     statement = QUOTE([ARR_3(_target,'16aa_Javelin_Static_base',_player)] call FUNC(adjustHeight));
                 };
                 class 16aa_Disassemble_Javelin:16aa_Disassemble_Javelin{
-                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_middle',['16aa_Javelin_Launcher'])] call FUNC(disassemble));
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_middle',['16aa_javelin_launcher'])] call FUNC(disassemble));
                 };
             };
         };
@@ -769,7 +787,7 @@ class CfgVehicles
                     statement = QUOTE([ARR_3(_target,'16aa_Javelin_Static_middle',_player)] call FUNC(adjustHeight));
                 };
                 class 16aa_Disassemble_Javelin:16aa_Disassemble_Javelin{
-                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_raised',['16aa_Javelin_Launcher'])] call FUNC(disassemble));
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_raised',['16aa_javelin_launcher'])] call FUNC(disassemble));
                 };
             };
         };
