@@ -418,7 +418,7 @@ class CfgVehicles
             class ACE_MainActions: ACE_MainActions {
                 position = "[0,0,1.155]";
                 class 16aa_Pickup: 16aa_Pickup {};
-                class 16aa_AdjustHeightUp: 16aa_Pickup {
+                class 16aa_AdjustHeightUp{
                     condition = "false";
                 };
                 class 16aa_AdjustHeightLower: 16aa_AdjustHeightUp {
@@ -457,6 +457,7 @@ class CfgVehicles
             class ACE_MainActions: ACE_MainActions {
                 position = "[0,0,0]";
                 class 16aa_Pickup: 16aa_Pickup {
+                    displayName = "Pick up Base Plate"
                     statement = QUOTE([ARR_3(_target,_player,'16aa_static_item_l16_baseplate')] call FUNC(pickup));
                 };
                 class 16aa_assemble_l16: 16aa_Pickup{
@@ -573,7 +574,7 @@ class CfgVehicles
     class 16aa_L2A1_Static_Base_raised: 16aa_L2A1_Static_Base{
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                class 16aa_AdjustHeightUp_L2A1: 16aa_AdjustHeightUp_L2A1{
+                class 16aa_AdjustHeightUp_L2A1{
                      condition = "false";
                 };
                 class 16aa_AdjustHeightUp_L2A1_Down: 16aa_AdjustHeightUp_L2A1{
@@ -642,7 +643,7 @@ class CfgVehicles
     class 16aa_GMG_Static_Base_raised: 16aa_GMG_Static_Base{
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                class 16aa_AdjustHeightUp_GMG: 16aa_AdjustHeightUp_GMG{
+                class 16aa_AdjustHeightUp_GMG{
                      condition = "false";
                 };
                 class 16aa_AdjustHeightDown_GMG: 16aa_AdjustHeightUp_GMG{
@@ -710,7 +711,7 @@ class CfgVehicles
     class 16aa_GPMG_Static_base_raised: 16aa_GPMG_Static_base{
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                class 16aa_AdjustHeightUp_GPMG: 16aa_AdjustHeightUp_GPMG{
+                class 16aa_AdjustHeightUp_GPMG{
                      condition = "false";
                 };
                 class 16aa_AdjustHeightDown_GPMG: 16aa_AdjustHeightUp_GPMG{
@@ -778,7 +779,7 @@ class CfgVehicles
     class 16aa_Javelin_Static_raised: 16aa_Javelin_Static_base{
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                class 16aa_AdjustHeightUp_Javelin: 16aa_AdjustHeightUp_Javelin{
+                class 16aa_AdjustHeightUp_Javelin{
                      condition = "false";
                 };
                 class 16aa_AdjustHeightDown_Javelin: 16aa_AdjustHeightUp_Javelin{
