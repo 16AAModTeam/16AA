@@ -1,7 +1,7 @@
 /*
 Author: Grey
 
-Raises or lowers tripod
+Raises or lowers static weapon/tripod
 
 Arguments:
 0: staticOld <OBJECT>
