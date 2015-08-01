@@ -261,7 +261,7 @@ class CfgVehicles
             //MACRO_ADDITEM(16aa_static_item_l2a1_barrel,5);
             MACRO_ADDITEM(16aa_static_item_l2a1_receiver,15);
             //MACRO_ADDITEM(16aa_static_item_gmg_barrel,5);
-            MACRO_ADDITEM(16aa_static_item_gmg_receiver,5);
+            MACRO_ADDITEM(16aa_static_item_gmg_receiver,15);
             MACRO_ADDITEM(16aa_static_item_l16_baseplate,15);
             //MACRO_ADDITEM(16aa_static_item_l16_bipod,5);
             MACRO_ADDITEM(16aa_static_item_l16_tube,15);
