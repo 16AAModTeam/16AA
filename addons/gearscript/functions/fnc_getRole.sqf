@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_role", "_config", "_primairyWeapon", "_secondiaryWeapon", "_pistolWeapon", "_primairyWeaponItems", "_secondiaryWeaponItems", "_pistolWeaponItems", "_uniform", "_vest", "_backpack", "_helmet", "_goggles", "_nvg", "_assignNVG", "_uniformMagazines", "_vestMagazines", "_backpackMagazines", "_uniformItems", "_vestItems", "_backpackItems", "_primaryWeaponData", "_secondiaryWeaponData", "_pistolData", "_uniformData", "_vestData", "_backpackData", "_miscData"];
+private ["_role", "_config", "_primaryWeapon", "_secondiaryWeapon", "_pistolWeapon", "_primaryWeaponItems", "_secondiaryWeaponItems", "_pistolWeaponItems", "_uniform", "_vest", "_backpack", "_helmet", "_goggles", "_nvg", "_assignNVG", "_uniformMagazines", "_vestMagazines", "_backpackMagazines", "_uniformItems", "_vestItems", "_backpackItems", "_primaryWeaponData", "_secondiaryWeaponData", "_pistolData", "_uniformData", "_vestData", "_backpackData", "_miscData", "_standard", "_miscEquip", "_bino", "_bino"];
 _role = _this select 0;
 
 _config = (configfile >> "LSR_gearManagement" >> "roles" >> _role);
@@ -23,12 +23,12 @@ if !(isclass _config) then {
 // not a valid role..
 if !(isClass _config) exitwith {[]};
 
-_primairyWeapon = getArray (_config >> "primairyWeapon");
-_secondiaryWeapon = getArray (_config >> "secondairyWeapon");
+_primaryWeapon = getArray (_config >> "primaryWeapon");
+_secondiaryWeapon = getArray (_config >> "secondaryWeapon");
 _pistolWeapon = getArray (_config >> "pistol");
 
-_primairyWeaponItems = getArray (_config >> "primairyWeaponItems");
-_secondiaryWeaponItems = getArray (_config >> "secondairyWeaponItems");
+_primaryWeaponItems = getArray (_config >> "primaryWeaponItems");
+_secondiaryWeaponItems = getArray (_config >> "secondaryWeaponItems");
 _pistolWeaponItems = getArray (_config >> "pistolItems");
 
 _uniform = getArray (_config >> "uniform");
@@ -38,6 +38,9 @@ _helmet = getArray (_config >> "helmet");
 _goggles = getArray (_config >> "goggles");
 _nvg = getArray (_config >> "nvg");
 _assignNVG = getNumber (_config >> "assignNVG");
+_standard = getArray (_config >> "standardItems");
+_miscEquip = getArray (_config >> "miscEquipment");
+_bino = getArray (_config >> "binoculars");
 
 _uniformMagazines = getArray (_config >> "uniformMagazines");
 _vestMagazines = getArray (_config >> "vestMagazines");
@@ -49,12 +52,12 @@ _backpackItems = getArray (_config >> "backpackItems");
 
 _config = (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role);
 if (isClass _config) then {
-    _primairyWeapon = if (isArray (_config >> "primairyWeapon")) then { getArray (_config >> "primairyWeapon");} else {_primairyWeapon};
-    _secondiaryWeapon = if (isArray (_config >> "secondairyWeapon")) then { getArray (_config >> "secondairyWeapon");} else {_secondiaryWeapon};
+    _primaryWeapon = if (isArray (_config >> "primaryWeapon")) then { getArray (_config >> "primaryWeapon");} else {_primaryWeapon};
+    _secondiaryWeapon = if (isArray (_config >> "secondaryWeapon")) then { getArray (_config >> "secondaryWeapon");} else {_secondiaryWeapon};
     _pistolWeapon = if (isArray (_config >> "pistol")) then { getArray (_config >> "pistol");} else {_pistolWeapon};
 
-    _primairyWeaponItems = if (isArray (_config >> "primairyWeaponItems")) then { getArray (_config >> "primairyWeaponItems");} else {_primairyWeaponItems};
-    _secondiaryWeaponItems = if (isArray (_config >> "secondairyWeaponItems")) then { getArray (_config >> "secondairyWeaponItems");} else {_secondiaryWeaponItems};
+    _primaryWeaponItems = if (isArray (_config >> "primaryWeaponItems")) then { getArray (_config >> "primaryWeaponItems");} else {_primaryWeaponItems};
+    _secondiaryWeaponItems = if (isArray (_config >> "secondaryWeaponItems")) then { getArray (_config >> "secondaryWeaponItems");} else {_secondiaryWeaponItems};
     _pistolWeaponItems = if (isArray (_config >> "pistolItems")) then { getArray (_config >> "pistolItems");} else {_pistolWeaponItems};
 
     _uniform = if (isArray (_config >> "uniform")) then { getArray (_config >> "uniform");} else {_uniform};
@@ -64,6 +67,9 @@ if (isClass _config) then {
     _goggles = if (isArray (_config >> "goggles")) then { getArray (_config >> "goggles");} else {_goggles};
     _nvg = if (isArray (_config >> "nvg")) then { getArray (_config >> "nvg");} else {_nvg};
     _assignNVG = if (isArray (_config >> "assignNVG")) then { getNumber (_config >> "assignNVG");} else {_assignNVG};
+    _standard = if (isArray (_config >> "standardItems")) then { getArray (_config >> "standardItems");} else {_standard};
+    _miscEquip = if (isArray (_config >> "miscEquipment")) then { getArray (_config >> "miscEquipment");} else {_miscEquip};
+    _bino = if (isArray (_config >> "binoculars")) then { getArray (_config >> "binoculars");} else {_bino};
 
     _uniformMagazines = if (isArray (_config >> "uniformMagazines")) then { getArray (_config >> "uniformMagazines");} else {_uniformMagazines};
     _vestMagazines = if (isArray (_config >> "vestMagazines")) then { getArray (_config >> "vestMagazines");} else {_vestMagazines};
@@ -82,9 +88,9 @@ if (isText (missionConfigFile >> "LSR_gearManagement" >> "modifiers" >> "uniform
 };
 if (isText (configFile >> "LSR_gearManagement" >> "roles" >> _role >> "uniformModifier")) then {
     _uniformModifier = getText (configFile >> "LSR_gearManagement" >> "roles" >> _role >> "uniformModifier");
-    if (isText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "uniformModifier")) then {
-        _uniformModifier = getText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "uniformModifier");
-    };
+};
+if (isText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "uniformModifier")) then {
+    _uniformModifier = getText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "uniformModifier");
 };
 
 {
@@ -101,25 +107,63 @@ if (isText (missionConfigFile >> "LSR_gearManagement" >> "modifiers" >> "weapon"
 };
 if (isText (configFile >> "LSR_gearManagement" >> "roles" >> _role >> "weaponModifier")) then {
     _weaponModifier = getText (configFile >> "LSR_gearManagement" >> "roles" >> _role >> "weaponModifier");
-    if (isText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "weaponModifier")) then {
-        _weaponModifier = getText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "weaponModifier");
-    };
+};
+if (isText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "weaponModifier")) then {
+    _weaponModifier = getText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "weaponModifier");
 };
 
 {
     private "_classname";
     _classname = [_x, "[type]", _weaponModifier] call CBA_fnc_replace;
-    _primairyWeapon set [_forEachIndex, _classname];
-}foreach _primairyWeapon;
+    _primaryWeapon set [_forEachIndex, _classname];
+}foreach _primaryWeapon;
+{
+    private "_classname";
+    _classname = [_x, "[type]", _weaponModifier] call CBA_fnc_replace;
+    _secondiaryWeapon set [_forEachIndex, _classname];
+}foreach _secondiaryWeapon;
 
+
+// magazine modifications
+private "_magModifier";
+_magModifier = getText (configfile >> "LSR_gearManagement" >> "modifiers" >> "magazine");
+if (isText (missionConfigFile >> "LSR_gearManagement" >> "modifiers" >> "magazine")) then {
+    _magModifier = getText (missionConfigFile >> "LSR_gearManagement" >> "modifiers" >> "magazine");
+};
+if (isText (configFile >> "LSR_gearManagement" >> "roles" >> _role >> "magazineModifier")) then {
+    _magModifier = getText (configFile >> "LSR_gearManagement" >> "roles" >> _role >> "magazineModifier");
+};
+if (isText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "magazineModifier")) then {
+    _magModifier = getText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "magazineModifier");
+};
+
+{
+    private "_classname";
+    _classname = [_x select 0, "[type]", _magModifier] call CBA_fnc_replace;
+    _classname = [_classname, _x select 1];
+    _uniformMagazines set [_forEachIndex, _classname];
+}foreach _uniformMagazines;
+{
+    private "_classname";
+    _classname = [_x select 0, "[type]", _magModifier] call CBA_fnc_replace;
+    _classname = [_classname, _x select 1];
+    _vestMagazines set [_forEachIndex, _classname];
+}foreach _vestMagazines;
+
+{
+    private "_classname";
+    _classname = [_x select 0, "[type]", _magModifier] call CBA_fnc_replace;
+    _classname = [_classname, _x select 1];
+    _backpackMagazines set [_forEachIndex, _classname];
+}foreach _backpackMagazines;
 
 // misc data
-_primaryWeaponData = [_primairyWeapon, _primairyWeaponItems];
+_primaryWeaponData = [_primaryWeapon, _primaryWeaponItems];
 _secondiaryWeaponData = [_secondiaryWeapon, _secondiaryWeaponItems];
 _pistolData = [_pistolWeapon, _pistolWeaponItems];
 _uniformData = [_uniform, _uniformItems, _uniformMagazines];
 _vestData = [_vest, _vestItems, _vestMagazines];
 _backpackData = [_backpack, _backpackItems, _backpackMagazines];
-_miscData = [_nvg, _assignNVG, _goggles, _helmet];
+_miscData = [_nvg, _assignNVG, _goggles, _helmet, _standard, _miscEquip + _bino];
 
 [_primaryWeaponData, _secondiaryWeaponData, _pistolData, _uniformData, _vestData, _backpackData, _miscData];
