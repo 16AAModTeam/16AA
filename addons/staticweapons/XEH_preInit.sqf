@@ -4,6 +4,7 @@ ADDON = false;
 
 PREP(pickup);
 PREP(place);
+PREP(placeTimer);
 PREP(adjustHeight);
 PREP(assemble);
 PREP(disassemble);

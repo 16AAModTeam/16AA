@@ -9,7 +9,7 @@ class CfgVehicles
                     //displayName = CSTRING(Placedown);
                     displayName = "Place Tripod";
                     condition = QUOTE([ARR_2(_player,'16aa_tripod')] call ace_common_fnc_hasItem);
-                    statement = QUOTE([ARR_3(_player,'16aa_tripod','16aa_tripod_low')] call FUNC(place));
+                    statement = QUOTE([ARR_3(_player,'16aa_tripod','16aa_tripod_low')] call FUNC(placeTimer));
                     showDisabled = 0;
                     priority = 2;
                     icon = PATHTOF(UI\w_tripod_ca.paa);
@@ -18,7 +18,7 @@ class CfgVehicles
                     //displayName = CSTRING(Placedown);
                     displayName = "Place Base Plate";
                     condition = QUOTE([ARR_2(_player,'16aa_static_item_l16_baseplate')] call ace_common_fnc_hasItem);
-                    statement = QUOTE([ARR_3(_player,'16aa_static_item_l16_baseplate','16aa_l16_baseplate_deployed')] call FUNC(place));
+                    statement = QUOTE([ARR_3(_player,'16aa_static_item_l16_baseplate','16aa_l16_baseplate_deployed')] call FUNC(placeTimer));
                     showDisabled = 0;
                     priority = 2;
                     icon = PATHTOF(UI\w_l16_baseplate_ca.paa);

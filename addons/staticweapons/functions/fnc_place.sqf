@@ -5,7 +5,8 @@ Place down tripod
 
 Arguments:
 0: unit <OBJECT>
-1: tripod class <STRING>
+1: item <STRING>
+2: tripod <STRING>
 
 Return Value:
 Nothing
