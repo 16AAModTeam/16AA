@@ -13,4 +13,10 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
-#include "ACE_Settings.hpp"
+
+class ACE_Settings {
+    class GVAR(auto_add_objects) {
+        value = 1;
+        typeName = "BOOL";
+    };
+};

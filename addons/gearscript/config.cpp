@@ -13,3 +13,10 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+
+class ACE_Settings {
+    class GVAR(useBaseRoleAsDefault) {
+        value = 1;
+        typeName = "BOOL";
+    };
+};
