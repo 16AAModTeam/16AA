@@ -1,1 +1,1 @@
-#include "\z\ace\addons\tripod\script_component.hpp"
+#include "\z\ace\addons\staticweapons\script_component.hpp"
