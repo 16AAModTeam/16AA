@@ -1,1 +1,1 @@
-#include "\z\ace\addons\staticweapons\script_component.hpp"
+#include "\z\lsr\addons\staticweapons\script_component.hpp"
