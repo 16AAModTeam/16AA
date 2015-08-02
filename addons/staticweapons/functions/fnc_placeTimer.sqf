@@ -18,7 +18,8 @@ Return value:
 
 PARAMS_3(_unit,_tripodClass,_objectClass);
 
-_name = configName(configFile >> "CfgVehicles" >> _objectClass >> "displayName");
-_progressText = format["Assembling: %1",_name];
+private ["_name", "_progressText"];
+_name = getText (configFile >> "CfgVehicles" >> _objectClass >> "displayName");
+_progressText = format["Assembling: %1", _name];
 
-[5, [_unit,_tripodClass,_objectClass], {(_this select 0) call FUNC(place)}, {},_progressText] call ace_common_fnc_progressBar;
+[5, [_unit,_tripodClass,_objectClass], {(_this select 0) call FUNC(place);}, {}, _progressText] call ace_common_fnc_progressBar;
