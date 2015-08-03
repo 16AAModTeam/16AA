@@ -8,7 +8,7 @@ class CfgVehicles
                     //displayName = CSTRING(Placedown);
                     displayName = "Deploy Basher - Small";
                     condition = QUOTE([ARR_2(_player,'16aa_basha_roll_item')] call ace_common_fnc_hasItem);
-                    statement = QUOTE([ARR_3(_player,'16aa_basha_roll_item','16aa_Basha_Small')] call lsr_staticweapons_fnc_place);
+                    statement = QUOTE([ARR_3(_player,'16aa_basha_roll_item','16aa_Basha_Small')] call lsr_staticweapons_fnc_placeTimer);
                     showDisabled = 0;
                     priority = 2;
                     picture = "\16aa_tents\icon\Small.paa";
@@ -17,7 +17,7 @@ class CfgVehicles
                     //displayName = CSTRING(Placedown);
                     displayName = "Deploy Basher - Large";
                     condition = QUOTE([ARR_2(_player,'16aa_basha_roll_item')] call ace_common_fnc_hasItem);
-                    statement = QUOTE([ARR_3(_player,'16aa_basha_roll_item','16aa_Basha_Large')] call lsr_staticweapons_fnc_place);
+                    statement = QUOTE([ARR_3(_player,'16aa_basha_roll_item','16aa_Basha_Large')] call lsr_staticweapons_fnc_placeTimer);
                     showDisabled = 0;
                     priority = 2;
                     picture = "\16aa_tents\icon\Large.paa";
@@ -56,7 +56,7 @@ class CfgVehicles
                     displayName = "Disassemble Basha";
                     distance = 5;
                     condition = "true";
-                    statement = QUOTE([ARR_3(_target,_player,'16aa_basha_roll_item')] call lsr_staticweapons_fnc_pickup);
+                    statement = QUOTE([ARR_3(_target,_player,'16aa_basha_roll_item')] call lsr_staticweapons_fnc_pickupTimer);
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
@@ -80,7 +80,7 @@ class CfgVehicles
                     displayName = "Disassemble Basha";
                     distance = 5;
                     condition = "true";
-                    statement = QUOTE([ARR_3(_target,_player,'16aa_basha_roll_item')] call lsr_staticweapons_fnc_pickup);
+                    statement = QUOTE([ARR_3(_target,_player,'16aa_basha_roll_item')] call lsr_staticweapons_fnc_pickupTimer);
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 4;
