@@ -28,4 +28,4 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call ace_common_fnc_doAnimation;
 };
 
-[10, [_staticOld,_unit,_staticNewClass,_staticItems], {(_this select 0) call FUNC(disassemble);}, {}, _progressText] call ace_common_fnc_progressBar;
+[15, [_staticOld,_unit,_staticNewClass,_staticItems], {(_this select 0) call FUNC(disassemble);}, {}, _progressText] call ace_common_fnc_progressBar;
