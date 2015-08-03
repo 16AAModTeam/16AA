@@ -16,14 +16,16 @@ Return value:
 */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_tripodClass,_objectClass);
+PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItems);
 
 private ["_name", "_progressText"];
-_name = getText (configFile >> "CfgVehicles" >> _objectClass >> "displayName");
-_progressText = format["Assembling: %1", _name];
+
+//_name = getText (configFile >> "CfgVehicles" >> _staticOld >> "displayName");
+_name  = "Static Weapon";
+_progressText = format["Disassembling %1", _name];
 
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call ace_common_fnc_doAnimation;
 };
 
-[10, [_unit,_tripodClass,_objectClass], {(_this select 0) call FUNC(place);}, {}, _progressText] call ace_common_fnc_progressBar;
+[10, [_staticOld,_unit,_staticNewClass,_staticItems], {(_this select 0) call FUNC(disassemble);}, {}, _progressText] call ace_common_fnc_progressBar;

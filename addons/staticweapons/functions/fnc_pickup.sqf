@@ -18,10 +18,6 @@ None
 
 PARAMS_3(_tripod,_unit,_staticItem);
 
-if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
-    _unit playMove "AmovPercMstpSrasWrflDnon_diary";
-};
-
 [{
     PARAMS_3(_tripod,_unit,_staticItem);
 

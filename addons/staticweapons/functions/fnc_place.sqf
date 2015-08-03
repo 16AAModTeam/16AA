@@ -19,9 +19,6 @@ Return value:
 PARAMS_3(_unit,_tripodClass,_objectClass);
 
 _unit removeItem _tripodClass;
-if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
-    _unit playMove "AmovPercMstpSrasWrflDnon_diary";
-};
 
 [{
     PARAMS_2(_unit,_objectClass);

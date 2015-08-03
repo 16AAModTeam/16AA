@@ -18,10 +18,6 @@ Return value:
 #include "script_component.hpp"
 
 PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItems);
-//TODO Add progress bar / delay to make it more realistic
-if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
-    _unit playMove "AmovPercMstpSrasWrflDnon_diary";
-};
 
 [{
     PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItems);

@@ -18,8 +18,6 @@ Return value:
 #include "script_component.hpp"
 
 PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItem);
-//TODO Add progress Bar / Delay to stop issue where weapon is spawned too quickly and flips in the air
-
 
 _staticItemType = [_staticItem] call ace_common_fnc_getWeaponType;
 /* Debug stuff
@@ -30,11 +28,6 @@ if (_staticItemtype == -1) then {
     _unit removeItem _staticItem;
 } else{
     _unit removeWeapon _staticItem;
-};
-
-
-if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
-    _unit playMove "AmovPercMstpSrasWrflDnon_diary";
 };
 
 [{

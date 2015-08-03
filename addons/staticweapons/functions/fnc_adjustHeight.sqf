@@ -19,13 +19,6 @@ Return value:
 
 PARAMS_3(_staticOld,_staticNewClass,_unit);
 
-if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
-    [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call ace_common_fnc_doAnimation;
-};
-
-// TODO kick out anyone inside the static weapon
-// TODO lock the static weapon
-
 [{
     PARAMS_3(_staticOld,_staticNewClass,_unit);
 
