@@ -681,7 +681,7 @@ class CfgVehicles
                     exceptions[] = {};
                     priority = 6;
                     icon = PATHTOF(UI\w_tripod_ca.paa);
-                };
+                };     
             };
         };
     };
