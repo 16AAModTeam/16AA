@@ -22,11 +22,20 @@ class CfgVehicles
                     priority = 2;
                     picture = "\16aa_tents\icon\Large.paa";
                 };
-                class GVAR(place_tent_medical) {
+                class GVAR(place_tent_medical_small) {
                     //displayName = CSTRING(Placedown);
-                    displayName = "Deploy Tent - Medical";
-                    condition = QUOTE([ARR_2(_player,'16aa_tent_medical_roll_item')] call ace_common_fnc_hasItem);
-                    statement = QUOTE([ARR_3(_player,'16aa_tent_medical_roll_item','16aa_tent_medical_small')] call lsr_staticweapons_fnc_placeTimer);
+                    displayName = "Deploy Tent - Medical (Small)";
+                    condition = QUOTE([ARR_2(_player,'16aa_tent_medical_roll_small_item')] call ace_common_fnc_hasItem);
+                    statement = QUOTE([ARR_3(_player,'16aa_tent_medical_roll_small_item','16aa_tent_medical_small')] call lsr_staticweapons_fnc_placeTimer);
+                    showDisabled = 0;
+                    priority = 2;
+                    picture = "\16aa_tents\icon\Large.paa";
+                };
+                class GVAR(place_tent_medical_medium) {
+                    //displayName = CSTRING(Placedown);
+                    displayName = "Deploy Tent - Medical (Medium)";
+                    condition = QUOTE([ARR_2(_player,'16aa_tent_medical_roll_medium_item')] call ace_common_fnc_hasItem);
+                    statement = QUOTE([ARR_3(_player,'16aa_tent_medical_roll_medium_item','16aa_tent_medical_medium')] call lsr_staticweapons_fnc_placeTimer);
                     showDisabled = 0;
                     priority = 2;
                     picture = "\16aa_tents\icon\Large.paa";
@@ -124,13 +133,52 @@ class CfgVehicles
                 displayName = "Interact";
                 class 16aa_Pickup_Tent_Medical {
                     selection = "";
-                    displayName = "Disassemble Tent - Medical";
+                    displayName = "Disassemble Tent - Medical (Small)";
                     distance = 5;
                     condition = "true";
-                    statement = QUOTE([ARR_3(_target,_player,'16aa_tent_medical_roll_item')] call lsr_staticweapons_fnc_pickupTimer);
+                    statement = QUOTE([ARR_3(_target,_player,'16aa_tent_medical_roll_small_item')] call lsr_staticweapons_fnc_pickupTimer);
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 4;
+                };
+            };
+        };
+        class Extended_Init_EventHandlers {
+            class 16aa_Tent_MedicalFacility {
+                class ADDON {
+                    init = QUOTE(_this setvariable ["ace_medical_isMedicalFacility",true]);
+                };
+            };
+        };
+    };
+    class 16aa_tent_medical_medium: ReammoBox_F
+    {
+        ace_dragging_canDrag = 0;
+        ace_dragging_dragPosition[] = {0,2.5,0};
+        ace_dragging_dragDirection = 0;
+        ace_dragging_canCarry = 0;
+        class ACE_Actions {
+            class ACE_MainActions {
+                selection = "interact";
+                distance = 5;
+                condition = "true";
+                displayName = "Interact";
+                class 16aa_Pickup_Tent_Medical_Medium {
+                    selection = "";
+                    displayName = "Disassemble Tent - Medical (Medium)";
+                    distance = 5;
+                    condition = "true";
+                    statement = QUOTE([ARR_3(_target,_player,'16aa_tent_medical_roll_medium_item')] call lsr_staticweapons_fnc_pickupTimer);
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 4;
+                };
+            };
+        };
+        class Extended_Init_EventHandlers {
+            class 16aa_Tent_MedicalFacility {
+                class ADDON {
+                    init = QUOTE(_this setvariable ["ace_medical_isMedicalFacility",true]);
                 };
             };
         };
