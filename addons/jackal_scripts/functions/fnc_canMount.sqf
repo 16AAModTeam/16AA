@@ -18,9 +18,11 @@ None
 PARAMS_2(_vehicle,_unit);
 private "_canMount,_commandersGun";
 _canMount = false;
-_commandersGun = (_vehicle weaponsTurret [0]) select 0;
+_commandersGun = getObjectTextures _vehicle;
 
-if(('16aa_l7a2' in (weapons _unit)) && (_commandersGun == 'SmokeLauncher'))then {
+if(('16aa_l7a2' in (weapons _unit)) && ( _vehicle getVariable [QGVAR(hasGPMG),true]) )then {
 	_canMount = true;
 };
 _canMount
+
+

@@ -26,6 +26,8 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
 
     _unit removeWeapon '16aa_l7a2';
 
+    _vehicle setvariable [QGVAR(hasGPMG), true, true];
+
     _vehicle addWeaponTurret ["16aa_GPMG_veh",[0]];
 
 	_vehicle setObjectTextureGlobal [3, "16aa_vehicles_common\weapons\gpmg\m240_co.paa"];

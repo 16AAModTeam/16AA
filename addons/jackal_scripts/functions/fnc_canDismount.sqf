@@ -17,10 +17,10 @@ None
 
 PARAMS_2(_vehicle,_unit);
 private "_canDismount,_commandersGun";
-_canDismount = true;
-_commandersGun = (_vehicle weaponsTurret [0]) select 0;
+_canDismount = false;
+_commandersGun = getObjectTextures _vehicle;
 
-if(_commandersGun == '16aa_GPMG_veh')then {
-	_canDismount = false;
+if(_vehicle getVariable [QGVAR(hasGPMG),true])then {
+	_canDismount = true;
 };
 _canDismount
