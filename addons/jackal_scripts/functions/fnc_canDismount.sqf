@@ -16,12 +16,11 @@ None
 #include "script_component.hpp"
 
 PARAMS_2(_vehicle,_unit);
-private "_canDismount,_gpmgTexture";
+private "_canDismount,_commandersGun";
 _canDismount = true;
+_commandersGun = (_vehicle weaponsTurret [0]) select 0;
 
-_gpmgTexture = (getObjectTextures _vehicle) select 3;
-
-if(_gpmgTexture == "")then {
+if(_commandersGun == '16aa_GPMG_veh')then {
 	_canDismount = false;
 };
 _canDismount
