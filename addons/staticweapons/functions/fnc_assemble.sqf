@@ -39,6 +39,33 @@ if (_staticItemtype == -1) then {
     _staticNew setPosASL _position;
     _staticNew setDir _direction;
 
+    switch (_staticNewClass) do{
+        case "16aa_L2A1_Static_Base": {
+             _staticNew setvariable [QGVAR(hasBarrel), false, true];
+             _staticNew lockTurret [[0], true];
+        };
+        case "16aa_L2A1_Static_Base_middle": {
+             _staticNew setvariable [QGVAR(hasBarrel), false, true];
+             _staticNew lockTurret [[0], true];
+        };
+        case "16aa_L2A1_Static_Base_raised": {
+             _staticNew setvariable [QGVAR(hasBarrel), false, true];
+             _staticNew lockTurret [[0], true];
+        };
+        case "16aa_GMG_Static_Base": {
+             _staticNew setvariable [QGVAR(hasBarrel), false, true];
+             _staticNew lockTurret [[0], true];
+        };
+        case "16aa_GMG_Static_Base_middle": {
+             _staticNew setvariable [QGVAR(hasBarrel), false, true];
+             _staticNew lockTurret [[0], true];
+        };
+        case "16aa_GMG_Static_Base_raised": {
+             _staticNew setvariable [QGVAR(hasBarrel), false, true];
+             _staticNew lockTurret [[0], true];
+        };
+    };
+
     if ((getPosATL _staticNew select 2) - (getPos _staticNew select 2) < 1E-5) then {
         _staticNew setVectorUp (surfaceNormal (position _staticNew));
     };

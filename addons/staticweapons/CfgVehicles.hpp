@@ -258,9 +258,9 @@ class CfgVehicles
     class 16AA_crate_csw : 16aa_crate_empty_csw {
         class TransportItems {
             MACRO_ADDITEM(16aa_tripod,45);
-            //MACRO_ADDITEM(16aa_static_item_l2a1_barrel,5);
+            MACRO_ADDITEM(16aa_static_item_l2a1_barrel,15);
             MACRO_ADDITEM(16aa_static_item_l2a1_receiver,15);
-            //MACRO_ADDITEM(16aa_static_item_gmg_barrel,5);
+            MACRO_ADDITEM(16aa_static_item_gmg_barrel,15);
             MACRO_ADDITEM(16aa_static_item_gmg_receiver,15);
             MACRO_ADDITEM(16aa_static_item_l16_baseplate,15);
             //MACRO_ADDITEM(16aa_static_item_l16_bipod,5);
@@ -538,7 +538,7 @@ class CfgVehicles
                 class 16aa_Disassemble{
                     distance = 5;
                     displayName = "Disassemble L2A1";
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canDisassemble));
                     statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_low',['16aa_static_item_l2a1_receiver'])] call FUNC(disassembleTimer));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -546,6 +546,26 @@ class CfgVehicles
                     icon = PATHTOF(UI\w_tripod_ca.paa);
                 };
             };
+                class 16aa_Barrel_Mount{
+                    distance = 5;
+                    selection = "barrel_memory";
+                    displayName = "Attach Barrel";
+                    condition = QUOTE([ARR_3(_target,_player,'16aa_static_item_l2a1_barrel')] call FUNC(canMountBarrel));
+                    statement = QUOTE([ARR_3(_target,_player,'16aa_static_item_l2a1_barrel')] call FUNC(mountBarrelTimer));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 7;
+                };
+                class 16aa_Barrel_Dismount{
+                    distance = 5;
+                    selection = "barrel_memory";
+                    displayName = "Detatch Barrel";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canDismountBarrel));
+                    statement = QUOTE([ARR_3(_target,_player,'16aa_static_item_l2a1_barrel')] call FUNC(dismountBarrelTimer));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 68;
+                };
         };
     };
     class 16aa_L2A1_Static_Base_middle: 16aa_L2A1_Static_Base{
@@ -606,7 +626,7 @@ class CfgVehicles
                 class 16aa_Disassemble_GMG{
                     distance = 5;
                     displayName = "Disassemble L134A1";
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canDisassemble));
                     statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_low',['16aa_static_item_gmg_receiver'])] call FUNC(disassembleTimer));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -614,6 +634,26 @@ class CfgVehicles
                     icon = PATHTOF(UI\w_tripod_ca.paa);
                 };
             };
+                class 16aa_Barrel_Mount{
+                    distance = 5;
+                    selection = "barrel_memory";
+                    displayName = "Attach Barrel";
+                    condition = QUOTE([ARR_3(_target,_player,'16aa_static_item_gmg_barrel')] call FUNC(canMountBarrel));
+                    statement = QUOTE([ARR_3(_target,_player,'16aa_static_item_gmg_barrel')] call FUNC(mountBarrelTimer));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 7;
+                };
+                class 16aa_Barrel_Dismount{
+                    distance = 5;
+                    selection = "barrel_memory";
+                    displayName = "Detatch Barrel";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canDismountBarrel));
+                    statement = QUOTE([ARR_3(_target,_player,'16aa_static_item_gmg_barrel')] call FUNC(dismountBarrelTimer));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 8;
+                };
         };
     };
     class 16aa_GMG_Static_Base_middle: 16aa_GMG_Static_Base{
@@ -681,7 +721,7 @@ class CfgVehicles
                     exceptions[] = {};
                     priority = 6;
                     icon = PATHTOF(UI\w_tripod_ca.paa);
-                };     
+                };
             };
         };
     };

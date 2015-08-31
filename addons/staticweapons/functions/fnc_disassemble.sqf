@@ -9,9 +9,6 @@ Arguments:
 2: staticNewClass <STRING>
 3: staticItems <ARRAY>
 
-Return Value:
-Nothing
-
 Return value:
  None
 */
