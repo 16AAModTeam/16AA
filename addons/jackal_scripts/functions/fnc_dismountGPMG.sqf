@@ -17,6 +17,10 @@ None
 
 params["_vehicle","_unit"];
 
+if !([_vehicle, _unit] call FUNC(canDismount)) exitwith {};
+
+_vehicle setvariable [QGVAR(hasGPMG), false, true];
+
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     _unit playMove "AmovPercMstpSrasWrflDnon_diary";
 };
@@ -25,8 +29,6 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     params["_vehicle","_unit"];
 
     ["16aa_jackals_setWeaponTurretGPMG", [_vehicle, false]] call ace_common_fnc_globalEvent;
-
-    _vehicle setvariable [QGVAR(hasGPMG), false, true];
 
     _pos = _unit modelToWorldVisual [0,1,0.05];
     _unit = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
