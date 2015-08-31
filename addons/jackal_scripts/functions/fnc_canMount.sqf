@@ -15,12 +15,12 @@ None
 */
 #include "script_component.hpp"
 
-PARAMS_2(_vehicle,_unit);
+params["_vehicle","_unit"];
 private "_canMount,_commandersGun";
 _canMount = false;
 _commandersGun = getObjectTextures _vehicle;
 
-if(('16aa_l7a2' in (weapons _unit)) && ( _vehicle getVariable [QGVAR(hasGPMG),true]) )then {
+if(('16aa_l7a2' in (weapons _unit)) && !( _vehicle getVariable [QGVAR(hasGPMG),true]) )then {
 	_canMount = true;
 };
 _canMount

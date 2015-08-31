@@ -15,7 +15,7 @@ None
 */
 #include "script_component.hpp"
 
-PARAMS_2(_vehicle,_unit);
+params["_vehicle","_unit"];
 private "_vehicle_debug,_cammandersGun";
 _cammandersGun = (_vehicle weaponsTurret [0]) select 0;
 

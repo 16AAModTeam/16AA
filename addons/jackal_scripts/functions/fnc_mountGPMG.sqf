@@ -15,20 +15,20 @@ None
 */
 #include "script_component.hpp"
 
-PARAMS_2(_vehicle,_unit);
+params["_vehicle","_unit"];
 
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     _unit playMove "AmovPercMstpSrasWrflDnon_diary";
 };
 
 [{
-    PARAMS_2(_vehicle,_unit);
+    params["_vehicle","_unit"];
 
     _unit removeWeapon '16aa_l7a2';
 
     _vehicle setvariable [QGVAR(hasGPMG), true, true];
 
-    _vehicle addWeaponTurret ["16aa_GPMG_veh",[0]];
+    ["16aa_jackals_setWeaponTurretGPMG", [_vehicle, true]] call ace_common_fnc_globalEvent;
 
 	_vehicle setObjectTextureGlobal [3, "16aa_vehicles_common\weapons\gpmg\m240_co.paa"];
 

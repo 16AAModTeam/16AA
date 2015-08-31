@@ -15,7 +15,7 @@ None
 */
 #include "script_component.hpp"
 
-PARAMS_2(_vehicle,_unit);
+params["_vehicle","_unit"];
 private "_canDismount,_commandersGun";
 _canDismount = false;
 _commandersGun = getObjectTextures _vehicle;
