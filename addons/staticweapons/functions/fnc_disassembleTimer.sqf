@@ -16,8 +16,7 @@ Return value:
 */
 #include "script_component.hpp"
 
-PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItems);
-
+params["_staticOld","_unit","_staticNewClass","_staticItems"];
 private ["_name", "_progressText"];
 
 //_name = getText (configFile >> "CfgVehicles" >> _staticOld >> "displayName");

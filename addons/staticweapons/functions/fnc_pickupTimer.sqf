@@ -16,7 +16,7 @@ Return value:
 */
 #include "script_component.hpp"
 
-PARAMS_3(_tripod,_unit,_staticItem);
+params["_tripod","_unit","_staticItem"];
 
 private ["_name", "_progressText"];
 //_name = getText (configFile >> "CfgVehicles" >> _tripod >> "displayName");

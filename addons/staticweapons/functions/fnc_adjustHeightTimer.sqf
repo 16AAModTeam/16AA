@@ -16,7 +16,7 @@ Return value:
 */
 #include "script_component.hpp"
 
-PARAMS_3(_staticOld,_staticNewClass,_unit);
+params["_staticOld","_staticNewClass","_unit"];
 
 private ["_name", "_progressText"];
 

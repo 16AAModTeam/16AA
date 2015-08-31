@@ -17,13 +17,10 @@ Return value:
 */
 #include "script_component.hpp"
 
-PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItem);
+params["_staticOld","_unit","_staticNewClass","_staticItem"];
 
 _staticItemType = [_staticItem] call ace_common_fnc_getWeaponType;
-/* Debug stuff
-_debugText = format["Weapon Type: %1",_staticItemType];
-hint _debugText;
-*/
+
 if (_staticItemtype == -1) then {
     _unit removeItem _staticItem;
 } else{
@@ -31,7 +28,7 @@ if (_staticItemtype == -1) then {
 };
 
 [{
-    PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItem);
+    params["_staticOld","_unit","_staticNewClass","_staticItem"];
 
      private ["_direction", "_position"];
     _direction = getDir _staticOld;

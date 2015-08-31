@@ -16,12 +16,11 @@ Return value:
 */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_tripodClass,_objectClass);
-
+params["_unit","_tripodClass","_objectClass"];
 _unit removeItem _tripodClass;
 
 [{
-    PARAMS_2(_unit,_objectClass);
+    params["_unit","_objectClass"];
 
     private ["_direction", "_position", "_tripod"];
     _direction = getDir _unit;

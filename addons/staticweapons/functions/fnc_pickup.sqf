@@ -16,10 +16,9 @@ None
 */
 #include "script_component.hpp"
 
-PARAMS_3(_tripod,_unit,_staticItem);
-
+params["_tripod","_unit","_staticItem"];
 [{
-    PARAMS_3(_tripod,_unit,_staticItem);
+    params["_tripod","_unit","_staticItem"];
 
     [_unit, _staticItem] call ace_common_fnc_addToInventory;
     deleteVehicle _tripod;
