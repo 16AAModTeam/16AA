@@ -17,11 +17,12 @@ Return value:
 #include "script_component.hpp"
 
 params["_staticOld","_unit","_staticNewClass","_staticItems"];
-private ["_name", "_progressText"];
+private ["_name", "_progressText","_objectClassName"];
 
-//_name = getText (configFile >> "CfgVehicles" >> _staticOld >> "displayName");
-_name  = "Static Weapon";
-_progressText = format["Disassembling %1", _name];
+_objectClassName = typeOf _staticOld;
+_name = getText (configFile >> "CfgVehicles" >> _objectClassName >> "displayName");
+
+_progressText = format["Disassembling: %1", _name];
 
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call ace_common_fnc_doAnimation;

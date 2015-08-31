@@ -17,11 +17,12 @@ Return value:
 #include "script_component.hpp"
 
 params["_tripod","_unit","_staticItem"];
+private ["_name", "_progressText","_objectClassName"];
 
-private ["_name", "_progressText"];
-//_name = getText (configFile >> "CfgVehicles" >> _tripod >> "displayName");
-_name  = "Static Weapon";
-_progressText = format["Picking Up %1", _name];
+_objectClassName = typeOf _tripod;
+_name = getText (configFile >> "CfgVehicles" >> _objectClassName >> "displayName");
+
+_progressText = format["Disassembling: %1", _name];
 
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call ace_common_fnc_doAnimation;
