@@ -9,7 +9,7 @@ Arguments:
 
 Return Value:
 nothing
-QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazine))
+
 */
 #include "script_component.hpp"
 

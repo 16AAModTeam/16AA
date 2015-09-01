@@ -562,7 +562,7 @@ class CfgVehicles
                         exceptions[] = {};
                         priority = 6;
                     };
-                     class 16aa_Static_UnloadMagazine{
+                     class 16aa_UnloadMagazine{
                         distance = 5;
                         displayName = "Unload Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
