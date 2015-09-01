@@ -26,6 +26,10 @@ PREP(canDismountBarrel);
 PREP(dismountBarrel);
 PREP(dismountBarrelTimer);
 
+PREP(canLoadMagazine);
+PREP(loadMagazine);
 
+PREP(canUnloadMagazine);
+PREP(unloadMagazine);
 
 ADDON = true;
