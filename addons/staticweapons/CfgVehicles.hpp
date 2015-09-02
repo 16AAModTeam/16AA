@@ -545,35 +545,35 @@ class CfgVehicles
                     priority = 6;
                     icon = PATHTOF(UI\w_tripod_ca.paa);
                 };
+            };
                 class 16aa_Magazines_Category{
-                    distance = 5;
+                    distance = 2;
+                    selection = "magazine";
                     displayName = "Magazine";
                     condition = true;
                     statement = "";
                     showDisabled = 0;
                     exceptions[] = {};
-                    priority = 6;
+                    priority = 7;
                     class 16aa_LoadMagazine{
-                        distance = 5;
+                        distance = 2;
                         displayName = "Load Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
                         statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazine));
                         showDisabled = 0;
                         exceptions[] = {};
-                        priority = 6;
+                        priority = 8;
                     };
                      class 16aa_UnloadMagazine{
-                        distance = 5;
+                        distance = 2;
                         displayName = "Unload Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
                         statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazine));
                         showDisabled = 0;
                         exceptions[] = {};
-                        priority = 2;
+                        priority = 9;
                     };
                 };
-
-            };
                 class 16aa_Barrel_Mount{
                     distance = 2;
                     selection = "barrel_memory";
@@ -582,7 +582,7 @@ class CfgVehicles
                     statement = QUOTE([ARR_3(_target,_player,'16aa_static_item_l2a1_barrel')] call FUNC(mountBarrelTimer));
                     showDisabled = 0;
                     exceptions[] = {};
-                    priority = 7;
+                    priority = 10;
                 };
                 class 16aa_Barrel_Dismount{
                     distance = 2;
@@ -592,7 +592,7 @@ class CfgVehicles
                     statement = QUOTE([ARR_3(_target,_player,'16aa_static_item_l2a1_barrel')] call FUNC(dismountBarrelTimer));
                     showDisabled = 0;
                     exceptions[] = {};
-                    priority = 8;
+                    priority = 11;
                 };
         };
     };
