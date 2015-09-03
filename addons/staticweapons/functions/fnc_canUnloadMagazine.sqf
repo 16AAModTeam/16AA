@@ -16,10 +16,11 @@ canUnloadMagazine - True/False
 params["_static","_unit"];
 private "_canUnloadMagazine,_hasBarrel";
 
-_canUnloadMagazinee = false;
+_canUnloadMagazine = false;
 _hasBarrel = _static getVariable [QGVAR(hasBarrel),true];
 
 if (((count (_static magazinesTurret [0])) > 0) &&  _hasBarrel) then {
 	_canUnloadMagazine = true;
 };
+
 _canUnloadMagazine

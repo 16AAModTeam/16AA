@@ -16,7 +16,7 @@ params["_static","_unit"];
 private "_canDismount";
 
 _canDismount = false;
-if((_static getVariable [QGVAR(hasBarrel),true]) && (alive _static))then {
+if((_static getVariable [QGVAR(hasBarrel),true]) && (alive _static) && ((count (_static magazinesTurret [0])) == 0) )then {
     _canDismount = true;
 };
 _canDismount

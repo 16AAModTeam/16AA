@@ -8,6 +8,7 @@ PREP(pickupTimer);
 PREP(place);
 PREP(placeTimer);
 
+PREP(canAdjustHeight);
 PREP(adjustHeight);
 PREP(adjustHeightTimer);
 

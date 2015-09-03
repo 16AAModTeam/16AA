@@ -256,8 +256,11 @@ class CfgVehicles
     class StaticMGWeapon : StaticWeapon {};
     class 16aa_crate_empty_csw;
     class 16AA_crate_csw : 16aa_crate_empty_csw {
+        class TransportWeapons {
+            MACRO_ADDWEAPON(16aa_javelin_launcher,15);
+        };
         class TransportItems {
-            MACRO_ADDITEM(16aa_tripod,45);
+            MACRO_ADDITEM(16aa_tripod,60);
             MACRO_ADDITEM(16aa_static_item_l2a1_barrel,15);
             MACRO_ADDITEM(16aa_static_item_l2a1_receiver,15);
             MACRO_ADDITEM(16aa_static_item_gmg_barrel,15);
@@ -268,9 +271,10 @@ class CfgVehicles
         };
         class TransportMagazines{
             MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_50cal,50);
-            /*
             MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_762,50);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_40mm,50};
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_40mm,50);
+            MACRO_ADDMAGAZINE(16aa_javelin_m,50);
+            /*
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_he,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_illum,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_white,50);
@@ -523,12 +527,13 @@ class CfgVehicles
 
     //L2A1
     class 16aa_L2A1_Static_Base : StaticMGWeapon {
+        GVAR(enableBarrel) = 1;
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class 16aa_AdjustHeightUp_L2A1{
                     displayName = "Raise Tripod";
                     distance = 5;
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_L2A1_Static_Base_middle',_player)] call FUNC(adjustHeightTimer));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -597,12 +602,13 @@ class CfgVehicles
         };
     };
     class 16aa_L2A1_Static_Base_middle: 16aa_L2A1_Static_Base{
+        GVAR(enableBarrel) = 1;
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class 16aa_AdjustHeightUp_L2A1{
                     displayName = "Raise Tripod";
                     distance = 5;
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_L2A1_Static_Base_raised',_player)] call FUNC(adjustHeightTimer));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -620,6 +626,7 @@ class CfgVehicles
         };
     };
     class 16aa_L2A1_Static_Base_raised: 16aa_L2A1_Static_Base{
+        GVAR(enableBarrel) = 1;
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class 16aa_AdjustHeightUp_L2A1{
@@ -627,7 +634,7 @@ class CfgVehicles
                 };
                 class 16aa_AdjustHeightUp_L2A1_Down: 16aa_AdjustHeightUp_L2A1{
                     displayName = "Lower Tripod";
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_L2A1_Static_Base_middle',_player)] call FUNC(adjustHeightTimer));
                 };
                 class 16aa_Disassemble: 16aa_Disassemble{
@@ -638,13 +645,14 @@ class CfgVehicles
     };
     //GMG
     class 16aa_GMG_Static_Base : StaticMGWeapon {
+        GVAR(enableBarrel) = 1;
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class 16aa_AdjustHeightUp_GMG {
                     selection = "";
                     displayName = "Raise Tripod";
                     distance = 5;
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_GMG_Static_Base_middle',_player)] call FUNC(adjustHeightTimer));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -662,6 +670,34 @@ class CfgVehicles
                     icon = PATHTOF(UI\w_tripod_ca.paa);
                 };
             };
+                class 16aa_Magazines_Category{
+                    distance = 2;
+                    selection = "magazine";
+                    displayName = "Magazine";
+                    condition = true;
+                    statement = "";
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 7;
+                    class 16aa_LoadMagazine{
+                        distance = 2;
+                        displayName = "Load Magazine";
+                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazine));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 8;
+                    };
+                     class 16aa_UnloadMagazine{
+                        distance = 2;
+                        displayName = "Unload Magazine";
+                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazine));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 9;
+                    };
+                };
                 class 16aa_Barrel_Mount{
                     distance = 5;
                     selection = "barrel_memory";
@@ -685,13 +721,14 @@ class CfgVehicles
         };
     };
     class 16aa_GMG_Static_Base_middle: 16aa_GMG_Static_Base{
+        GVAR(enableBarrel) = 1;
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
 
                 class 16aa_AdjustHeightUp_GMG{
                     displayName = "Raise Tripod";
                     distance = 5;
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_GMG_Static_Base_raised',_player)] call FUNC(adjustHeightTimer));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -709,6 +746,7 @@ class CfgVehicles
         };
     };
     class 16aa_GMG_Static_Base_raised: 16aa_GMG_Static_Base{
+        GVAR(enableBarrel) = 1;
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class 16aa_AdjustHeightUp_GMG{
@@ -716,7 +754,7 @@ class CfgVehicles
                 };
                 class 16aa_AdjustHeightDown_GMG: 16aa_AdjustHeightUp_GMG{
                     displayName = "Lower Tripod";
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_GMG_Static_Base_middle',_player)] call FUNC(adjustHeightTimer));
                 };
                 class 16aa_Disassemble_GMG:16aa_Disassemble_GMG{
@@ -733,7 +771,7 @@ class CfgVehicles
                     selection = "";
                     displayName = "Raise Tripod";
                     distance = 5;
-                    condition = "true";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_GPMG_Static_base_middle',_player)] call FUNC(adjustHeightTimer));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -743,7 +781,7 @@ class CfgVehicles
                 class 16aa_Disassemble_GPMG{
                     distance = 5;
                     displayName = "Disassemble GPMG";
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canDisassemble));
                     statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_low',['16aa_l7a2'])] call FUNC(disassembleTimer));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -751,6 +789,34 @@ class CfgVehicles
                     icon = PATHTOF(UI\w_tripod_ca.paa);
                 };
             };
+            class 16aa_Magazines_Category{
+                    distance = 2;
+                    selection = "magazine";
+                    displayName = "Magazine";
+                    condition = true;
+                    statement = "";
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 7;
+                    class 16aa_LoadMagazine{
+                        distance = 2;
+                        displayName = "Load Magazine";
+                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazine));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 8;
+                    };
+                     class 16aa_UnloadMagazine{
+                        distance = 2;
+                        displayName = "Unload Magazine";
+                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazine));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 9;
+                    };
+                };
         };
     };
     class 16aa_GPMG_Static_base_middle: 16aa_GPMG_Static_base{
@@ -759,7 +825,7 @@ class CfgVehicles
                 class 16aa_AdjustHeightUp_GPMG{
                     displayName = "Raise Tripod";
                     distance = 5;
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_GPMG_Static_base_raised',_player)] call FUNC(adjustHeightTimer));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -784,7 +850,7 @@ class CfgVehicles
                 };
                 class 16aa_AdjustHeightDown_GPMG: 16aa_AdjustHeightUp_GPMG{
                     displayName = "Lower Tripod";
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_GPMG_Static_base_middle',_player)] call FUNC(adjustHeightTimer));
                 };
                 class 16aa_Disassemble_GPMG:16aa_Disassemble_GPMG{
@@ -801,7 +867,7 @@ class CfgVehicles
                     selection = "";
                     displayName = "Raise Tripod";
                     distance = 5;
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_Javelin_Static_middle',_player)] call FUNC(adjustHeightTimer));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -811,7 +877,7 @@ class CfgVehicles
                 class 16aa_Disassemble_Javelin{
                     distance = 5;
                     displayName = "Disassemble Javelin";
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canDisassemble));
                     statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_low',['16aa_javelin_launcher'])] call FUNC(disassembleTimer));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -819,6 +885,34 @@ class CfgVehicles
                     icon = PATHTOF(UI\w_tripod_ca.paa);
                 };
             };
+            class 16aa_Magazines_Category{
+                    distance = 2;
+                    selection = "magazine";
+                    displayName = "Magazine";
+                    condition = true;
+                    statement = "";
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 7;
+                    class 16aa_LoadMagazine{
+                        distance = 2;
+                        displayName = "Load Magazine";
+                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazine));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 8;
+                    };
+                     class 16aa_UnloadMagazine{
+                        distance = 2;
+                        displayName = "Unload Magazine";
+                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazine));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 9;
+                    };
+                };
         };
     };
     class 16aa_Javelin_Static_middle: 16aa_Javelin_Static_base{
@@ -827,7 +921,7 @@ class CfgVehicles
                 class 16aa_AdjustHeightUp_Javelin{
                     displayName = "Raise Tripod";
                     distance = 5;
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_Javelin_Static_raised',_player)] call FUNC(adjustHeightTimer));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -852,7 +946,7 @@ class CfgVehicles
                 };
                 class 16aa_AdjustHeightDown_Javelin: 16aa_AdjustHeightUp_Javelin{
                     displayName = "Lower Tripod";
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_Javelin_Static_middle',_player)] call FUNC(adjustHeightTimer));
                 };
                 class 16aa_Disassemble_Javelin:16aa_Disassemble_Javelin{
