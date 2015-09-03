@@ -274,13 +274,11 @@ class CfgVehicles
             MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_762,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_40mm,50);
             MACRO_ADDMAGAZINE(16aa_javelin_m,50);
-            /*
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_he,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_illum,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_white,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_red,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_orange,50);
-            */
         };
     };
     //Empty Tripods
@@ -514,7 +512,7 @@ class CfgVehicles
                 class 16aa_Disassemble{
                      distance = 5;
                     displayName = "Disassemble L16";
-                    condition = "alive _target && count crew _target == 0";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canDisassemble));
                     statement = QUOTE([ARR_4(_target,_player,'16aa_l16_baseplate_deployed',['16aa_static_item_l16_tube'])] call FUNC(disassembleTimer));
                     showDisabled = 0;
                     exceptions[] = {};
@@ -522,6 +520,34 @@ class CfgVehicles
                     icon = PATHTOF(UI\w_tripod_ca.paa);
                 };
             };
+            class 16aa_Magazines_Category{
+                    distance = 2;
+                    selection = "magazine";
+                    displayName = "Magazine";
+                    condition = true;
+                    statement = "";
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 7;
+                    class 16aa_LoadMagazine{
+                        distance = 2;
+                        displayName = "Load Magazine";
+                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazine));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 8;
+                    };
+                     class 16aa_UnloadMagazine{
+                        distance = 2;
+                        displayName = "Unload Magazine";
+                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazine));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 9;
+                    };
+                };
         };
     };
 

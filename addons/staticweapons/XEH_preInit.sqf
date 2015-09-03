@@ -33,4 +33,5 @@ PREP(loadMagazine);
 PREP(canUnloadMagazine);
 PREP(unloadMagazine);
 
+PREP(handleFiredMortar);
 ADDON = true;
