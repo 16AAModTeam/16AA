@@ -23,7 +23,7 @@ _ammoCount = _static magazineTurretAmmo [_currentMagazine, [0]];
 if (_ammoCount == 0) then {
 	_static removeMagazineTurret[_currentMagazine,[0]];
 }else {
-	_pos = _unit modelToWorldVisual [0,1,0.01];
+	_pos = _unit modelToWorldVisual [0,1,0];
     _unit = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
     _unit addMagazineAmmoCargo [_currentMagazine, 1, _ammocount];
     _unit setPosATL _pos;
