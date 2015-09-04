@@ -47,6 +47,7 @@ class CfgMagazines {
         picture = PATHTOF(UI\w_l16_ammo_he_ca.paa);
         mass = 20;
         count = 1;
+        GVAR(isMortarRound) = 1;
     };
     class 16aa_static_magazine_l16_illum : 8Rnd_82mm_Mo_Flare_white  {
         scope = 2;
@@ -58,6 +59,7 @@ class CfgMagazines {
         picture = PATHTOF(UI\w_l16_ammo_illum_ca.paa);
         mass = 20;
         count = 1;
+        GVAR(isMortarRound) = 1;
     };
     class 16aa_static_magazine_l16_smoke_white : 8Rnd_82mm_Mo_Smoke_white  {
         scope = 2;
@@ -69,6 +71,7 @@ class CfgMagazines {
         picture = PATHTOF(UI\w_l16_ammo_smk_white_ca.paa);
         mass = 20;
         count = 1;
+        GVAR(isMortarRound) = 1;
     };
     class 16aa_static_magazine_l16_smoke_red : 8Rnd_82mm_Mo_Smoke_red  {
         scope = 2;
@@ -80,6 +83,7 @@ class CfgMagazines {
         picture = PATHTOF(UI\w_l16_ammo_smk_red_ca.paa);
         mass = 20;
         count = 1;
+        GVAR(isMortarRound) = 1;
     };
     class 16aa_static_magazine_l16_smoke_orange : 8Rnd_82mm_Mo_Smoke_orange  {
         scope = 2;
@@ -91,5 +95,6 @@ class CfgMagazines {
         picture = PATHTOF(UI\w_l16_ammo_smk_orange_ca.paa);
         mass = 20;
         count = 1;
+        GVAR(isMortarRound) = 1;
     };
 };

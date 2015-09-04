@@ -29,9 +29,11 @@ PREP(dismountBarrelTimer);
 
 PREP(canLoadMagazine);
 PREP(loadMagazine);
+PREP(loadMagazineTimer);
 
 PREP(canUnloadMagazine);
 PREP(unloadMagazine);
+PREP(unloadMagazineTimer);
 
 PREP(handleFiredMortar);
 ADDON = true;

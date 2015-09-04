@@ -533,7 +533,7 @@ class CfgVehicles
                         distance = 2;
                         displayName = "Load Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -542,7 +542,7 @@ class CfgVehicles
                         distance = 2;
                         displayName = "Unload Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 9;
@@ -590,7 +590,7 @@ class CfgVehicles
                         distance = 2;
                         displayName = "Load Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -599,7 +599,7 @@ class CfgVehicles
                         distance = 2;
                         displayName = "Unload Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 9;
@@ -709,7 +709,7 @@ class CfgVehicles
                         distance = 2;
                         displayName = "Load Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -718,7 +718,7 @@ class CfgVehicles
                         distance = 2;
                         displayName = "Unload Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 9;
@@ -828,7 +828,7 @@ class CfgVehicles
                         distance = 2;
                         displayName = "Load Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -837,7 +837,7 @@ class CfgVehicles
                         distance = 2;
                         displayName = "Unload Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 9;
@@ -924,7 +924,7 @@ class CfgVehicles
                         distance = 2;
                         displayName = "Load Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -933,7 +933,7 @@ class CfgVehicles
                         distance = 2;
                         displayName = "Unload Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 9;
