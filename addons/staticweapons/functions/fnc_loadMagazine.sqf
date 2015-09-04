@@ -43,8 +43,6 @@ if (_magazineClassDetails != "") then{
 	_roundsMax = parseNumber _maxRoundsText;
 	_magType = _type;
 };
-_debugText = format ["Debug %1:", _roundsLeftText];
-hint _debugText;
 
 _unit removeMagazine _magazineClass;
 

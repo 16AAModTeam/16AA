@@ -97,4 +97,43 @@ class CfgMagazines {
         count = 1;
         GVAR(isMortarRound) = 1;
     };
+    class 32Rnd_155mm_Mo_shells;
+    class 16aa_static_magazine_1Rnd_105mmHE: 32Rnd_155mm_Mo_shells
+    {
+        scope = 2;
+        displayName = "L31 HE";
+        ammo = "16aa_Sh_105_HE";
+        count = 1;
+        nameSound = "heat";
+        displayNameShort = "L31 HE";
+        GVAR(isMortarRound) = 1;
+    };
+    class 16aa_static_magazine_1Rnd_105mmWP: 16aa_static_magazine_1Rnd_105mmHE
+    {
+        displayName = "M60A2 WP";
+        displayNameShort = "WP";
+        ammo = "16aa_Sh_105_WP";
+        GVAR(isMortarRound) = 1;
+    };
+    class 16aa_static_magazine_1Rnd_105mmLASER: 16aa_static_magazine_1Rnd_105mmHE
+    {
+        displayName = "M67 AT Laser Guided";
+        displayNameShort = "Laser Guided";
+        ammo = "16aa_Sh_105_LASER";
+        GVAR(isMortarRound) = 1;
+    };
+    class 16aa_static_magazine_1Rnd_105mmSMOKE: 16aa_static_magazine_1Rnd_105mmHE
+    {
+        displayName = "L45 Smoke";
+        displayNameShort = "L45 Smoke";
+        ammo = "16aa_Sh_105_SMOKE";
+        GVAR(isMortarRound) = 1;
+    };
+    class 16aa_static_magazine_1Rnd_105mmILLUM: 16aa_static_magazine_1Rnd_105mmHE
+    {
+        displayName = "L43 Ilumination";
+        displayNameShort = "L43 Ilumination";
+        ammo = "16aa_Sh_105_ILLUM";
+        GVAR(isMortarRound) = 1;
+    };
 };

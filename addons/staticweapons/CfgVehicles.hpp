@@ -550,7 +550,39 @@ class CfgVehicles
                 };
         };
     };
-
+    class 16aa_L118_base: StaticWeapon{
+         class ACE_Actions: ACE_Actions {
+            class ACE_MainActions;
+            class 16aa_Magazines_Category{
+                    distance = 2;
+                    selection = "magazine";
+                    displayName = "Magazine";
+                    condition = true;
+                    statement = "";
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 7;
+                    class 16aa_LoadMagazine{
+                        distance = 2;
+                        displayName = "Load Magazine";
+                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazineTimer));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 8;
+                    };
+                     class 16aa_UnloadMagazine{
+                        distance = 2;
+                        displayName = "Unload Magazine";
+                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazineTimer));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 9;
+                    };
+                };
+        };
+    };
     //L2A1
     class 16aa_L2A1_Static_Base : StaticMGWeapon {
         GVAR(enableBarrel) = 1;
