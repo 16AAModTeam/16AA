@@ -6,6 +6,7 @@ Loads Magazine into static weapon
 Arguments:
 0: static <OBJECT>
 1: unit <OBJECT>
+2: magazineClassOptional <Optional>
 
 Return Value:
 nothing
@@ -13,7 +14,7 @@ nothing
 */
 #include "script_component.hpp"
 
-params["_static","_unit"];
+params["_static","_unit","_magazineClassOptional"];
 private "_weapon,_currentMagazine,_magazines,_magazineDetails,_listOfMagNames,_magazineClass,_magazineClassDetails,_parsed,_roundsLeft,_configMortar";
 
 _weapon = (_static weaponsTurret [0]) select 0;
@@ -48,7 +49,11 @@ _unit removeMagazine _magazineClass;
 
 _configMortar = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> QGVAR(isMortarRound));
 if(_configMortar == 1) then {
-	_static addMagazineTurret [_magazineClass,[0]];
+	if(_magazineClassOptional !="") then{
+		_static addMagazineTurret [_magazineClassOptional,[0]];
+	}else{
+		_static addMagazineTurret [_magazineClass,[0]];
+	};
 }else {
 	_static addMagazineTurret [_magazineClass,[0]];
 	_static setMagazineTurretAmmo [_magazineClass, _roundsLeft, [0]];

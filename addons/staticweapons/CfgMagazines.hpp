@@ -98,7 +98,7 @@ class CfgMagazines {
         GVAR(isMortarRound) = 1;
     };
     class 32Rnd_155mm_Mo_shells;
-    class 16aa_static_magazine_1Rnd_105mmHE: 32Rnd_155mm_Mo_shells
+    class 16aa_static_magazine_1Rnd_105mm_HE: 32Rnd_155mm_Mo_shells
     {
         scope = 2;
         displayName = "L31 HE";
@@ -106,33 +106,43 @@ class CfgMagazines {
         count = 1;
         nameSound = "heat";
         displayNameShort = "L31 HE";
+        model = PATHTOF(data\l118_ammo_he.p3d);
+        picture = PATHTOF(UI\w_l118_ammo_he_ca.paa);
         GVAR(isMortarRound) = 1;
     };
-    class 16aa_static_magazine_1Rnd_105mmWP: 16aa_static_magazine_1Rnd_105mmHE
+    class 16aa_static_magazine_1Rnd_105mm_WP: 16aa_static_magazine_1Rnd_105mm_HE
     {
         displayName = "M60A2 WP";
         displayNameShort = "WP";
+        model = PATHTOF(data\l118_ammo_wp.p3d);
+        picture = PATHTOF(UI\w_l118_ammo_wp_ca.paa);
         ammo = "16aa_Sh_105_WP";
         GVAR(isMortarRound) = 1;
     };
-    class 16aa_static_magazine_1Rnd_105mmLASER: 16aa_static_magazine_1Rnd_105mmHE
+    class 16aa_static_magazine_1Rnd_105mm_LASER: 16aa_static_magazine_1Rnd_105mm_HE
     {
         displayName = "M67 AT Laser Guided";
         displayNameShort = "Laser Guided";
+        model = PATHTOF(data\l118_ammo_at_lg.p3d);
+        picture = PATHTOF(UI\w_l118_ammo_at_lg_ca.paa);
         ammo = "16aa_Sh_105_LASER";
         GVAR(isMortarRound) = 1;
     };
-    class 16aa_static_magazine_1Rnd_105mmSMOKE: 16aa_static_magazine_1Rnd_105mmHE
+    class 16aa_static_magazine_1Rnd_105mm_SMOKE: 16aa_static_magazine_1Rnd_105mm_HE
     {
         displayName = "L45 Smoke";
         displayNameShort = "L45 Smoke";
+        model = PATHTOF(data\l118_ammo_smoke.p3d);
+        picture = PATHTOF(UI\w_l118_ammo_smk_white_ca.paa);
         ammo = "16aa_Sh_105_SMOKE";
         GVAR(isMortarRound) = 1;
     };
-    class 16aa_static_magazine_1Rnd_105mmILLUM: 16aa_static_magazine_1Rnd_105mmHE
+    class 16aa_static_magazine_1Rnd_105mm_ILLUM: 16aa_static_magazine_1Rnd_105mm_HE
     {
         displayName = "L43 Ilumination";
         displayNameShort = "L43 Ilumination";
+        model = PATHTOF(data\l118_ammo_illum.p3d);
+        picture = PATHTOF(UI\w_l118_ammo_illum_ca.paa);
         ammo = "16aa_Sh_105_ILLUM";
         GVAR(isMortarRound) = 1;
     };

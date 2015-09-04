@@ -23,6 +23,11 @@ class Extended_FiredBIS_EventHandlers {
             firedBIS = QUOTE(_this call FUNC(handleFiredMortar));
         };
     };
+    class 16aa_L118_base {
+        class ADDON {
+            firedBIS = QUOTE(_this call FUNC(handleFiredMortar));
+        };
+    };
     class 16aa_Javelin_Static_base{
         class ADDON {
             firedBIS = QUOTE(_this call FUNC(handleFiredMortar));
