@@ -27,5 +27,5 @@ _static = _this select 0;
 _magazineName = _this select 5;
 
  if ((_static magazineTurretAmmo [_magazineName, [0]]) == 0) then {
-	_static removeMagazineTurret [_magazineName, [0]];
+	["16aa_staticweapons_removeMagazine", [_static, _magazineName]] call ace_common_fnc_globalEvent;
 };

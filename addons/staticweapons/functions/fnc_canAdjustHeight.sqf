@@ -16,7 +16,7 @@ canAdjustHeight - True/False
 params["_static","_unit"];
 private "_canAdjustHeight";
 _canAdjustHeight = false;
-if( (alive _static) && (count (crew _static) == 0) && ((count (_static magazinesTurret [0])) == 0) )then {
+if( (alive _static) && (count (crew _static) == 0) )then {
     _canAdjustHeight = true;
 };
 

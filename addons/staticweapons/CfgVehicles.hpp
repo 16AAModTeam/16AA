@@ -274,16 +274,25 @@ class CfgVehicles
             MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_762,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_40mm,50);
             MACRO_ADDMAGAZINE(16aa_javelin_m,50);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_he,50);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_illum,50);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_white,50);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_red,50);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_orange,50);
+        };
+    };
+    class 16aa_crate_empty_artillery;
+    class 16AA_crate_artillery_105: 16aa_crate_empty_artillery{
+         class TransportMagazines{
             MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_HE,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_WP,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_LASER,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_SMOKE,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_ILLUM,50);
+        };
+    };
+    class 16AA_crate_artillery_81: 16aa_crate_empty_artillery{
+         class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_he,50);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_illum,50);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_white,50);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_red,50);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_orange,50);
         };
     };
     //Empty Tripods

@@ -26,6 +26,7 @@ _magazines = magazines _unit;
 _listOfMagNames = getArray(configFile >> "cfgWeapons" >> _weapon >> "magazines");
 _hasCompatibleMagazine = false;
 _hasBarrel = _static getVariable [QGVAR(hasBarrel),true];
+_count = _static magazineTurretAmmo [_currentMagazine, [0]];
 
 if (_magazineClassOptional != "")then{
 	if ([_unit,_magazineClassOptional] call ace_common_fnc_hasMagazine)  then {

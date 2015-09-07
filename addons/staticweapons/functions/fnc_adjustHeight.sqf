@@ -33,7 +33,7 @@ params["_staticOld","_staticNewClass","_unit"];
         _hasBarrelV = true;
     };
     if ((count (_staticOld magazinesTurret [0])) == 1) then {
-        _ammoCount = _staticOld magazineTurretAmmo [_currentMagazine, [0]];
+        _ammoCount = _static magazineTurretAmmo [_currentMagazine, [0]];
         _hasMagazine = true;
     };
     deletevehicle _staticOld;
@@ -54,8 +54,8 @@ params["_staticOld","_staticNewClass","_unit"];
         };
     };
     if (_hasMagazine) then {
-        _staticNew addMagazineTurret [_currentMagazine,[0]];
-        _staticNew setMagazineTurretAmmo [_currentMagazine, _ammoCount, [0]];
+        ["16aa_staticweapons_addMagazine", [_staticNew, _currentMagazine]] call ace_common_fnc_globalEvent;
+        ["16aa_staticweapons_setTurretAmmo", [_staticNew, _currentMagazine,_ammoCount]] call ace_common_fnc_globalEvent;
     };
 
     if ((getPosATL _staticNew select 2) - (getPos _staticNsew select 2) < 1E-5) then {
