@@ -9,22 +9,15 @@ Arguments:
 2: staticNewClass <STRING>
 3: staticItems <ARRAY>
 
-Return Value:
-Nothing
-
 Return value:
  None
 */
 #include "script_component.hpp"
 
-PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItems);
-//TODO Add progress bar / delay to make it more realistic
-if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
-    _unit playMove "AmovPercMstpSrasWrflDnon_diary";
-};
+params["_staticOld","_unit","_staticNewClass","_staticItems"];
 
 [{
-    PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItems);
+    params["_staticOld","_unit","_staticNewClass","_staticItems"];
 
      private ["_direction", "_position"];
     _direction = getDir _staticOld;
@@ -41,13 +34,11 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     _staticNew setPosASL _position; // force that shit on the correct position
     _unit reveal _staticNew;
     {
-        //Checks whether the staticItem is actually an item or a weapon. Adds it the correct way depending on weapon type
         _staticItemType = [_x] call ace_common_fnc_getWeaponType;
         if (_staticItemtype == -1) then {
             [_unit, _x] call ace_common_fnc_addToInventory;
 
         } else{
-            //TODO Check if player has no weapon, if so , add the item that fnc is called with
             _pos = _unit modelToWorldVisual [0,1,0.05];
             _unit = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
             _unit addWeaponCargoGlobal [_x,1];

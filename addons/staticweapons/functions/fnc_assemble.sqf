@@ -17,30 +17,20 @@ Return value:
 */
 #include "script_component.hpp"
 
-PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItem);
-//TODO Add progress Bar / Delay to stop issue where weapon is spawned too quickly and flips in the air
-
+params["_staticOld","_unit","_staticNewClass","_staticItem"];
 
 _staticItemType = [_staticItem] call ace_common_fnc_getWeaponType;
-/* Debug stuff
-_debugText = format["Weapon Type: %1",_staticItemType];
-hint _debugText;
-*/
+
 if (_staticItemtype == -1) then {
     _unit removeItem _staticItem;
 } else{
     _unit removeWeapon _staticItem;
 };
 
-
-if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
-    _unit playMove "AmovPercMstpSrasWrflDnon_diary";
-};
-
 [{
-    PARAMS_4(_staticOld,_unit,_staticNewClass,_staticItem);
+    params["_staticOld","_unit","_staticNewClass","_staticItem"];
 
-     private ["_direction", "_position"];
+     private ["_direction,_position,_configBarrel"];
     _direction = getDir _staticOld;
     _position = getPosASL _staticOld;
     deletevehicle _staticOld;
@@ -49,10 +39,16 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     _staticNew setPosASL _position;
     _staticNew setDir _direction;
 
+    _configBarrel = getNumber (configFile >> "CfgVehicles" >> typeOf _staticNew >> QGVAR(enableBarrel));
+    if(_configBarrel == 1) then{
+        _staticNew setvariable [QGVAR(hasBarrel), false, true];
+        _staticNew lockTurret [[0], true];
+    };
+
     if ((getPosATL _staticNew select 2) - (getPos _staticNew select 2) < 1E-5) then {
         _staticNew setVectorUp (surfaceNormal (position _staticNew));
     };
-    _staticNew setPosASL _position; // force that shit on the correct position
+    _staticNew setPosASL _position;
     _unit reveal _staticNew;
 
 }, [_staticOld,_unit,_staticNewClass,_staticItem], 1, 0] call ace_common_fnc_waitAndExecute;
