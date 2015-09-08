@@ -45,16 +45,11 @@ if (_magazineClassDetails != "") then{
 	_magType = _type;
 };
 
-_unit removeMagazine _magazineClass;
-
 _configMortar = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> QGVAR(isMortarRound));
-if(_configMortar == 1) then {
-	if(_magazineClassOptional !="") then{
+if(_magazineClassOptional !="") then{
+		_unit removeMagazine _magazineClassOptional;
 		["16aa_staticweapons_addMagazine", [_static, _magazineClassOptional]] call ace_common_fnc_globalEvent;
 	}else{
+		_unit removeMagazine _magazineClass;
 		["16aa_staticweapons_addMagazine", [_static, _magazineClass]] call ace_common_fnc_globalEvent;
 	};
-}else {
-	["16aa_staticweapons_addMagazine", [_static, _magazineClass]] call ace_common_fnc_globalEvent;
-	["16aa_staticweapons_setTurretAmmo", [_static, _magazineClass,_roundsLeft]] call ace_common_fnc_globalEvent;
-};

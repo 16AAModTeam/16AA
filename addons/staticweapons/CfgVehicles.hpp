@@ -826,8 +826,8 @@ class CfgVehicles
                     class 16aa_LoadMagazine{
                         distance = 5;
                         displayName = "Load Magazine";
-                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazineTimer));
+                        condition = QUOTE([ARR_3(_target,_player,'')] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_3(_target,_player,'')] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -945,8 +945,8 @@ class CfgVehicles
                     class 16aa_LoadMagazine{
                         distance = 5;
                         displayName = "Load Magazine";
-                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazineTimer));
+                        condition = QUOTE([ARR_3(_target,_player,'')] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_3(_target,_player,'')] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -1041,8 +1041,8 @@ class CfgVehicles
                     class 16aa_LoadMagazine{
                         distance = 5;
                         displayName = "Load Magazine";
-                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazineTimer));
+                        condition = QUOTE([ARR_3(_target,_player,'')] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_3(_target,_player,'')] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
