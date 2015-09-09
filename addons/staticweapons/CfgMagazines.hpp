@@ -119,15 +119,6 @@ class CfgMagazines {
         ammo = "16aa_Sh_105_WP";
         GVAR(isMortarRound) = 1;
     };
-    class 16aa_static_magazine_1Rnd_105mm_LASER: 16aa_static_magazine_1Rnd_105mm_HE
-    {
-        displayName = "M67 AT Laser Guided";
-        displayNameShort = "Laser Guided";
-        model = PATHTOF(data\l118_ammo_at_lg.p3d);
-        picture = PATHTOF(UI\w_l118_ammo_at_lg_ca.paa);
-        ammo = "16aa_Sh_105_LASER";
-        GVAR(isMortarRound) = 1;
-    };
     class 16aa_static_magazine_1Rnd_105mm_SMOKE: 16aa_static_magazine_1Rnd_105mm_HE
     {
         displayName = "L45 Smoke";
