@@ -258,9 +258,10 @@ class CfgVehicles
     class 16AA_crate_csw : 16aa_crate_empty_csw {
         class TransportWeapons {
             MACRO_ADDWEAPON(16aa_javelin_launcher,15);
+            MACRO_ADDWEAPON(16aa_l7a2,15);
         };
         class TransportItems {
-            MACRO_ADDITEM(16aa_tripod,60);
+            MACRO_ADDITEM(16aa_tripod,75);
             MACRO_ADDITEM(16aa_static_item_l2a1_barrel,15);
             MACRO_ADDITEM(16aa_static_item_l2a1_receiver,15);
             MACRO_ADDITEM(16aa_static_item_gmg_barrel,15);
@@ -268,12 +269,6 @@ class CfgVehicles
             MACRO_ADDITEM(16aa_static_item_l16_baseplate,15);
             //MACRO_ADDITEM(16aa_static_item_l16_bipod,5);
             MACRO_ADDITEM(16aa_static_item_l16_tube,15);
-        };
-        class TransportMagazines{
-            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_50cal,50);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_762,50);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_40mm,50);
-            MACRO_ADDMAGAZINE(16aa_javelin_m,50);
         };
     };
     class 16aa_crate_empty_artillery;
@@ -293,6 +288,14 @@ class CfgVehicles
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_white,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_red,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_orange,50);
+        };
+    };
+    class 16AA_crate_csw_ammo : 16aa_crate_empty_csw{
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_50cal,50);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_762,50);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_40mm,50);
+            MACRO_ADDMAGAZINE(16aa_javelin_m,50);
         };
     };
     //Empty Tripods

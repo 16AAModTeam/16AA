@@ -1,7 +1,7 @@
 class CfgMagazines {
     class 100Rnd_127x99_mag_Tracer_red;
     class 150Rnd_762x51_Box;
-    class 96Rnd_40mm_G_belt;
+    class 32Rnd_40mm_G_belt;
     class 8Rnd_82mm_Mo_shells;
     class 8Rnd_82mm_Mo_Smoke_red;
     class 8Rnd_82mm_Mo_Flare_white;
@@ -27,12 +27,12 @@ class CfgMagazines {
         picture = PATHTOF(UI\w_ammobox_762_ca.paa);
         mass = 20;
     };
-    class 16aa_static_magazine_ammobox_40mm : 96Rnd_40mm_G_belt  {
+    class 16aa_static_magazine_ammobox_40mm : 32Rnd_40mm_G_belt  {
         scope = 2;
         scopeCurator = 2;
         author = "3LSR";
         displayName = "40mm Ammo Box";
-        descriptionshort = "96Rd 40mm. Used in L134A1 Grenade Machine Gun";
+        descriptionshort = "32Rd 40mm. Used in L134A1 Grenade Machine Gun";
         model = "\16aa_crates_a3\ammobox_40mm.p3d";
         picture = PATHTOF(UI\w_ammobox_40mm_ca.paa);
         mass = 20;
