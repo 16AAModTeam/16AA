@@ -27,8 +27,7 @@ None
 		_i = _i + 1;
 
 	} forEach (_listOfMags select 0);
-	_debugText = format["Add mag = %1, vehicle = %2, turret = %3", _magName, _vehicle, _turretIndex];
-	hint _debugText;
+
 	["16aa_jackals_removeMagazine", [_vehicle,_magName ,_turretIndex]] call ace_common_fnc_globalEvent;
 	["16aa_jackals_addMagazine", [_vehicle,_magName ,_turretIndex]] call ace_common_fnc_globalEvent;
 
