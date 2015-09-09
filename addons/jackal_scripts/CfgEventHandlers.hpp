@@ -9,3 +9,10 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE( call COMPILE_FILE(XEH_postInit) );
     };
 };
+class Extended_Init_EventHandlers {
+	class 16aa_Jackal2_BASE_D{
+		class ADDON{
+			  init = QUOTE(_this call DFUNC(vehicleInit));
+		};
+	};
+};
