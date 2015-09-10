@@ -28,7 +28,7 @@ None
 
 	} forEach (_listOfMags select 0);
 
-	["16aa_jackals_removeMagazine", [_vehicle,_magName ,_turretIndex]] call ace_common_fnc_globalEvent;
+
 	["16aa_jackals_addMagazine", [_vehicle,_magName ,_turretIndex]] call ace_common_fnc_globalEvent;
 
 
