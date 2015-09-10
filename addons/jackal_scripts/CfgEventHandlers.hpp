@@ -15,4 +15,9 @@ class Extended_Init_EventHandlers {
 			  init = QUOTE(_this call DFUNC(vehicleInit));
 		};
 	};
+  class 16aa_ridgback_HMG_D{
+    class ADDON{
+        init = QUOTE(_this call DFUNC(vehicleInit));
+    };
+  };
 };
