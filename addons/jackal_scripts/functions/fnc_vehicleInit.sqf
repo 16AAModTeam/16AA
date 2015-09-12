@@ -14,4 +14,4 @@ none
      true
 },
 {false},
-[19, [false, false, false]]] call cba_fnc_addKeybind;
+[19, [false, true, false]]] call cba_fnc_addKeybind;
