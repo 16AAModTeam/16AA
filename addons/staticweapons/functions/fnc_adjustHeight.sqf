@@ -22,11 +22,20 @@ params["_staticOld","_staticNewClass","_unit"];
 [{
     params["_staticOld","_staticNewClass","_unit"];
 
-    private ["_direction,_position,_staticNew,_hasBarrelV,_configBarrel,_currentMagazine,_ammoCount,_hasMagazine"];
+    private ["_direction,_position,_staticNew,_hasBarrelV,_configBarrel,_currentMagazine,_ammoCount,_hasMagazine,_defaultMag"];
     _direction = getDir _staticOld;
     _position = getPosASL _staticOld;
     _hasBarrelV = false;
+
+    _weapon = (_staticOld weaponsTurret [0]) select 0;
+    _listOfMagNames = getArray(configFile >> "cfgWeapons" >> _weapon >> "magazines");
+    _defaultMag = _listOfMagNames select 0;
     _currentMagazine = _staticOld currentMagazineTurret [0];
+
+    if!(_currentMagazine != "") then {
+        _currentMagazine = _defaultMag;
+    };
+
     _ammoCount = 0;
     _hasMagazine = false;
     if(_staticOld getVariable [QGVAR(hasBarrel),false])then {
