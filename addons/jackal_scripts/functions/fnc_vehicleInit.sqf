@@ -11,7 +11,7 @@ none
 ["16aa", "16AA_Key_Reload_Vehicle_Weapon", localize LSTRING(ReloadWeapon),
 {
      [ACE_player, vehicle ACE_player] call FUNC(resupplyAmmo);
-     true
+     vehicle ACE_player;
 },
 {false},
 [19, [false, true, false]]] call cba_fnc_addKeybind;
