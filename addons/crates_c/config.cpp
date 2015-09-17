@@ -13,10 +13,22 @@ class CfgPatches {
     class 16AA_crate_ammo {
     	units[] = {
 			"16AA_container_ammo",
-			"16AA_container_ammo_artillery",
+			"16AA_container_ammo_artillery_105",
 			"16AA_crate_csw_ammo",
+			"16AA_crate_csw_ammo_50cal",
+			"16AA_crate_csw_ammo_762",
+			"16AA_crate_csw_ammo_40mm",
 			"16AA_crate_artillery_105",
+			"16AA_crate_artillery_105_he",
+			"16AA_crate_artillery_105_wp",
+			"16AA_crate_artillery_105_smoke",
+			"16AA_crate_artillery_105_illum",
 			"16AA_crate_artillery_81",
+			"16AA_crate_artillery_81_he",
+			"16AA_crate_artillery_81_illum",
+			"16AA_crate_artillery_81_smoke_white",
+			"16AA_crate_artillery_81_smoke_red",
+			"16AA_crate_artillery_81_smoke_orange",
 			"16AA_crate_ammo_556_stanag",
 			"16AA_crate_ammo_556_link",
 			"16AA_crate_ammo_762_stanag",
@@ -28,7 +40,12 @@ class CfgPatches {
 			"16AA_crate_ammo_grenades_chemlight",
 			"16AA_crate_ammo_grenades_40mm",
 			"16AA_crate_ammo_explosives",
-			"16AA_crate_ammo_launcher",
+			"16AA_crate_ammo_explosives_detonator",
+			"16AA_crate_ammo_launcher_at4",
+			"16AA_crate_ammo_launcher_nlaw",
+			"16AA_crate_ammo_launcher_stinger",
+			"16AA_crate_ammo_launcher_javelin_tube",
+			"16AA_crate_ammo_launcher_javelin_clu",
 			"16AA_crate_ammo_misc"
 		};
 		requiredaddons[] = {"LSR_common","16aa_crates_a3"};

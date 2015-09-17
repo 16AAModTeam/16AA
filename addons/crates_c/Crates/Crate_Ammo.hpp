@@ -3,14 +3,10 @@
 		scopeCurator = 2;
 		displayName = "Container - Ammo";
 		vehicleClass = "16aa_Crates_Ammo";
-		ace_cargo_space = 99;
+		ace_cargo_space = 150;
         ace_caro_size = 100;
 		class ACE_Cargo {
             class Cargo {
-                class 16AA_crate_csw_ammo {
-                    type = "16AA_crate_csw_ammo";
-                    amount = 5;
-                };
                 class 16AA_crate_ammo_556_stanag {
                     type = "16AA_crate_ammo_556_stanag";
                     amount = 10;
@@ -33,11 +29,11 @@
                 };
                 class 16AA_crate_ammo_grenades_smoke {
                     type = "16AA_crate_ammo_grenades_smoke";
-                    amount = 6;
+                    amount = 5;
                 };
                 class 16AA_crate_ammo_grenades_frag {
                     type = "16AA_crate_ammo_grenades_frag";
-                    amount = 6;
+                    amount = 5;
                 };
                 class 16AA_crate_ammo_grenades_flashbang {
                     type = "16AA_crate_ammo_grenades_flashbang";
@@ -45,49 +41,129 @@
                 };
                 class 16AA_crate_ammo_grenades_chemlight {
                     type = "16AA_crate_ammo_grenades_chemlight";
-                    amount = 5;
+                    amount = 2;
                 };
                 class 16AA_crate_ammo_grenades_40mm {
                     type = "16AA_crate_ammo_grenades_40mm";
-                    amount = 6;
+                    amount = 5;
                 };
                 class 16AA_crate_ammo_explosives {
                     type = "16AA_crate_ammo_explosives";
                     amount = 5;
                 };
-                class 16AA_crate_ammo_launcher {
-                    type = "16AA_crate_ammo_launcher";
+                class 16AA_crate_ammo_explosives_detonator {
+                    type = "16AA_crate_ammo_explosives_detonator";
                     amount = 5;
+                };
+                class 16AA_crate_ammo_launcher_at4 {
+                    type = "16AA_crate_ammo_launcher_at4";
+                    amount = 5;
+                };
+                class 16AA_crate_ammo_launcher_nlaw {
+                    type = "16AA_crate_ammo_launcher_nlaw";
+                    amount = 5;
+                };
+                class 16AA_crate_ammo_launcher_stinger {
+                    type = "16AA_crate_ammo_launcher_stinger";
+                    amount = 2;
+                };
+                class 16AA_crate_ammo_launcher_javelin_tube{
+                    type = "16AA_crate_ammo_launcher_javelin_tube";
+                    amount = 3;
+                };
+                 class 16AA_crate_ammo_launcher_javelin_clu{
+                    type = "16AA_crate_ammo_launcher_javelin_clu";
+                    amount = 2;
                 };
                 class 16AA_crate_ammo_misc {
                     type = "16AA_crate_ammo_misc";
-                    amount = 5;
+                    amount = 2;
                 };
                 class 16AA_crate_medical {
                     type = "16AA_crate_medical";
-                    amount = 5;
+                    amount = 2;
                 };
             };
         };
 	};
-	class 16AA_container_ammo_artillery: 16AA_container_ammo{
+    class 16AA_container_ammo_csw: 16AA_container_ammo{
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "Container - CSW Ammo";
+        class ACE_Cargo {
+            class Cargo {
+                class 16AA_crate_csw_ammo_50cal {
+                    type = "16AA_crate_csw_ammo_50cal";
+                    amount = 30;
+                };
+                class 16AA_crate_csw_ammo_762 {
+                    type = "16AA_crate_csw_ammo_762";
+                    amount = 30;
+                };
+                class 16AA_crate_csw_ammo_40mm {
+                    type = "16AA_crate_csw_ammo_40mm";
+                    amount = 30;
+                };
+            };
+        };
+    };
+	class 16AA_container_ammo_artillery_105: 16AA_container_ammo{
 		scope = 2;
 		scopeCurator = 2;
-		displayName = "Container - Artillery Ammo";
+		displayName = "Container - 105MM Ammo";
 		class ACE_Cargo {
             class Cargo {
-                class 16AA_crate_artillery_105 {
-                    type = "16AA_crate_artillery_105";
-                    amount = 55;
+                class 16AA_crate_artillery_105_he {
+                    type = "16AA_crate_artillery_105_he";
+                    amount = 30;
                 };
-                class 16AA_crate_artillery_81 {
-                    type = "16AA_crate_artillery_81";
-                    amount = 40;
+                class 16AA_crate_artillery_105_wp {
+                    type = "16AA_crate_artillery_105_wp";
+                    amount = 15;
+                };
+
+                class 16AA_crate_artillery_105_illum {
+                    type = "16AA_crate_artillery_105_illum";
+                    amount = 15;
+                };
+
+                class 16AA_crate_artillery_105_smoke {
+                    type = "16AA_crate_artillery_105_smoke";
+                    amount = 30;
                 };
             };
         };
 	};
-	class CargoNet_01_box_F;
+    class 16AA_container_ammo_artillery_81: 16AA_container_ammo{
+        scope = 2;
+        scopeCurator = 2;
+        displayName = "Container - 81MM Ammo";
+        class ACE_Cargo {
+            class Cargo {
+                class 16aa_static_magazine_l16_he {
+                    type = "16aa_static_magazine_l16_he";
+                    amount = 20;
+                };
+                class 16aa_static_magazine_l16_illum {
+                    type = "16aa_static_magazine_l16_illum";
+                    amount = 10;
+                };
+                class 16aa_static_magazine_l16_smoke_white {
+                    type = "16aa_static_magazine_l16_smoke_white";
+                    amount = 20;
+                };
+                class 16aa_static_magazine_l16_smoke_red {
+                    type = "16aa_static_magazine_l16_smoke_red";
+                    amount = 20;
+                };
+                class 16aa_static_magazine_l16_smoke_orange {
+                    type = "16aa_static_magazine_l16_smoke_orange";
+                    amount = 20;
+                };
+            };
+        };
+    };
+
 	class 16AA_container_slingloading: CargoNet_01_box_F{
 		scope = 2;
 		scopeCurator = 2;
@@ -95,9 +171,8 @@
 		vehicleClass = "16aa_Crates_Empty";
 		ace_cargo_space = 20;
 		ace_cargo_hasCargo = 1;
-		ace_cargo_canLoad = 1;
+		//ace_cargo_canLoad = 1;
 		ace_dragging_canDrag = 1;
-        ace_cargo_size = 50;
 	};
 	class 16AA_crate_csw_ammo : 16aa_crate_empty_csw {
 		author = "3LSR";
@@ -110,6 +185,30 @@
             MACRO_ADDMAGAZINE(16aa_javelin_m,50);
         };
 	};
+    class 16AA_crate_csw_ammo_50cal : 16aa_crate_empty_wooden_medium {
+        author = "3LSR";
+        displayName = "CSW - 50Cal";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_50cal,5);
+        };
+    };
+    class 16AA_crate_csw_ammo_762 : 16aa_crate_empty_wooden_medium {
+        author = "3LSR";
+        displayName = "CSW - 7.62MM";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_762,5);
+        };
+    };
+    class 16AA_crate_csw_ammo_40mm : 16aa_crate_empty_wooden_medium {
+        author = "3LSR";
+        displayName = "CSW - 40MM";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_40mm,5);
+        };
+    };
 	class 16AA_crate_artillery_105 : 16aa_crate_empty_artillery {
 		author = "3LSR";
 		displayName = "105MM";
@@ -121,6 +220,38 @@
             MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_ILLUM,50);
         };
 	};
+    class 16AA_crate_artillery_105_he : 16aa_crate_empty_artillery {
+        author = "3LSR";
+        displayName = "105MM - HE";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_HE,2);
+        };
+    };
+    class 16AA_crate_artillery_105_wp : 16aa_crate_empty_artillery {
+        author = "3LSR";
+        displayName = "105MM - WP";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_WP,2);
+        };
+    };
+    class 16AA_crate_artillery_105_smoke : 16aa_crate_empty_artillery {
+        author = "3LSR";
+        displayName = "105MM - Smoke";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_SMOKE,2);
+        };
+    };
+    class 16AA_crate_artillery_105_illum : 16aa_crate_empty_artillery {
+        author = "3LSR";
+        displayName = "105MM - Illum";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_ILLUM,2);
+        };
+    };
 	class 16AA_crate_artillery_81 : 16aa_crate_empty_wooden_large {
 		author = "3LSR";
 		displayName = "81MM";
@@ -133,12 +264,52 @@
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_orange,50);
         };
 	};
+    class 16AA_crate_artillery_81_he : 16aa_crate_empty_wooden_large {
+        author = "3LSR";
+        displayName = "81MM - HE";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_he,4);
+        };
+    };
+    class 16AA_crate_artillery_81_illum : 16aa_crate_empty_wooden_large {
+        author = "3LSR";
+        displayName = "81MM - Illum";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_illum,4);
+        };
+    };
+    class 16AA_crate_artillery_81_smoke_white : 16aa_crate_empty_wooden_large {
+        author = "3LSR";
+        displayName = "81MM - Smoke (White)";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_white,4);
+        };
+    };
+    class 16AA_crate_artillery_81_smoke_red : 16aa_crate_empty_wooden_large {
+        author = "3LSR";
+        displayName = "81MM - Smoke (Red)";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_red,4);
+        };
+    };
+    class 16AA_crate_artillery_81_smoke_orange : 16aa_crate_empty_wooden_large {
+        author = "3LSR";
+        displayName = "81MM - Smoke (Orange)";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_orange,4);
+        };
+    };
 	class 16AA_crate_ammo_556_stanag : 16aa_crate_empty_wooden_small {
 		author = "3LSR";
 		displayName = "5.56MM Stanag";
 		vehicleClass = "16aa_Crates_Ammo";
         class TransportMagazines{
-        	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag,40);
+        	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag,30);
         };
 	};
 	class 16AA_crate_ammo_556_link : 16aa_crate_empty_wooden_small {
@@ -146,7 +317,7 @@
 		displayName = "5.56MM Link";
 		vehicleClass = "16aa_Crates_Ammo";
         class TransportMagazines{
-        	MACRO_ADDMAGAZINE(sti_200Rnd_556x45,30);
+        	MACRO_ADDMAGAZINE(sti_200Rnd_556x45,10);
         };
 	};
 	class 16AA_crate_ammo_762_stanag : 16aa_crate_empty_wooden_small {
@@ -154,7 +325,7 @@
 		displayName = "7.62MM Stanag";
 		vehicleClass = "16aa_Crates_Ammo";
         class TransportMagazines{
-        	MACRO_ADDMAGAZINE(20Rnd_762x51_Mag,40);
+        	MACRO_ADDMAGAZINE(20Rnd_762x51_Mag,20);
         };
 	};
 	class 16AA_crate_ammo_762_link : 16aa_crate_empty_wooden_small {
@@ -175,7 +346,7 @@
 
         };
 	};
-	class 16AA_crate_ammo_grenades_smoke : 16aa_crate_empty_wooden_small {
+	class 16AA_crate_ammo_grenades_smoke : 16aa_crate_empty_wooden_medium {
 		author = "3LSR";
 		displayName = "Smoke Grenades";
 		vehicleClass = "16aa_Crates_Ammo";
@@ -203,7 +374,7 @@
         	MACRO_ADDMAGAZINE(ACE_M84,20);
         };
 	};
-	class 16AA_crate_ammo_grenades_chemlight : 16aa_crate_empty_wooden_small {
+	class 16AA_crate_ammo_grenades_chemlight : 16aa_crate_empty_wooden_medium {
 		author = "3LSR";
 		displayName = "Chemlight/IR";
 		vehicleClass = "16aa_Crates_Ammo";
@@ -214,7 +385,7 @@
         	MACRO_ADDMAGAZINE(B_IR_Grenade,20);
         };
 	};
-	class 16AA_crate_ammo_grenades_40mm : 16aa_crate_empty_wooden_small {
+	class 16AA_crate_ammo_grenades_40mm : 16aa_crate_empty_wooden_medium {
 		author = "3LSR";
 		displayName = "40MM";
 		vehicleClass = "16aa_Crates_Ammo";
@@ -231,28 +402,62 @@
 		author = "3LSR";
 		displayName = "Explosives";
 		vehicleClass = "16aa_Crates_Ammo";
-        class TransportItems {
-            MACRO_ADDITEM(ACE_M26_Clacker,10);
-        };
         class TransportMagazines{
-        	MACRO_ADDMAGAZINE(SatchelCharge_Remote_Mag,5);
         	MACRO_ADDMAGAZINE(ATMine_Range_Mag,5);
-        	MACRO_ADDMAGAZINE(ClaymoreDirectionalMine_Remote_Mag,3);
+        	MACRO_ADDMAGAZINE(ClaymoreDirectionalMine_Remote_Mag,5);
         };
 	};
-	class 16AA_crate_ammo_launcher: 16aa_crate_empty_wooden_large {
+    class 16AA_crate_ammo_explosives_detonator: 16aa_crate_empty_wooden_medium {
+        author = "3LSR";
+        displayName = "Explosives (Clacker)";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportItems {
+            MACRO_ADDITEM(ACE_M26_Clacker,5);
+        };
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(SatchelCharge_Remote_Mag,5);
+        };
+    };
+	class 16AA_crate_ammo_launcher_at4: 16aa_crate_empty_wooden_large {
 		author = "3LSR";
-		displayName = "Launcher";
+		displayName = "Launcher (AT4)";
 		vehicleClass = "16aa_Crates_Ammo";
 		class TransportWeapons {
-			MACRO_ADDWEAPON(16aa_AT4CSHP,10);
-            MACRO_ADDWEAPON(launch_NLAW_F,10);
-        };
-        class TransportMagazines{
-        	MACRO_ADDMAGAZINE(16aa_Stinger_M,10);
-        	MACRO_ADDMAGAZINE(16aa_javelin_m,10);
+			MACRO_ADDWEAPON(16aa_AT4CSHP,2);
         };
 	};
+    class 16AA_crate_ammo_launcher_nlaw: 16aa_crate_empty_wooden_large {
+        author = "3LSR";
+        displayName = "Launcher (NLAW)";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportWeapons {
+            MACRO_ADDWEAPON(launch_NLAW_F,2);
+        };
+    };
+    class 16AA_crate_ammo_launcher_stinger: 16aa_crate_empty_wooden_large {
+        author = "3LSR";
+        displayName = "Launcher (Stinger)";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_Stinger_M,2);
+        };
+    };
+    class 16AA_crate_ammo_launcher_javelin_tube: 16aa_crate_empty_wooden_large {
+        author = "3LSR";
+        displayName = "Javelin Tubes";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_javelin_m,2);
+        };
+    };
+     class 16AA_crate_ammo_launcher_javelin_clu: 16aa_crate_empty_wooden_large {
+        author = "3LSR";
+        displayName = "Javelin Clu";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportWeapons {
+            MACRO_ADDWEAPON(16aa_javelin_launcher,1);
+        };
+    };
 	class 16AA_crate_ammo_misc: 16aa_crate_empty_wooden_large {
 		author = "3LSR";
 		displayName = "Miscellaneous";
