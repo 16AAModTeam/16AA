@@ -1,18 +1,5 @@
-class CfgPatches {
-	class 16AA_crate_main {
-		requiredaddons[] = {"16aa_crates_a3"};
-		requiredversion = 0.1;
-		units[] = {"16AA_crate_main"};
-		weapons[] = {};
-		magazines[] = {};
-	};
-};
-
-class CfgVehicles {
-	class 16aa_crate_empty_main;
-
-	class 16AA_crate_main : 16aa_crate_empty_main {
-		scope = public;
+	class 16AA_crate_main: 16aa_crate_empty_main {
+		scope = 2;
 		author = "Adams & Beazley";
 		displayName = "Main";
 		vehicleClass = "16aa_Crates";
@@ -20,7 +7,6 @@ class CfgVehicles {
             MACRO_ADDWEAPON(16aa_l85a2_ris_e,50);
             MACRO_ADDWEAPON(16aa_l85a2_ugl_ladder_e,25);
             MACRO_ADDWEAPON(16aa_l22_e,20);
-            MACRO_ADDWEAPON(16aa_l85a2_ris_e,50);
             MACRO_ADDWEAPON(16aa_l129a1_HG_Bipod,20);
             MACRO_ADDWEAPON(16aa_l110a2_mk1,25);
             MACRO_ADDWEAPON(16AA_L7A2,25);
@@ -98,4 +84,3 @@ class CfgVehicles {
         	MACRO_ADDMAGAZINE(16aa_javelin_m,50);
         };
     };
-};

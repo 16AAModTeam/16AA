@@ -1,25 +1,4 @@
-class CfgPatches {
-	class 16AA_crate_section {
-		requiredaddons[] = {"16aa_crates_a3"};
-		requiredversion = 0.1;
-		units[] = {"16AA_crate_section"};
-		weapons[] = {};
-		magazines[] = {};
-	};
-};
-
-class CfgAddons {
-	class PreloadAddons {
-		class 16AA_crate_section {
-			list[] = {"16AA_crate_section"};
-		};
-	};
-};
-
-class CfgVehicles {
-	class 16aa_crate_empty;	// External class reference
-
-	class 16AA_crate_section : 16aa_crate_empty {
+	class 16AA_crate_section: 16aa_crate_empty {
 		author = "Adams & Beazley";
 		displayName = "Section";
 		vehicleClass = "16aa_Crates";
@@ -72,4 +51,3 @@ class CfgVehicles {
         	MACRO_ADDMAGAZINE(ACE_M84,25);
         };
 	};
-};

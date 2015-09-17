@@ -1,17 +1,4 @@
-class CfgPatches {
-	class 16AA_crate_flight {
-		requiredaddons[] = {"16aa_crates_a3"};
-		requiredversion = 0.1;
-		units[] = {"16AA_crate_flight"};
-		weapons[] = {};
-		magazines[] = {};
-	};
-};
-
-class CfgVehicles {
-	class 16aa_crate_empty;	// External class reference
-
-	class 16AA_crate_flight : 16aa_crate_empty {
+	class 16AA_crate_flight: 16aa_crate_empty {
 		author = "Adams & Beazley";
 		displayName = "Flight";
 		vehicleClass = "16aa_Crates";
@@ -41,4 +28,3 @@ class CfgVehicles {
         	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_JTAC_L_A_SATCOM,2);
         };
 	};
-};

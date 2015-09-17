@@ -1,17 +1,4 @@
-class CfgPatches {
-	class 16AA_crate_medical {
-		requiredaddons[] = {"16aa_crates_a3"};
-		requiredversion = 0.1;
-		units[] = {"16AA_crate_medical"};
-		weapons[] = {};
-		magazines[] = {};
-	};
-};
-
-class CfgVehicles {
-	class 16aa_crate_empty_medical;	// External class reference
-
-	class 16AA_crate_medical : 16aa_crate_empty_medical {
+	class 16AA_crate_medical: 16aa_crate_empty_medical {
 		author = "Adams & Beazley";
 		displayName = "Medical";
 		vehicleClass = "16aa_Crates";
@@ -44,4 +31,3 @@ class CfgVehicles {
         	MACRO_ADDMAGAZINE(SmokeShellPurple,10);
         };
 	};
-};

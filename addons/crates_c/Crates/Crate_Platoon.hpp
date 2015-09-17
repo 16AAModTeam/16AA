@@ -1,26 +1,5 @@
-class CfgPatches {
-	class 16AA_crate_platoon {
-		requiredaddons[] = {"16aa_crates_a3"};
-		requiredversion = 0.1;
-		units[] = {"16AA_crate_platoon"};
-		weapons[] = {};
-		magazines[] = {};
-	};
-};
-
-class CfgAddons {
-	class PreloadAddons {
-		class 16AA_crate_platoon {
-			list[] = {"16AA_crate_platoon"};
-		};
-	};
-};
-
-class CfgVehicles {
-	class 16aa_crate_empty_platoon;	// External class reference
-
-	class 16AA_crate_platoon : 16aa_crate_empty_platoon {
-		scope = public;
+	class 16AA_crate_platoon: 16aa_crate_empty_platoon {
+		scope = 2;
 		author = "Adams & Beazley";
 		displayName = "Platoon";
 		vehicleClass = "16aa_Crates";
@@ -60,4 +39,3 @@ class CfgVehicles {
             MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_SL_L_A,3);
         };
 	};
-};

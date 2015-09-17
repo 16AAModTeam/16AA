@@ -1,38 +1,3 @@
-class CfgPatches {
-	class 16AA_crate_ammo {
-		requiredaddons[] = {"16aa_crates_a3"};
-		requiredversion = 0.1;
-		units[] = {
-			"16AA_container_ammo",
-			"16AA_container_ammo_artillery",
-			"16AA_crate_csw_ammo",
-			"16AA_crate_artillery_105",
-			"16AA_crate_artillery_81",
-			"16AA_crate_ammo_556_stanag",
-			"16AA_crate_ammo_556_link",
-			"16AA_crate_ammo_762_stanag",
-			"16AA_crate_ammo_762_link",
-			"16AA_crate_ammo_12ga",
-			"16AA_crate_ammo_grenades_smoke",
-			"16AA_crate_ammo_grenades_frag",
-			"16AA_crate_ammo_grenades_flashbang",
-			"16AA_crate_ammo_grenades_chemlight",
-			"16AA_crate_ammo_grenades_40mm",
-			"16AA_crate_ammo_explosives",
-			"16AA_crate_ammo_launcher",
-			"16AA_crate_ammo_misc"
-		};
-		weapons[] = {};
-		magazines[] = {};
-	};
-};
-class CfgVehicles {
-	class 16aa_crate_empty_csw;
-	class 16aa_crate_empty_artillery;
-	class 16aa_crate_empty_wooden_large;
-	class 16aa_crate_empty_wooden_small;
-	class Land_Cargo20_military_green_F;
-	class Cargo_base_F;
 	class 16AA_container_ammo: Land_Cargo20_military_green_F{
 		scope = 2;
 		scopeCurator = 2;
@@ -301,4 +266,3 @@ class CfgVehicles {
         	MACRO_ADDMAGAZINE(16aa_sign_checkpoint,15);
         };
 	};
-};

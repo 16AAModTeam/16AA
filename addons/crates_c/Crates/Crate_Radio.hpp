@@ -1,19 +1,5 @@
-class CfgPatches {
-	class 16AA_crate_radio {
-		requiredaddons[] = {"16aa_crates_a3"};
-		requiredversion = 0.1;
-		units[] = {"16AA_crate_radio"};
-		weapons[] = {};
-		magazines[] = {};
-	};
-};
-
-
-class CfgVehicles {
-	class 16aa_crate_empty;	// External class reference
-
-	class 16AA_crate_radio : 16aa_crate_empty {
-		scope = public;
+	class 16AA_crate_radio: 16aa_crate_empty {
+		scope = 2;
 		author = "Adams & Beazley";
 		displayName = "Radio";
 		vehicleClass = "16aa_Crates";
@@ -30,4 +16,3 @@ class CfgVehicles {
         	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_JTAC_L_A,10);
         };
 	};
-};

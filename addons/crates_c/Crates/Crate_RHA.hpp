@@ -1,17 +1,4 @@
-class CfgPatches {
-	class 16AA_crate_rha {
-		requiredaddons[] = {"16aa_crates_a3"};
-		requiredversion = 0.1;
-		units[] = {"16AA_crate_rha"};
-		weapons[] = {};
-		magazines[] = {};
-	};
-};
-
-class CfgVehicles {
-	class 16aa_crate_empty_main;	// External class reference
-
-	class 16AA_crate_rha : 16aa_crate_empty_main {
+	class 16AA_crate_rha: 16aa_crate_empty_main {
 		author = "Adams & Beazley";
 		displayName = "7RHA";
 		vehicleClass = "16aa_Crates";
@@ -36,4 +23,3 @@ class CfgVehicles {
         	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_Radio_L_A,5);
         };
 	};
-};

@@ -1,23 +1,8 @@
-class CfgPatches
-{
-	class 16AA_crates_training
-	{
-		requiredaddons[] = {"16aa_weapons_c"};
-		requiredversion = 0.1;
-		units[] = {"16AA_crate_training_main","16AA_crate_training_section","16AA_crate_csw_training"};
-		weapons[] = {};
-		magazines[] = {};
-	};
-};
-class CfgVehicles
-{
-	class 16aa_crate_empty;
-	class 16aa_crate_empty_main;
 	class 16AA_crate_training_main: 16aa_crate_empty_main
 	{
 		scope = 2;
 		author = "Adams & Beazley";
-		displayName = "Training - Main";
+		displayName = "Main";
 		vehicleClass = "16aa_Crates_Training";
 		class TransportWeapons {
             MACRO_ADDWEAPON(16aa_l85a2_ris_bfa,40);
@@ -76,7 +61,7 @@ class CfgVehicles
 	{
 		scope = 2;
 		author = "Adams & Beazley";
-		displayName = "Training - Section";
+		displayName = "Section";
 		vehicleClass = "16aa_Crates_Training";
 		class TransportWeapons {
             MACRO_ADDWEAPON(16aa_l85a2_ris_bfa,10);
@@ -131,11 +116,10 @@ class CfgVehicles
         	MACRO_ADDMAGAZINE(1Rnd_HE_Grenade_shell_blank,20);
 		};
 	};
-	class 16aa_crate_empty_csw;
 	class 16AA_crate_csw_training: 16aa_crate_empty_csw {
 		scope = 2;
 		author = "Adams & Beazley";
-		displayName = "Training - CSW";
+		displayName = "CSW";
 		vehicleClass = "16aa_Crates_Training";
 		class TransportMagazines{
         	MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_50cal_blank,50);
@@ -143,4 +127,3 @@ class CfgVehicles
         	MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_40mm_blank,50);
 		};
 	};
-};

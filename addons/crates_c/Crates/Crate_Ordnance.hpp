@@ -1,17 +1,4 @@
-class CfgPatches {
-	class 16aa_crate_ordnance {
-		requiredaddons[] = {"16aa_crates_a3"};
-		requiredversion = 0.1;
-		units[] = {"16AA_crate_ordnance"};
-		weapons[] = {};
-		magazines[] = {};
-	};
-};
-
-class CfgVehicles {
-	class 16aa_crate_empty_launchers;	// External class reference
-
-	class 16AA_crate_ordnance : 16aa_crate_empty_launchers {
+	class 16AA_crate_ordnance: 16aa_crate_empty_launchers {
 		author = "Adams & Beazley";
 		displayName = "Ordnance";
 		vehicleClass = "16aa_Crates";
@@ -31,4 +18,3 @@ class CfgVehicles {
         	MACRO_ADDMAGAZINE(NLAW_F,50);
         };
 	};
-};

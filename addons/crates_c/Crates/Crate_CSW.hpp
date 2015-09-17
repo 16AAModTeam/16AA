@@ -1,18 +1,5 @@
-class CfgPatches {
-	class 16AA_crate_csw {
-		requiredaddons[] = {16aa_crates_a3};
-		requiredversion = 0.1;
-		units[] = {"16AA_crate_csw"};
-		weapons[] = {};
-		magazines[] = {};
-	};
-};
-
-class CfgVehicles {
-	class 16aa_crate_empty_csw;	// External class reference
-
-	class 16AA_crate_csw : 16aa_crate_empty_csw {
-		scope = public;
+	class 16AA_crate_csw: 16aa_crate_empty_csw {
+		scope = 2;
 		author = "3LSR";
 		displayName = "CSW";
 		vehicleClass = "16aa_Crates";
@@ -31,4 +18,3 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_Sandbag_empty,50);
         };
 	};
-};
