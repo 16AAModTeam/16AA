@@ -9,5 +9,7 @@ PREP(mountGPMG);
 PREP(mountGPMGTimer);
 PREP(canMount);
 PREP(canDismount);
+PREP(resupplyAmmo);
+PREP(addMagazine);
 
 ADDON = true;

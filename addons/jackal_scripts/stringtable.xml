@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="LSR">
+    <Package name="jackal_scripts">
+        <Key ID="STR_LSR_jackal_scripts_ReloadWeapon">
+            <English>Reload Vehicle Weapon</English>
+        </Key>
+    </Package>
+</Project>

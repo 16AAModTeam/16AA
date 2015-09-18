@@ -14,7 +14,7 @@ Return value:
 */
 #include "script_component.hpp"
 
-PARAMS_2(_vehicle,_unit);
+params["_vehicle","_unit"];
 
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call ace_common_fnc_doAnimation;
