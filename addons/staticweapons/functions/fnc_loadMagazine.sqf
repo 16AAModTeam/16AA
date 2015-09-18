@@ -34,7 +34,7 @@ _roundsLeft = 0;
 }forEach _magazines;
 
 if ((_static magazineTurretAmmo [_currentMagazine, [0]]) == 0) then {
-	["16aa_staticweapons_removeMagazine", [_static, _currentMagazine]] call ace_common_fnc_globalEvent;
+	["16aa_staticweapons_removeMagazine", [_static], [_static, _currentMagazine]] call ace_common_fnc_targetEvent;
 };
 
 if (_magazineClassDetails != "") then{
@@ -48,8 +48,8 @@ if (_magazineClassDetails != "") then{
 _configMortar = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> QGVAR(isMortarRound));
 if(_magazineClassOptional !="") then{
 		_unit removeMagazine _magazineClassOptional;
-		["16aa_staticweapons_addMagazine", [_static, _magazineClassOptional]] call ace_common_fnc_globalEvent;
+		["16aa_staticweapons_addMagazine", [_static], [_static, _magazineClassOptional]] call ace_common_fnc_targetEvent;
 	}else{
 		_unit removeMagazine _magazineClass;
-		["16aa_staticweapons_addMagazine", [_static, _magazineClass]] call ace_common_fnc_globalEvent;
+		["16aa_staticweapons_addMagazine", [_static], [_static, _magazineClass]] call ace_common_fnc_targetEvent;
 	};
