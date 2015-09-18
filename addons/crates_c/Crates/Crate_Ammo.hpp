@@ -469,5 +469,6 @@
         	MACRO_ADDMAGAZINE(16aa_cone,30);
         	MACRO_ADDMAGAZINE(16aa_sign_road_closed,15);
         	MACRO_ADDMAGAZINE(16aa_sign_checkpoint,15);
+            MACRO_ADDITEM(ACE_Sandbag_empty,50);
         };
 	};
