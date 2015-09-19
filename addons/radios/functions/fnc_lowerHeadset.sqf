@@ -20,9 +20,6 @@ _haveLR = call TFAR_fnc_haveLRRadio;
 _radioSW = call TFAR_fnc_activeSwRadio;
 _radioLR = call TFAR_fnc_activeLrRadio;
 
-_debugtext = format ["Debug: %1 %2 %3 %4",_haveSW,_radioSW,_haveLR,_radioLR];
-hint _debugText;
-
 if (_haveSW)then{
 	[_radioSW, 3] call TFAR_fnc_setSwVolume;
 };
