@@ -258,9 +258,10 @@ class CfgVehicles
     class 16AA_crate_csw : 16aa_crate_empty_csw {
         class TransportWeapons {
             MACRO_ADDWEAPON(16aa_javelin_launcher,15);
+            MACRO_ADDWEAPON(16aa_l7a2,15);
         };
         class TransportItems {
-            MACRO_ADDITEM(16aa_tripod,60);
+            MACRO_ADDITEM(16aa_tripod,75);
             MACRO_ADDITEM(16aa_static_item_l2a1_barrel,15);
             MACRO_ADDITEM(16aa_static_item_l2a1_receiver,15);
             MACRO_ADDITEM(16aa_static_item_gmg_barrel,15);
@@ -269,19 +270,12 @@ class CfgVehicles
             //MACRO_ADDITEM(16aa_static_item_l16_bipod,5);
             MACRO_ADDITEM(16aa_static_item_l16_tube,15);
         };
-        class TransportMagazines{
-            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_50cal,50);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_762,50);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_40mm,50);
-            MACRO_ADDMAGAZINE(16aa_javelin_m,50);
-        };
     };
     class 16aa_crate_empty_artillery;
     class 16AA_crate_artillery_105: 16aa_crate_empty_artillery{
          class TransportMagazines{
             MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_HE,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_WP,50);
-            MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_LASER,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_SMOKE,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_ILLUM,50);
         };
@@ -293,6 +287,14 @@ class CfgVehicles
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_white,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_red,50);
             MACRO_ADDMAGAZINE(16aa_static_magazine_l16_smoke_orange,50);
+        };
+    };
+    class 16AA_crate_csw_ammo : 16aa_crate_empty_csw{
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_50cal,50);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_762,50);
+            MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_40mm,50);
+            MACRO_ADDMAGAZINE(16aa_javelin_m,50);
         };
     };
     //Empty Tripods
@@ -547,7 +549,7 @@ class CfgVehicles
                         distance = 5;
                         displayName = "Load HE";
                         condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_he')] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_he')] call FUNC(loadMagazineTimer));
+                        statement = QUOTE([ARR_4(_target,_player,'16aa_static_magazine_l16_he',1)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -556,7 +558,7 @@ class CfgVehicles
                         distance = 5;
                         displayName = "Load Illum";
                         condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_illum')] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_illum')] call FUNC(loadMagazineTimer));
+                        statement = QUOTE([ARR_4(_target,_player,'16aa_static_magazine_l16_illum',1)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -565,7 +567,7 @@ class CfgVehicles
                         distance = 5;
                         displayName = "Load Smoke - White";
                         condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_smoke_white')] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_smoke_white')] call FUNC(loadMagazineTimer));
+                        statement = QUOTE([ARR_4(_target,_player,'16aa_static_magazine_l16_smoke_white',1)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -574,7 +576,7 @@ class CfgVehicles
                         distance = 5;
                         displayName = "Load Smoke - Red";
                         condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_smoke_red')] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_smoke_red')] call FUNC(loadMagazineTimer));
+                        statement = QUOTE([ARR_4(_target,_player,'16aa_static_magazine_l16_smoke_red',1)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -583,7 +585,7 @@ class CfgVehicles
                         distance = 5;
                         displayName = "Load Smoke - Orange";
                         condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_smoke_orange')] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_smoke_orange')] call FUNC(loadMagazineTimer));
+                        statement = QUOTE([ARR_4(_target,_player,'16aa_static_magazine_l16_smoke_orange',1)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -616,7 +618,7 @@ class CfgVehicles
                         distance = 5;
                         displayName = "Load HE";
                         condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_1Rnd_105mm_HE')] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_1Rnd_105mm_HE')] call FUNC(loadMagazineTimer));
+                        statement = QUOTE([ARR_4(_target,_player,'16aa_static_magazine_1Rnd_105mm_HE',5)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -625,7 +627,7 @@ class CfgVehicles
                         distance = 5;
                         displayName = "Load WP";
                         condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_1Rnd_105mm_WP')] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_1Rnd_105mm_WP')] call FUNC(loadMagazineTimer));
+                        statement = QUOTE([ARR_4(_target,_player,'16aa_static_magazine_1Rnd_105mm_WP',5)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -634,16 +636,7 @@ class CfgVehicles
                         distance = 5;
                         displayName = "Load Smoke";
                         condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_1Rnd_105mm_SMOKE')] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_1Rnd_105mm_SMOKE')] call FUNC(loadMagazineTimer));
-                        showDisabled = 0;
-                        exceptions[] = {};
-                        priority = 8;
-                    };
-                    class 16aa_LoadMagazine_AT_LG{
-                        distance = 5;
-                        displayName = "Load AT - Laser Guided";
-                        condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_1Rnd_105mm_LASER')] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_1Rnd_105mm_LASER')] call FUNC(loadMagazineTimer));
+                        statement = QUOTE([ARR_4(_target,_player,'16aa_static_magazine_1Rnd_105mm_SMOKE',5)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -652,7 +645,7 @@ class CfgVehicles
                         distance = 5;
                         displayName = "Load Illum";
                         condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_1Rnd_105mm_ILLUM')] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_1Rnd_105mm_ILLUM')] call FUNC(loadMagazineTimer));
+                        statement = QUOTE([ARR_4(_target,_player,'16aa_static_magazine_1Rnd_105mm_ILLUM',5)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -708,7 +701,7 @@ class CfgVehicles
                         distance = 5;
                         displayName = "Load Magazine";
                         condition = QUOTE([ARR_3(_target,_player,'')] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_3(_target,_player,'')] call FUNC(loadMagazineTimer));
+                        statement = QUOTE([ARR_4(_target,_player,'',5)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -826,8 +819,8 @@ class CfgVehicles
                     class 16aa_LoadMagazine{
                         distance = 5;
                         displayName = "Load Magazine";
-                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazineTimer));
+                        condition = QUOTE([ARR_3(_target,_player,'')] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_4(_target,_player,'',5)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -945,8 +938,8 @@ class CfgVehicles
                     class 16aa_LoadMagazine{
                         distance = 5;
                         displayName = "Load Magazine";
-                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazineTimer));
+                        condition = QUOTE([ARR_3(_target,_player,'')] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_4(_target,_player,'',5)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
@@ -1041,8 +1034,8 @@ class CfgVehicles
                     class 16aa_LoadMagazine{
                         distance = 5;
                         displayName = "Load Magazine";
-                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canLoadMagazine));
-                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(loadMagazineTimer));
+                        condition = QUOTE([ARR_3(_target,_player,'')] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_4(_target,_player,'',5)] call FUNC(loadMagazineTimer));
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;

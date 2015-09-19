@@ -37,6 +37,7 @@ if (_magazineClassOptional != "")then{
 		if ([_unit,_x] call ace_common_fnc_hasMagazine)  exitWith {_hasCompatibleMagazine = true;};
 	}forEach _listOfMagNames;
 };
+
 if ( ( ((count (_static magazinesTurret [0])) == 0) || ((_static magazineTurretAmmo [_currentMagazine, [0]]) == 0) ) && _hasCompatibleMagazine && _hasBarrel) then {
 	_canLoadMagazine = true;
 };
