@@ -18,7 +18,7 @@
         	MACRO_ADDMAGAZINE(16aa_Stinger_M,8);
         	MACRO_ADDMAGAZINE(150Rnd_762x51_Box,8);
         };
-        class TransportBackpack{
+        class TransportBackpacks{
         	MACRO_ADDBACKPACK(B_UAV_01_backpack_F,2);
         	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_Radio_L_A,5);
         };
