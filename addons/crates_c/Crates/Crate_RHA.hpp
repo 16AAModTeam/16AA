@@ -16,7 +16,7 @@
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(16aa_Stinger_M,8);
-        	MACRO_ADDMAGAZINE(150Rnd_762x51_Box,8);
+        	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg,8);
         };
         class TransportBackpacks{
         	MACRO_ADDBACKPACK(B_UAV_01_backpack_F,2);

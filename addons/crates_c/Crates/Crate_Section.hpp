@@ -11,6 +11,7 @@
             MACRO_ADDWEAPON(16AA_G17,3);
             MACRO_ADDWEAPON(16aa_AT4CSHP,8);
             MACRO_ADDWEAPON(launch_NLAW_F,2);
+
         };
         class TransportItems {
             MACRO_ADDITEM(tf_anprc152,5);
