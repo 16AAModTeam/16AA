@@ -464,11 +464,11 @@
 		vehicleClass = "16aa_Crates_Ammo";
 		class TransportItems {
             MACRO_ADDITEM(ACE_CableTie,40);
+            MACRO_ADDITEM(ACE_Sandbag_empty,50);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(16aa_cone,30);
         	MACRO_ADDMAGAZINE(16aa_sign_road_closed,15);
         	MACRO_ADDMAGAZINE(16aa_sign_checkpoint,15);
-            MACRO_ADDITEM(ACE_Sandbag_empty,50);
         };
 	};
