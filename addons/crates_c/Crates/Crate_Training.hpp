@@ -38,7 +38,7 @@
         	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag_Blank,400);
         	MACRO_ADDMAGAZINE(sti_200Rnd_556x45_Blank,200);
         	MACRO_ADDMAGAZINE(20Rnd_762x51_Mag_Blank,120);
-        	MACRO_ADDMAGAZINE(150Rnd_762x51_Box_blank,50);
+        	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg_blank,50);
         	MACRO_ADDMAGAZINE(16aa_30Rnd_545x39_blank,50);
         	MACRO_ADDMAGAZINE(16aa_handgrenade_blank,150);
         	MACRO_ADDMAGAZINE(SmokeShellYellow,200);
@@ -99,7 +99,7 @@
         	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag_Blank,100);
         	MACRO_ADDMAGAZINE(sti_200Rnd_556x45_Blank,30);
         	MACRO_ADDMAGAZINE(20Rnd_762x51_Mag_Blank,20);
-        	MACRO_ADDMAGAZINE(150Rnd_762x51_Box_blank,50);
+        	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg_blank,50);
         	MACRO_ADDMAGAZINE(16aa_30Rnd_545x39_blank,50);
         	MACRO_ADDMAGAZINE(16aa_handgrenade_blank,40);
         	MACRO_ADDMAGAZINE(SmokeShellYellow,60);
