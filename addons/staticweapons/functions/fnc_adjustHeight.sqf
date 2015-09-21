@@ -1,7 +1,7 @@
 /*
 Author: Grey
 
-Raises or lowers tripod
+Raises or lowers static weapon/tripod
 
 Arguments:
 0: staticOld <OBJECT>
@@ -17,30 +17,51 @@ Return value:
 */
 #include "script_component.hpp"
 
-PARAMS_3(_staticOld,_staticNewClass,_unit);
-
-if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
-    [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call ace_common_fnc_doAnimation;
-};
-
-// TODO kick out anyone inside the static weapon
-// TODO lock the static weapon
+params["_staticOld","_staticNewClass","_unit"];
 
 [{
-    PARAMS_3(_staticOld,_staticNewClass,_unit);
+    params["_staticOld","_staticNewClass","_unit"];
 
-    private ["_direction", "_position","_staticNew"];
+    private ["_direction,_position,_staticNew,_hasBarrelV,_configBarrel,_currentMagazine,_ammoCount,_hasMagazine"];
     _direction = getDir _staticOld;
     _position = getPosASL _staticOld;
+    _hasBarrelV = false;
+    _currentMagazine = _staticOld currentMagazineTurret [0];
+    _ammoCount = 0;
+    _hasMagazine = false;
+    if(_staticOld getVariable [QGVAR(hasBarrel),false])then {
+        _hasBarrelV = true;
+    };
+    if ((count (_staticOld magazinesTurret [0])) == 1) then {
+        _ammoCount = _static magazineTurretAmmo [_currentMagazine, [0]];
+        _hasMagazine = true;
+    };
     deletevehicle _staticOld;
 
     _staticNew = createVehicle [_staticNewClass, _position, [], 0, "CAN_COLLIDE"];
     _staticNew setPosASL _position;
     _staticNew setDir _direction;
 
-    if ((getPosATL _staticNew select 2) - (getPos _staticNew select 2) < 1E-5) then {
+    _configBarrel = getNumber (configFile >> "CfgVehicles" >> typeOf _staticNew >> QGVAR(enableBarrel));
+    if(_configBarrel == 1)  then{
+        if(_hasBarrelV)then {
+            _staticNew setvariable [QGVAR(hasBarrel), true, true];
+            _staticNew lockTurret [[0], false];
+            _staticNew animate ["barrel_hide",0];
+        }else{
+            _staticNew setvariable [QGVAR(hasBarrel), false, true];
+            _staticNew lockTurret [[0], true];
+        };
+    };
+    if (_hasMagazine) then {
+        ["16aa_staticweapons_addMagazine", [_staticNew, _currentMagazine]] call ace_common_fnc_globalEvent;
+        ["16aa_staticweapons_setTurretAmmo", [_staticNew, _currentMagazine,_ammoCount]] call ace_common_fnc_globalEvent;
+    };
+
+    if ((getPosATL _staticNew select 2) - (getPos _staticNsew select 2) < 1E-5) then {
         _staticNew setVectorUp (surfaceNormal (position _staticNew));
     };
     _staticNew setPosASL _position; // force that shit on the correct position
     _unit reveal _staticNew;
+
 }, [_staticOld,_staticNewClass,_unit], 1, 0] call ace_common_fnc_waitAndExecute;

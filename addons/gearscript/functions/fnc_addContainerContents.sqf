@@ -25,8 +25,6 @@ _classes = _containerData select 0;
 _items = _containerData select 1;
 _magazines = _containerData select 2;
 
-diag_log format["AddContainerContents: %1", _this];
-
 switch (toLower _type) do {
     case "backpack": {
         if (isNull (backpackContainer _unit)) exitwith {};

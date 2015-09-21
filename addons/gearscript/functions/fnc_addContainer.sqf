@@ -26,7 +26,7 @@ _items = _containerData select 1;
 _magazines = _containerData select 2;
 
 _containerClass = "";
-if (typeName _classes == "ARRAY") then {
+if (typeName _classes == "ARRAY" && {count _classes > 0}) then {
     _containerClass = (_classes select (floor(random(count _classes))));
 };
 if (_containerClass == "") exitwith {}; // no container to add

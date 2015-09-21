@@ -5,7 +5,8 @@ Place down tripod
 
 Arguments:
 0: unit <OBJECT>
-1: tripod class <STRING>
+1: item <STRING>
+2: tripod <STRING>
 
 Return Value:
 Nothing
@@ -15,15 +16,11 @@ Return value:
 */
 #include "script_component.hpp"
 
-PARAMS_3(_unit,_tripodClass,_objectClass);
-
+params["_unit","_tripodClass","_objectClass"];
 _unit removeItem _tripodClass;
-if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
-    _unit playMove "AmovPercMstpSrasWrflDnon_diary";
-};
 
 [{
-    PARAMS_2(_unit,_objectClass);
+    params["_unit","_objectClass"];
 
     private ["_direction", "_position", "_tripod"];
     _direction = getDir _unit;
