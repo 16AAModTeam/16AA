@@ -5,7 +5,7 @@
 	if!([ACE_player] call FUNC(canLowerHeadset)) exitWith {false};
 
 	[ACE_player] call FUNC(lowerHeadset);
-	ACE_player;
+	true
 },
 {false},
 [0, [false, false, false]],false] call cba_fnc_addKeybind;

@@ -1,11 +1,11 @@
 class RscTitles
 {
     class RscPicture;
-    class RscLoweredHeadset
+    class RscLSRLoweredHeadset
     {
         idd=-1;
-        onLoad="with uiNameSpace do { RscLoweredHeadset = _this select 0 };";
-        name = "RscLoweredHeadset";
+        onLoad="with uiNameSpace do { RscLSRLoweredHeadset = _this select 0 };";
+        name = "RscLSRLoweredHeadset";
         movingEnable=0;
         duration=99999;
         class controls
