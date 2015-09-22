@@ -11,8 +11,8 @@ None
 */
 #include "script_component.hpp"
 
-#define VOLUME_NORMAL 8;
-#define VOLUME_LOW 3;
+#define VOLUME_NORMAL 8
+#define VOLUME_LOW 3
 
 private ["_haveSW","_haveLR","_radioSW"];
 
@@ -22,7 +22,7 @@ _haveLR = call TFAR_fnc_haveLRRadio;
 _radioSW = call TFAR_fnc_activeSwRadio;
 (call TFAR_fnc_activeLrRadio) params ["_radioObject", "_radioID"];
 
-if(if (ACE_player getVariable [QGVAR(headsetIsLowered),false]) then{
+if(ACE_player getVariable [QGVAR(headsetIsLowered),false]) then{
 	if (_haveSW)then{
 		[_radioSW, 8] call TFAR_fnc_setSwVolume;
 	};
