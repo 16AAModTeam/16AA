@@ -21,11 +21,11 @@ _currentMagazine = _static currentMagazineTurret [0];
 _ammoCount = _static magazineTurretAmmo [_currentMagazine, [0]];
 
 if (_ammoCount == 0) then {
-	["16aa_staticweapons_removeMagazine", [_static], [_static, _currentMagazine]] call ace_common_fnc_targetEvent;
+	["16aa_staticweapons_removeMagazine", [_static, _currentMagazine]] call ace_common_fnc_globalEvent;
 }else {
 	_pos = _unit modelToWorldVisual [0,1,0];
     _unit = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
     _unit addMagazineAmmoCargo [_currentMagazine, 1, _ammocount];
     _unit setPosATL _pos;
-    ["16aa_staticweapons_removeMagazine", [_static], [_static, _currentMagazine]] call ace_common_fnc_targetEvent;
+    ["16aa_staticweapons_removeMagazine", [_static, _currentMagazine]] call ace_common_fnc_globalEvent;
 };

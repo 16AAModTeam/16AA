@@ -63,7 +63,7 @@ params["_staticOld","_staticNewClass","_unit"];
         };
     };
     if (_hasMagazine) then {
-        ["16aa_staticweapons_addMagazine", [_staticNew], [_staticNew, _currentMagazine]] call ace_common_fnc_targetEvent;
+        ["16aa_staticweapons_addMagazine", [_staticNew, _currentMagazine]] call ace_common_fnc_globalEvent;
     };
 
     if ((getPosATL _staticNew select 2) - (getPos _staticNsew select 2) < 1E-5) then {
