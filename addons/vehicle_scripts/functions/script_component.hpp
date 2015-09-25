@@ -1,1 +1,1 @@
-#include "\z\lsr\addons\jackal_scripts\script_component.hpp"
+#include "\z\lsr\addons\vehicle_scripts\script_component.hpp"

@@ -16,7 +16,7 @@ None
 #include "script_component.hpp"
 
 params["_vehicle","_unit"];
-private ["_canDismount"];
+private "_canDismount";
 _canDismount = false;
 
 if(_vehicle getVariable [QGVAR(hasGPMG),true])then {

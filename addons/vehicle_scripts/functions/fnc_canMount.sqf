@@ -16,7 +16,7 @@ None
 #include "script_component.hpp"
 
 params["_vehicle","_unit"];
-private ["_canMount"];
+private "_canMount";
 _canMount = false;
 
 if(('16aa_l7a2' in (weapons _unit)) && !( _vehicle getVariable [QGVAR(hasGPMG),true]) )then {

@@ -18,7 +18,7 @@ None
 
 params["_vehicle","_unit","_textureIndex"];
 
-if !([_vehicle, _unit] call FUNC(canDismount)) exitwith {};
+//if !([_vehicle, _unit] call FUNC(canDismount)) exitwith {};
 
 _vehicle setvariable [QGVAR(hasGPMG), true, true];
 
@@ -27,7 +27,7 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
 };
 
 [{
-    params["_vehicle","_unit"];
+    params["_vehicle","_unit","_textureIndex"];
 
     _unit removeWeapon '16aa_l7a2';
 
