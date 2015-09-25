@@ -32,7 +32,7 @@ if (((_turretIndex  select 0) == 1) || ((_turretIndex  select 0) == 0))  then {
 					};
 				} forEach _listOfMagNames;
 				if (_magName != "") exitWith {
-					["16aa_jackals_removeMagazine", [_vehicle,_magName ,_turretIndex]] call ace_common_fnc_globalEvent;
+					["16aa_vehicles_removeMagazine", [_vehicle,_magName ,_turretIndex]] call ace_common_fnc_globalEvent;
 					[_vehicle, _turretIndex, _magName] call FUNC(addMagazine);
 				};
 			};
