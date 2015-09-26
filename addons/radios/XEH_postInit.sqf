@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["16aa", "16AA_Key_Adjust_Headset", "Lower/Raise Radio Headset",
+["16AA", "16AA_Key_Adjust_Headset", "Lower/Raise Radio Headset",
 {
 	if!([ACE_player] call FUNC(canLowerHeadset)) exitWith {false};
 
