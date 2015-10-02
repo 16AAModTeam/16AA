@@ -21,11 +21,11 @@ Public: No
 */
 
 #include "script_component.hpp"
-params ["_vehicle,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile"];
+params ["_vehicle","_weapon","_muzzle","_mode","_ammo","_magazine",_"projectile"];
 private ["_static,_magazineName"];
 _static = _this select 0;
 _magazineName = _this select 5;
 
  if ((_static magazineTurretAmmo [_magazineName, [0]]) == 0) then {
- 	["16aa_staticweapons_removeMagazine", [_static], [_static, _magazineName]] call ace_common_fnc_targetEvent;
+ 	["16aa_staticweapons_removeMagazine", [_static, _magazineName]] call ace_common_fnc_globalEvent;
 };
