@@ -12,7 +12,7 @@ class CfgVehicles
                     statement = QUOTE([ARR_3(_player,'16aa_tripod','16aa_tripod_low')] call FUNC(placeTimer));
                     showDisabled = 0;
                     priority = 2;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_place_tripod_ca.paa);
                 };
                 class GVAR(l16_place) {
                     //displayName = CSTRING(Placedown);
@@ -328,23 +328,27 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_place_tripod_ca.paa);
                 };
                 class 16aa_assemble_l2a1: 16aa_Pickup{
                     displayName = "Assemble L2A1";
                     condition = QUOTE([ARR_2(_player,'16aa_static_item_l2a1_receiver')] call ace_common_fnc_hasItem);
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                 class 16aa_assemble_gmg: 16aa_Pickup{
                     displayName = "Assemble L134A1";
                     condition = QUOTE([ARR_2(_player,'16aa_static_item_gmg_receiver')] call ace_common_fnc_hasItem);
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                 class 16aa_assemble_gpmg: 16aa_Pickup{
                     displayName = "Assemble GPMG SF";
                     condition = "'16aa_l7a2' in (weapons _player)";
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                 class 16aa_assemble_javelin: 16aa_Pickup{
                     displayName = "Assemble Javelin";
                     condition = "'16aa_javelin_launcher' in (weapons _player)";
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
         };
@@ -368,23 +372,27 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_adjust_up_ca.paa);
                 };
                 class 16aa_assemble_l2a1: 16aa_assemble_l2a1{
                     displayName = "Assemble L2A1";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_L2A1_Static_Base','16aa_static_item_l2a1_receiver')] call FUNC(assembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                 class 16aa_assemble_gmg: 16aa_assemble_gmg{
                     displayName = "Assemble L134A1";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_GMG_Static_Base','16aa_static_item_gmg_receiver')] call FUNC(assembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                 class 16aa_assemble_gpmg: 16aa_assemble_gpmg{
                     displayName = "Assemble GPMG SF";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_GPMG_Static_Base','16aa_l7a2')] call FUNC(assembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                 class 16aa_assemble_javelin: 16aa_assemble_javelin{
                     displayName = "Assemble Javelin";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_Javelin_Static_base','16aa_javelin_launcher')] call FUNC(assembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
         };
@@ -402,26 +410,32 @@ class CfgVehicles
                 class 16aa_AdjustHeightUp: 16aa_Pickup {
                     displayName = "Raise Tripod";
                     statement = QUOTE([ARR_3(_target,'16aa_tripod_raised',_player)] call FUNC(adjustHeightTimer));
+                    icon = PATHTOF(UI\w_adjust_up_ca.paa);
                 };
                 class 16aa_AdjustHeightLower: 16aa_AdjustHeightUp {
                     displayName = "Lower Tripod";
                     statement = QUOTE([ARR_3(_target,'16aa_tripod_low',_player)] call FUNC(adjustHeightTimer));
+                    icon = PATHTOF(UI\w_adjust_down_ca.paa);
                 };
                 class 16aa_assemble_l2a1: 16aa_assemble_l2a1{
                     displayName = "Assemble L2A1";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_L2A1_Static_Base_middle','16aa_static_item_l2a1_receiver')] call FUNC(assembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                 class 16aa_assemble_gmg: 16aa_assemble_gmg{
                     displayName = "Assemble L134A1";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_GMG_Static_Base_middle','16aa_static_item_gmg_receiver')] call FUNC(assembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                 class 16aa_assemble_gpmg: 16aa_assemble_gpmg{
                     displayName = "Assemble GPMG SF";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_GPMG_Static_Base_middle','16aa_l7a2')] call FUNC(assembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                 class 16aa_assemble_javelin: 16aa_assemble_javelin{
                     displayName = "Assemble Javelin";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_Javelin_Static_middle','16aa_javelin_launcher')] call FUNC(assembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
         };
@@ -443,22 +457,27 @@ class CfgVehicles
                     condition = "true";
                     displayName = "Lower Tripod";
                     statement = QUOTE([ARR_3(_target,'16aa_tripod_middle',_player)] call FUNC(adjustHeightTimer));
+                    icon = PATHTOF(UI\w_adjust_down_ca.paa);
                 };
                 class 16aa_assemble_l2a1: 16aa_assemble_l2a1{
                     displayName = "Assemble L2A1";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_L2A1_Static_Base_raised','16aa_static_item_l2a1_receiver')] call FUNC(assembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                 class 16aa_assemble_gmg: 16aa_assemble_gmg{
                     displayName = "Assemble L134A1";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_GMG_Static_Base_raised','16aa_static_item_gmg_receiver')] call FUNC(assembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                 class 16aa_assemble_gpmg: 16aa_assemble_gpmg{
                     displayName = "Assemble GPMG SF";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_GPMG_Static_base_raised','16aa_l7a2')] call FUNC(assembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                  class 16aa_assemble_javelin: 16aa_assemble_javelin{
                     displayName = "Assemble Javelin";
                     statement = QUOTE([ARR_4(_target,_player,'16aa_Javelin_Static_raised','16aa_javelin_launcher')] call FUNC(assembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
         };
@@ -477,11 +496,13 @@ class CfgVehicles
                 class 16aa_Pickup: 16aa_Pickup {
                     displayName = "Pick up Base Plate"
                     statement = QUOTE([ARR_3(_target,_player,'16aa_static_item_l16_baseplate')] call FUNC(pickupTimer));
+                    icon = PATHTOF(UI\w_l16_baseplate_ca.paa);
                 };
                 class 16aa_assemble_l16: 16aa_Pickup{
                     displayName = "Assemble L16";
                     condition = QUOTE([ARR_2(_player,'16aa_static_item_l16_tube')] call ace_common_fnc_hasItem);
                     statement = QUOTE([ARR_4(_target,_player,'16aa_L16_Mortar','16aa_static_item_l16_tube')] call FUNC(assembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                  class 16aa_assemble_l2a1{
                     condition = "false";
@@ -533,7 +554,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 6;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
             class 16aa_Magazines_Category{
@@ -553,6 +574,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                     class 16aa_LoadMagazine_Illum{
                         distance = 5;
@@ -562,6 +584,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                     class 16aa_LoadMagazine_Smoke_White{
                         distance = 5;
@@ -571,6 +594,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                     class 16aa_LoadMagazine_Smoke_Red{
                         distance = 5;
@@ -580,6 +604,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                     class 16aa_LoadMagazine_Smoke_Orange{
                         distance = 5;
@@ -589,6 +614,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                      class 16aa_UnloadMagazine{
                         distance = 5;
@@ -598,6 +624,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 9;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                 };
         };
@@ -622,6 +649,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                     class 16aa_LoadMagazine_WP{
                         distance = 5;
@@ -631,6 +659,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                     class 16aa_LoadMagazine_Smoke{
                         distance = 5;
@@ -649,6 +678,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                      class 16aa_UnloadMagazine{
                         distance = 5;
@@ -658,6 +688,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 9;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                 };
         };
@@ -675,7 +706,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_adjust_up_ca.paa);
                 };
                 class 16aa_Disassemble{
                     distance = 5;
@@ -685,7 +716,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 6;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
                 class 16aa_Magazines_Category{
@@ -705,6 +736,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                      class 16aa_UnloadMagazine{
                         distance = 5;
@@ -714,6 +746,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 9;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                 };
                 class 16aa_Barrel_Mount{
@@ -725,6 +758,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 10;
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                 class 16aa_Barrel_Dismount{
                     distance = 5;
@@ -735,6 +769,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 11;
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
         };
     };
@@ -750,14 +785,16 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_adjust_up_ca.paa);
                 };
                 class 16aa_AdjustHeightUp_L2A1_Down: 16aa_AdjustHeightUp_L2A1{
                     displayName = "Lower Tripod";
                     statement = QUOTE([ARR_3(_target,'16aa_L2A1_Static_Base',_player)] call FUNC(adjustHeightTimer));
+                    icon = PATHTOF(UI\w_adjust_down_ca.paa);
                 };
                 class 16aa_Disassemble: 16aa_Disassemble{
                     statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_middle',['16aa_static_item_l2a1_receiver'])] call FUNC(disassembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
         };
@@ -773,9 +810,11 @@ class CfgVehicles
                     displayName = "Lower Tripod";
                     condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_L2A1_Static_Base_middle',_player)] call FUNC(adjustHeightTimer));
+                    icon = PATHTOF(UI\w_adjust_down_ca.paa);
                 };
                 class 16aa_Disassemble: 16aa_Disassemble{
                     statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_raised',['16aa_static_item_l2a1_receiver'])] call FUNC(disassembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
         };
@@ -794,7 +833,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_adjust_up_ca.paa);
                 };
                 class 16aa_Disassemble_GMG{
                     distance = 5;
@@ -804,7 +843,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 6;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
                 class 16aa_Magazines_Category{
@@ -824,6 +863,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                      class 16aa_UnloadMagazine{
                         distance = 5;
@@ -833,6 +873,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 9;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                 };
                 class 16aa_Barrel_Mount{
@@ -844,6 +885,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 7;
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
                 class 16aa_Barrel_Dismount{
                     distance = 5;
@@ -854,6 +896,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 8;
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
         };
     };
@@ -861,7 +904,6 @@ class CfgVehicles
         GVAR(enableBarrel) = 1;
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-
                 class 16aa_AdjustHeightUp_GMG{
                     displayName = "Raise Tripod";
                     distance = 5;
@@ -870,14 +912,16 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_adjust_up_ca.paa);
                 };
                 class 16aa_AdjustHeightDown_GMG: 16aa_AdjustHeightUp_GMG{
                     displayName = "Lower Tripod";
                     statement = QUOTE([ARR_3(_target,'16aa_GMG_Static_Base',_player)] call FUNC(adjustHeightTimer));
+                    icon = PATHTOF(UI\w_adjust_down_ca.paa);
                 };
                 class 16aa_Disassemble_GMG: 16aa_Disassemble_GMG{
                     statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_middle',['16aa_static_item_gmg_receiver'])] call FUNC(disassembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
         };
@@ -893,9 +937,11 @@ class CfgVehicles
                     displayName = "Lower Tripod";
                     condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_GMG_Static_Base_middle',_player)] call FUNC(adjustHeightTimer));
+                    icon = PATHTOF(UI\w_adjust_down_ca.paa);
                 };
                 class 16aa_Disassemble_GMG:16aa_Disassemble_GMG{
                     statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_raised',['16aa_static_item_gmg_receiver'])] call FUNC(disassembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
         };
@@ -913,7 +959,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_adjust_up_ca.paa);
                 };
                 class 16aa_Disassemble_GPMG{
                     distance = 5;
@@ -923,7 +969,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 6;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
             class 16aa_Magazines_Category{
@@ -943,6 +989,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                      class 16aa_UnloadMagazine{
                         distance = 5;
@@ -952,6 +999,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 9;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                 };
         };
@@ -967,14 +1015,16 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_adjust_up_ca.paa);
                 };
                 class 16aa_AdjustHeightDown_GPMG: 16aa_AdjustHeightUp_GPMG{
                     displayName = "Lower Tripod";
                     statement = QUOTE([ARR_3(_target,'16aa_GPMG_Static_base',_player)] call FUNC(adjustHeightTimer));
+                    icon = PATHTOF(UI\w_adjust_down_ca.paa);
                 };
                 class 16aa_Disassemble_GPMG:16aa_Disassemble_GPMG{
                     statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_middle',['16aa_l7a2'])] call FUNC(disassembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
         };
@@ -989,9 +1039,11 @@ class CfgVehicles
                     displayName = "Lower Tripod";
                     condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_GPMG_Static_base_middle',_player)] call FUNC(adjustHeightTimer));
+                    icon = PATHTOF(UI\w_adjust_down_ca.paa);
                 };
                 class 16aa_Disassemble_GPMG:16aa_Disassemble_GPMG{
                     statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_raised',['16aa_l7a2'])] call FUNC(disassembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
         };
@@ -1009,7 +1061,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_adjust_up_ca.paa);
                 };
                 class 16aa_Disassemble_Javelin{
                     distance = 5;
@@ -1019,7 +1071,7 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 6;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
             class 16aa_Magazines_Category{
@@ -1039,6 +1091,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                      class 16aa_UnloadMagazine{
                         distance = 5;
@@ -1048,6 +1101,7 @@ class CfgVehicles
                         showDisabled = 0;
                         exceptions[] = {};
                         priority = 9;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
                 };
         };
@@ -1063,14 +1117,16 @@ class CfgVehicles
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
-                    icon = PATHTOF(UI\w_tripod_ca.paa);
+                    icon = PATHTOF(UI\w_adjust_up_ca.paa);
                 };
                 class 16aa_AdjustHeightDown_Javelin: 16aa_AdjustHeightUp_Javelin{
                     displayName = "Lower Tripod";
                     statement = QUOTE([ARR_3(_target,'16aa_Javelin_Static_base',_player)] call FUNC(adjustHeightTimer));
+                    icon = PATHTOF(UI\w_adjust_down_ca.paa);
                 };
                 class 16aa_Disassemble_Javelin:16aa_Disassemble_Javelin{
                     statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_middle',['16aa_javelin_launcher'])] call FUNC(disassembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
         };
@@ -1085,9 +1141,11 @@ class CfgVehicles
                     displayName = "Lower Tripod";
                     condition = QUOTE([ARR_2(_target,_player)] call FUNC(canAdjustHeight));
                     statement = QUOTE([ARR_3(_target,'16aa_Javelin_Static_middle',_player)] call FUNC(adjustHeightTimer));
+                    icon = PATHTOF(UI\w_adjust_down_ca.paa);
                 };
                 class 16aa_Disassemble_Javelin:16aa_Disassemble_Javelin{
                     statement = QUOTE([ARR_4(_target,_player,'16aa_tripod_raised',['16aa_javelin_launcher'])] call FUNC(disassembleTimer));
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
             };
         };
