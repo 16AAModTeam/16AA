@@ -16,15 +16,7 @@
 
 #include "script_component.hpp"
 
-private ["_unit", "_nvgClassname", "_assignNVG", "_goggles", "_helmet", "_standard", "_miscEquip"];
-_unit = _this select 0;
-_nvgClassname = _this select 1;
-_assignNVG = _this select 2;
-_goggles = _this select 3;
-_helmet = _this select 4;
-_standard = _this select 5;
-_miscEquip = if (count _this > 6) then {_this select 6} else {[]};
-
+params ["_unit", "_nvgClassname", "_assignNVG", "_goggles", "_helmet", "_standard", ["_miscEquip",[]]];
 
 if (count _nvgClassname > 0) then {
     _nvgClassname = (_nvgClassname select (floor(random(count _nvgClassname))));
