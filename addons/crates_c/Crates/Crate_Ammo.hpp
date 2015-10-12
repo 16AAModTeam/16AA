@@ -140,24 +140,24 @@
         displayName = "Container - 81MM Ammo";
         class ACE_Cargo {
             class Cargo {
-                class 16aa_static_magazine_l16_he {
-                    type = "16aa_static_magazine_l16_he";
+                class 16AA_crate_artillery_81_he {
+                    type = "16AA_crate_artillery_81_he";
                     amount = 20;
                 };
-                class 16aa_static_magazine_l16_illum {
-                    type = "16aa_static_magazine_l16_illum";
+                class 16AA_crate_artillery_81_illum {
+                    type = "16AA_crate_artillery_81_illum";
                     amount = 10;
                 };
-                class 16aa_static_magazine_l16_smoke_white {
-                    type = "16aa_static_magazine_l16_smoke_white";
+                class 16AA_crate_artillery_81_smoke_white {
+                    type = "16AA_crate_artillery_81_smoke_white";
                     amount = 20;
                 };
-                class 16aa_static_magazine_l16_smoke_red {
-                    type = "16aa_static_magazine_l16_smoke_red";
+                class 16AA_crate_artillery_81_smoke_red {
+                    type = "16AA_crate_artillery_81_smoke_red";
                     amount = 20;
                 };
-                class 16aa_static_magazine_l16_smoke_orange {
-                    type = "16aa_static_magazine_l16_smoke_orange";
+                class 16AA_crate_artillery_81_smoke_orange {
+                    type = "16AA_crate_artillery_81_smoke_orange";
                     amount = 20;
                 };
             };
