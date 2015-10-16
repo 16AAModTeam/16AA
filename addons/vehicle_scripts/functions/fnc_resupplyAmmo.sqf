@@ -8,7 +8,7 @@ None
 */
 #include "script_component.hpp"
 params ["_vehicle", "_unit"];
-private ["_unit","_vehicle","_weapon", "_turret", "_magazines", "_listOfMagNames", "_magName","_turretIndex"];
+private ["_unit,_vehicle,_weapon, _turret, _magazines, _listOfMagNames, _magName,_turretIndex"];
 _unit = ACE_player;
 _vehicle = vehicle ACE_player;
 _turretIndex = [_unit] call ace_common_fnc_getTurretIndex;

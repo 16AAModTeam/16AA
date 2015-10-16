@@ -8,7 +8,7 @@ None
 */
 #include "script_component.hpp"
 	params ["_vehicle", "_turretIndex", "_magName"];
-	private ["_magName", "_listOfMags", "_listOfQuantities", "_i", "_quantity"];
+	private ["_magName, _listOfMags, _listOfQuantities, _i, _quantity"];
 
 	_listOfMags = getMagazineCargo _vehicle;
 	_listOfQuantities = _listOfMags select 1;

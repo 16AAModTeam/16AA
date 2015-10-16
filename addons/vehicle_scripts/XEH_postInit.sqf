@@ -13,7 +13,7 @@
 ["16aa_vehicles_addMagazine", {
     params ["_vehicle", "_magazine","_turretIndex"];
 
-    _vehicle addMagazineTurret [_magazine,_turretindex];
+    _vehicle addMagazineTurret [_magazine,_turretIndex];
 
 
 }] call ace_common_fnc_addEventhandler;
@@ -21,7 +21,7 @@
 ["16aa_vehicles_removeMagazine", {
     params ["_vehicle", "_magazine","_turretIndex"];
 
-    _vehicle removeMagazineTurret [_magazine,_turretindex];
+    _vehicle removeMagazineTurret [_magazine,_turretIndex];
 
 }] call ace_common_fnc_addEventhandler;
 
