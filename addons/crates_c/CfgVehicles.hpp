@@ -1,6 +1,5 @@
 class CfgVehicles {
 	class 16aa_crate_empty;
-	class 16aa_crate_empty_artillery;
 	class 16aa_crate_empty_csw;
 	class 16aa_crate_empty_main;
 	class 16aa_crate_empty_medical;

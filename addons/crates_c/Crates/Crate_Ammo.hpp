@@ -209,7 +209,7 @@
             MACRO_ADDMAGAZINE(16aa_static_magazine_ammobox_40mm,5);
         };
     };
-	class 16AA_crate_artillery_105 : 16aa_crate_empty_artillery {
+	class 16AA_crate_artillery_105 : 16aa_crate_empty_wooden_large {
 		author = "3LSR";
 		displayName = "105MM";
 		vehicleClass = "16aa_Crates_Ammo";
@@ -220,7 +220,7 @@
             MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_ILLUM,50);
         };
 	};
-    class 16AA_crate_artillery_105_he : 16aa_crate_empty_artillery {
+    class 16AA_crate_artillery_105_he : 16aa_crate_empty_wooden_large {
         author = "3LSR";
         displayName = "105MM - HE";
         vehicleClass = "16aa_Crates_Ammo";
@@ -228,7 +228,7 @@
             MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_HE,2);
         };
     };
-    class 16AA_crate_artillery_105_wp : 16aa_crate_empty_artillery {
+    class 16AA_crate_artillery_105_wp : 16aa_crate_empty_wooden_large {
         author = "3LSR";
         displayName = "105MM - WP";
         vehicleClass = "16aa_Crates_Ammo";
@@ -236,7 +236,7 @@
             MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_WP,2);
         };
     };
-    class 16AA_crate_artillery_105_smoke : 16aa_crate_empty_artillery {
+    class 16AA_crate_artillery_105_smoke : 16aa_crate_empty_wooden_large {
         author = "3LSR";
         displayName = "105MM - Smoke";
         vehicleClass = "16aa_Crates_Ammo";
@@ -244,7 +244,7 @@
             MACRO_ADDMAGAZINE(16aa_static_magazine_1Rnd_105mm_SMOKE,2);
         };
     };
-    class 16AA_crate_artillery_105_illum : 16aa_crate_empty_artillery {
+    class 16AA_crate_artillery_105_illum : 16aa_crate_empty_wooden_large {
         author = "3LSR";
         displayName = "105MM - Illum";
         vehicleClass = "16aa_Crates_Ammo";
@@ -308,6 +308,7 @@
 		author = "3LSR";
 		displayName = "5.56MM Stanag";
 		vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_small_556.p3d";
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag,30);
         };

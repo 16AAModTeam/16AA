@@ -13,7 +13,9 @@ class CfgPatches {
     class 16AA_crate_ammo {
     	units[] = {
 			"16AA_container_ammo",
+			"16AA_container_ammo_csw",
 			"16AA_container_ammo_artillery_105",
+			"16AA_container_ammo_artillery_81",
 			"16AA_crate_csw_ammo",
 			"16AA_crate_csw_ammo_50cal",
 			"16AA_crate_csw_ammo_762",
