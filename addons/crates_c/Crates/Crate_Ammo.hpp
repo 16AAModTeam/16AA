@@ -1,10 +1,8 @@
-	class 16AA_container_ammo: Land_Cargo20_military_green_F{
+	class 16AA_container_ammo: 16aa_container_empty{
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Container - Ammo";
 		vehicleClass = "16aa_Crates_Ammo";
-		ace_cargo_space = 150;
-        ace_caro_size = 100;
 		class ACE_Cargo {
             class Cargo {
                 class 16AA_crate_ammo_556_stanag {
@@ -86,10 +84,11 @@
             };
         };
 	};
-    class 16AA_container_ammo_csw: 16AA_container_ammo{
+    class 16AA_container_ammo_csw: 16aa_container_empty{
         scope = 2;
         scopeCurator = 2;
         displayName = "Container - CSW Ammo";
+        vehicleClass = "16aa_Crates_Ammo";
         class ACE_Cargo {
             class Cargo {
                 class 16AA_crate_csw_ammo_50cal {
@@ -107,10 +106,11 @@
             };
         };
     };
-	class 16AA_container_ammo_artillery_105: 16AA_container_ammo{
+	class 16AA_container_ammo_artillery_105: 16aa_container_empty{
 		scope = 2;
 		scopeCurator = 2;
 		displayName = "Container - 105MM Ammo";
+        vehicleClass = "16aa_Crates_Ammo";
 		class ACE_Cargo {
             class Cargo {
                 class 16AA_crate_artillery_105_he {
@@ -134,10 +134,11 @@
             };
         };
 	};
-    class 16AA_container_ammo_artillery_81: 16AA_container_ammo{
+    class 16AA_container_ammo_artillery_81: 16aa_container_empty{
         scope = 2;
         scopeCurator = 2;
         displayName = "Container - 81MM Ammo";
+        vehicleClass = "16aa_Crates_Ammo";
         class ACE_Cargo {
             class Cargo {
                 class 16AA_crate_artillery_81_he {
@@ -317,6 +318,7 @@
 		author = "3LSR";
 		displayName = "5.56MM Link";
 		vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_small_556_link.p3d";
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(sti_200Rnd_556x45,10);
         };
@@ -325,6 +327,7 @@
 		author = "3LSR";
 		displayName = "7.62MM Stanag";
 		vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_small_762.p3d";
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(20Rnd_762x51_Mag,20);
         };
@@ -333,6 +336,7 @@
 		author = "3LSR";
 		displayName = "7.62MM Link";
 		vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_small_762_link.p3d";
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg,10);
         };
@@ -341,6 +345,7 @@
 		author = "3LSR";
 		displayName = "12 Guage";
 		vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_small_12ga.p3d";
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Slug,20);
         	MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Pellets,20);
@@ -351,6 +356,7 @@
 		author = "3LSR";
 		displayName = "Smoke Grenades";
 		vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_medium_grenades_smoke.p3d";
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(SmokeShellRed,20);
         	MACRO_ADDMAGAZINE(SmokeShellYellow,20);
@@ -363,6 +369,7 @@
 		author = "3LSR";
 		displayName = "Frag Grenades";
 		vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_small_grenade_frag.p3d";
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(16AA_HandGrenade,20);
         };
@@ -371,6 +378,7 @@
 		author = "3LSR";
 		displayName = "Flashbangs";
 		vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_small_grenade_flashbang.p3d";
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(ACE_M84,20);
         };
@@ -379,6 +387,7 @@
 		author = "3LSR";
 		displayName = "Chemlight/IR";
 		vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_medium_grenades_chemlight.p3d";
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(chemlight_blue,20);
         	MACRO_ADDMAGAZINE(chemlight_red,20);
@@ -390,6 +399,7 @@
 		author = "3LSR";
 		displayName = "40MM";
 		vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_medium_grenades_40mm.p3d";
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(1Rnd_SmokeRed_Grenade_shell,20);
         	MACRO_ADDMAGAZINE(1Rnd_SmokeBlue_Grenade_shell,20);
@@ -403,6 +413,7 @@
 		author = "3LSR";
 		displayName = "Explosives";
 		vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_large_explosives.p3d";
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(ATMine_Range_Mag,5);
         	MACRO_ADDMAGAZINE(ClaymoreDirectionalMine_Remote_Mag,5);
@@ -412,6 +423,7 @@
         author = "3LSR";
         displayName = "Explosives (Clacker)";
         vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_large_explosives_detonator.p3d";
         class TransportItems {
             MACRO_ADDITEM(ACE_M26_Clacker,5);
         };
@@ -423,6 +435,7 @@
 		author = "3LSR";
 		displayName = "Launcher (AT4)";
 		vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_large_launcher_at4.p3d";
 		class TransportWeapons {
 			MACRO_ADDWEAPON(16aa_AT4CSHP,2);
         };
@@ -431,6 +444,7 @@
         author = "3LSR";
         displayName = "Launcher (NLAW)";
         vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_large_launcher_nlaw.p3d";
         class TransportWeapons {
             MACRO_ADDWEAPON(launch_NLAW_F,2);
         };
@@ -439,6 +453,7 @@
         author = "3LSR";
         displayName = "Launcher (Stinger)";
         vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_large_launcher_stinger.p3d";
         class TransportMagazines{
             MACRO_ADDMAGAZINE(16aa_Stinger_M,2);
         };
@@ -447,6 +462,7 @@
         author = "3LSR";
         displayName = "Javelin Tubes";
         vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_large_launcher_javelin_tube.p3d";
         class TransportMagazines{
             MACRO_ADDMAGAZINE(16aa_javelin_m,2);
         };
@@ -455,6 +471,7 @@
         author = "3LSR";
         displayName = "Javelin Clu";
         vehicleClass = "16aa_Crates_Ammo";
+        model = "16aa_crates_a3\16aa_wooden_large_launcher_javelin_clu.p3d";
         class TransportWeapons {
             MACRO_ADDWEAPON(16aa_javelin_launcher,1);
         };
