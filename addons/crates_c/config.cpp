@@ -48,7 +48,9 @@ class CfgPatches {
 			"16AA_crate_ammo_launcher_stinger",
 			"16AA_crate_ammo_launcher_javelin_tube",
 			"16AA_crate_ammo_launcher_javelin_clu",
-			"16AA_crate_ammo_misc"
+			"16AA_crate_ammo_misc",
+			"16AA_backpack_resupply_section",
+			"16AA_crate_ammo_bergen_section"
 		};
 		requiredaddons[] = {"LSR_common","16aa_crates_a3"};
 		requiredversion = REQUIRED_VERSION;

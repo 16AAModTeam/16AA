@@ -9,6 +9,7 @@ class CfgVehicles {
 	class 16aa_crate_empty_wooden_medium;
 	class 16aa_crate_empty_wooden_large;
 	class 16aa_container_empty;
+	class 16aa_Carryall_2Para;
 	class Cargo_base_F;
 	class CargoNet_01_box_F;
 	#include "Crates\Crate_Ammo.hpp"
