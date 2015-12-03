@@ -18,6 +18,8 @@
             MACRO_ADDITEM(RAF_Fighter_Pilot_Outfit2,10);
             MACRO_ADDITEM(RAF_Fighter_Pilot_Outfit3,10);
             MACRO_ADDITEM(RAF_Fighter_Pilot_Outfit4,10);
+            MACRO_ADDITEM(16aa_helmet_hivis_yellow,10);
+            MACRO_ADDITEM(16aa_vest_hivis_yellow,10);
             MACRO_ADDITEM(ACE_MapTools,10);
         };
         class TransportMagazines{

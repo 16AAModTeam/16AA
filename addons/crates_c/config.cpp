@@ -50,7 +50,9 @@ class CfgPatches {
 			"16AA_crate_ammo_launcher_javelin_clu",
 			"16AA_crate_ammo_misc",
 			"16AA_backpack_resupply_section",
-			"16AA_crate_ammo_bergen_section"
+			"16AA_crate_ammo_bergen_section",
+			"16AA_backpack_resupply_section_grenade",
+			"16AA_crate_ammo_bergen_section_grenade"
 		};
 		requiredaddons[] = {"LSR_common","16aa_crates_a3"};
 		requiredversion = REQUIRED_VERSION;

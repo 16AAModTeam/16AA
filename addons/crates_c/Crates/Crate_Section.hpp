@@ -11,7 +11,6 @@
             MACRO_ADDWEAPON(16AA_G17,3);
             MACRO_ADDWEAPON(16aa_AT4CSHP,8);
             MACRO_ADDWEAPON(launch_NLAW_F,2);
-
         };
         class TransportItems {
             MACRO_ADDITEM(tf_anprc152,5);
@@ -24,7 +23,6 @@
             MACRO_ADDITEM(RH_ta648,1);
             MACRO_ADDITEM(optic_TWS,1);
             MACRO_ADDITEM(ACE_MX2A,1);
-            MACRO_ADDITEM(RH_m145,1);
             MACRO_ADDITEM(ACE_MapTools,10);
             MACRO_ADDITEM(ACE_CableTie,20);
             MACRO_ADDITEM(ACE_bodyBag,10);

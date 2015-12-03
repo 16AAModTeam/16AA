@@ -85,6 +85,10 @@
                     type = "16AA_crate_ammo_bergen_section";
                     amount = 6;
                 };
+                class 16AA_crate_ammo_bergen_section_grenade {
+                    type = "16AA_crate_ammo_bergen_section_grenade";
+                    amount = 6;
+                };
             };
         };
 	};
@@ -503,9 +507,30 @@
     };
     class 16AA_crate_ammo_bergen_section: 16aa_crate_empty_wooden_large {
         author = "3LSR";
-        displayName = "Resupply Bergens";
+        displayName = "Resupply Bergens - 5.56MM Ammo";
         vehicleClass = "16aa_Crates_Ammo";
         class TransportBackpacks{
             MACRO_ADDBACKPACK(16AA_backpack_resupply_section,6);
+        };
+    };
+     class 16AA_backpack_resupply_section_grenade: 16aa_Carryall_2Para{
+        author = "3LSR";
+        class TransportMagazines{
+            MACRO_ADDMAGAZINE(16AA_HandGrenade,20);
+            MACRO_ADDMAGAZINE(SmokeShellYellow,10);
+            MACRO_ADDMAGAZINE(SmokeShellBlue,10);
+            MACRO_ADDMAGAZINE(SmokeShellGreen,10);
+            MACRO_ADDMAGAZINE(chemlight_blue,10);
+            MACRO_ADDMAGAZINE(chemlight_green,10);
+            MACRO_ADDMAGAZINE(chemlight_red,10);
+            MACRO_ADDMAGAZINE(16aa_chemlight_ir,10);
+        };
+    };
+    class 16AA_crate_ammo_bergen_section_grenade: 16aa_crate_empty_wooden_large {
+        author = "3LSR";
+        displayName = "Resupply Bergens - Grenades";
+        vehicleClass = "16aa_Crates_Ammo";
+        class TransportBackpacks{
+            MACRO_ADDBACKPACK(16AA_backpack_resupply_section_grenade,6);
         };
     };
