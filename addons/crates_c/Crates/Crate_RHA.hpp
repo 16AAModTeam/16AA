@@ -11,7 +11,7 @@
             MACRO_ADDITEM(Laserbatteries,20);
             MACRO_ADDITEM(ACE_MapTools,10);
             MACRO_ADDITEM(ACE_RangeTable_82mm,20);
-            ACRO_ADDITEM(ACE_UAVBattery,10);
+            MACRO_ADDITEM(ACE_UAVBattery,10);
             MACRO_ADDITEM(16aa_basha_roll_item,3);
             MACRO_ADDITEM(16aa_helmet_hivis_yellow,10);
             MACRO_ADDITEM(16aa_vest_hivis_yellow,10);
