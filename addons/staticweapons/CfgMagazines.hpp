@@ -27,6 +27,7 @@ class CfgMagazines {
         model = "\16aa_crates_a3\ammobox_762.p3d";
         picture = PATHTOF(UI\w_ammobox_762_ca.paa);
         mass = 44;
+        count = 200;
         ammo = "16aa_762x51_Ball";
     };
     class 16aa_static_magazine_ammobox_40mm : 32Rnd_40mm_G_belt  {
