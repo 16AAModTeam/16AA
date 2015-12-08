@@ -1,5 +1,5 @@
 	class 16AA_crate_fsg: 16aa_crate_empty_main {
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "FSG";
 		vehicleClass = "16aa_Crates";
 		class TransportWeapons {
@@ -11,6 +11,7 @@
             MACRO_ADDWEAPON(16aa_AT4CSHP,2);
             MACRO_ADDWEAPON(16aa_javelin_launcher,3);
             MACRO_ADDWEAPON(16aa_l115a3,1);
+			MACRO_ADDWEAPON(16aa_Stinger_Launcher,4);
         };
         class TransportItems {
             MACRO_ADDITEM(tf_anprc152,5);
@@ -38,7 +39,8 @@
         	MACRO_ADDMAGAZINE(16aa_5x338_Mag,10);
         };
         class TransportBackpacks{
-        	MACRO_ADDBACKPACK(16aa_Carryall_2Para,4);
+        	MACRO_ADDBACKPACK(16aa_Carryall_2Para,2);
+			MACRO_ADDBACKPACK(B_Kitbag_MTP,4);
         	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_Radio_L_B,2);
         };
 	};

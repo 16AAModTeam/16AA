@@ -1,5 +1,5 @@
 	class 16AA_crate_section: 16aa_crate_empty {
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Section";
 		vehicleClass = "16aa_Crates";
 		class TransportWeapons {

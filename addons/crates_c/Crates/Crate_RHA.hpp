@@ -1,5 +1,5 @@
 	class 16AA_crate_rha: 16aa_crate_empty_main {
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "7RHA";
 		vehicleClass = "16aa_Crates";
 		class TransportWeapons {

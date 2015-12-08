@@ -1,7 +1,7 @@
 	class 16AA_crate_training_main: 16aa_crate_empty_main
 	{
 		scope = 2;
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Main";
 		vehicleClass = "16aa_Crates_Training";
 		class TransportWeapons {
@@ -60,7 +60,7 @@
 	class 16AA_crate_training_section: 16aa_crate_empty
 	{
 		scope = 2;
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Section";
 		vehicleClass = "16aa_Crates_Training";
 		class TransportWeapons {
@@ -118,7 +118,7 @@
 	};
 	class 16AA_crate_csw_training: 16aa_crate_empty_csw {
 		scope = 2;
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "CSW";
 		vehicleClass = "16aa_Crates_Training";
 		class TransportMagazines{

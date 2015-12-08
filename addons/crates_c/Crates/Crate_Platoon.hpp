@@ -1,6 +1,6 @@
 	class 16AA_crate_platoon: 16aa_crate_empty_platoon {
 		scope = 2;
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Platoon";
 		vehicleClass = "16aa_Crates";
 		class TransportWeapons {

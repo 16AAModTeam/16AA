@@ -1,6 +1,6 @@
 	class 16AA_crate_main: 16aa_crate_empty_main {
 		scope = 2;
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Main";
 		vehicleClass = "16aa_Crates";
 		class TransportWeapons {
