@@ -1,6 +1,6 @@
 	class 16AA_crate_main: 16aa_crate_empty_main {
 		scope = 2;
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Main";
 		vehicleClass = "16aa_Crates";
 		class TransportWeapons {
@@ -21,7 +21,6 @@
             MACRO_ADDITEM(16aa_optic_LDS,10);
             MACRO_ADDITEM(16aa_optic_LDS_2d,10);
             MACRO_ADDITEM(16aa_optic_LDS_pip,10);
-            MACRO_ADDITEM(RH_m145,10);
             MACRO_ADDITEM(16aa_HMNVS,100);
             MACRO_ADDITEM(optic_NVS,35);
             MACRO_ADDITEM(optic_TWS,15);
@@ -74,6 +73,7 @@
         	MACRO_ADDMAGAZINE(chemlight_blue,100);
         	MACRO_ADDMAGAZINE(chemlight_green,100);
         	MACRO_ADDMAGAZINE(B_IR_Grenade,100);
+            MACRO_ADDMAGAZINE(16aa_chemlight_ir,100);
         	MACRO_ADDMAGAZINE(ACE_M84,150);
         	MACRO_ADDMAGAZINE(SatchelCharge_Remote_Mag,20);
         	MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag,60);

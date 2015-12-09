@@ -1,5 +1,5 @@
 	class 16AA_crate_flight: 16aa_crate_empty {
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Flight";
 		vehicleClass = "16aa_Crates";
 		class TransportWeapons {
@@ -18,6 +18,8 @@
             MACRO_ADDITEM(RAF_Fighter_Pilot_Outfit2,10);
             MACRO_ADDITEM(RAF_Fighter_Pilot_Outfit3,10);
             MACRO_ADDITEM(RAF_Fighter_Pilot_Outfit4,10);
+            MACRO_ADDITEM(16aa_helmet_hivis_yellow,10);
+            MACRO_ADDITEM(16aa_vest_hivis_yellow,10);
             MACRO_ADDITEM(ACE_MapTools,10);
         };
         class TransportMagazines{

@@ -1,6 +1,6 @@
 	class 16AA_crate_platoon: 16aa_crate_empty_platoon {
 		scope = 2;
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Platoon";
 		vehicleClass = "16aa_Crates";
 		class TransportWeapons {
@@ -26,12 +26,13 @@
         	MACRO_ADDMAGAZINE(SatchelCharge_Remote_Mag,5);
         	MACRO_ADDMAGAZINE(B_IR_Grenade,8);
         	MACRO_ADDMAGAZINE(ACE_M84,20);
-        	MACRO_ADDMAGAZINE(SmokeShellBlue,5);
-        	MACRO_ADDMAGAZINE(SmokeShellGreen,5);
-        	MACRO_ADDMAGAZINE(SmokeShellPurple,5);
-        	MACRO_ADDMAGAZINE(chemlight_blue,20);
-        	MACRO_ADDMAGAZINE(chemlight_red,20);
-        	MACRO_ADDMAGAZINE(chemlight_green,20);
+        	MACRO_ADDMAGAZINE(SmokeShellBlue,10);
+        	MACRO_ADDMAGAZINE(SmokeShellGreen,10);
+        	MACRO_ADDMAGAZINE(SmokeShellPurple,10);
+        	MACRO_ADDMAGAZINE(chemlight_blue,30);
+        	MACRO_ADDMAGAZINE(chemlight_red,30);
+        	MACRO_ADDMAGAZINE(chemlight_green,30);
+            MACRO_ADDMAGAZINE(16aa_chemlight_ir,30);
         	MACRO_ADDMAGAZINE(UGL_FlareRed_F,20);
         	MACRO_ADDMAGAZINE(UGL_FlareWhite_F,20);
         };

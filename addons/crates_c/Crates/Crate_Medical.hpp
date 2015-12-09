@@ -1,5 +1,5 @@
 	class 16AA_crate_medical: 16aa_crate_empty_medical {
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Medical";
 		vehicleClass = "16aa_Crates";
         class TransportItems {
@@ -29,5 +29,9 @@
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(SmokeShellGreen,10);
         	MACRO_ADDMAGAZINE(SmokeShellPurple,10);
+        };
+		class TransportBackpacks{
+        	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_JTAC_L_A_SATCOM,2);
+        	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_Medic_H_A,2);
         };
 	};

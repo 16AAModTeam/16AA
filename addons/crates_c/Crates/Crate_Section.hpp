@@ -1,5 +1,5 @@
 	class 16AA_crate_section: 16aa_crate_empty {
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Section";
 		vehicleClass = "16aa_Crates";
 		class TransportWeapons {
@@ -23,7 +23,6 @@
             MACRO_ADDITEM(RH_ta648,1);
             MACRO_ADDITEM(optic_TWS,1);
             MACRO_ADDITEM(ACE_MX2A,1);
-            MACRO_ADDITEM(RH_m145,1);
             MACRO_ADDITEM(ACE_MapTools,10);
             MACRO_ADDITEM(ACE_CableTie,20);
             MACRO_ADDITEM(ACE_bodyBag,10);
