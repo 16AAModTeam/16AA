@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
 		weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"LSR_common","16aa_Vehicles_Jackals_c"};
+        requiredAddons[] = {"LSR_common","16aa_Vehicles_Jackals_c","uk_veh_c"};
         author[] = {"Grey"};
         authorUrl = "";
         VERSION_CONFIG;

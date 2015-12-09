@@ -1,4 +1,4 @@
-lsr_jackal_scripts
+lsr_vehicle_scripts
 =================
 
 ## Maintainers

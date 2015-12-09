@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["16aa_jackals_setWeaponTurretGPMG", {
+["16aa_vehicles_setWeaponTurretGPMG", {
     params ["_vehicle", "_add"];
 
     if (_add) then {
@@ -10,22 +10,22 @@
     };
 }] call ace_common_fnc_addEventhandler;
 
-["16aa_jackals_addMagazine", {
+["16aa_vehicles_addMagazine", {
     params ["_vehicle", "_magazine","_turretIndex"];
 
-    _vehicle addMagazineTurret [_magazine,_turretindex];
+    _vehicle addMagazineTurret [_magazine,_turretIndex];
 
 
 }] call ace_common_fnc_addEventhandler;
 
-["16aa_jackals_removeMagazine", {
+["16aa_vehicles_removeMagazine", {
     params ["_vehicle", "_magazine","_turretIndex"];
 
-    _vehicle removeMagazineTurret [_magazine,_turretindex];
+    _vehicle removeMagazineTurret [_magazine,_turretIndex];
 
 }] call ace_common_fnc_addEventhandler;
 
-["16aa", "16AA_Key_Reload_Vehicle_Weapon", localize LSTRING(ReloadWeapon),
+["16AA", "16AA_Key_Reload_Vehicle_Weapon", localize LSTRING(ReloadWeapon),
 {
      [ACE_player, vehicle ACE_player] call FUNC(resupplyAmmo);
      vehicle ACE_player;
