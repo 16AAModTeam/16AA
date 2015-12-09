@@ -13,13 +13,7 @@
 
 }] call ace_common_fnc_addEventhandler;
 
-["16aa_staticweapons_getTurretAmmo", {
-    params ["_static", "_magazine"];
-    _ammoCount = _static magazineTurretAmmo [_magazine, [0]];
-    _ammoCount;
-}] call ace_common_fnc_addEventhandler;
-
-["16aa_staticweapons_setTurretAmmo", {
+["16aa_staticweapons_setAmmo", {
     params ["_static", "_magazine","_ammoCount"];
 
     _static setMagazineTurretAmmo [_magazine, _ammoCount, [0]];
