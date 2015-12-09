@@ -7,6 +7,7 @@
  * 1: unit <OBJECT>
  * 2: staticNewClass <STRING>
  * 3: staticItems <ARRAY>
+ * 4: timeToPlace <NUMBER>
  *
  * Return Value:
  * None
@@ -18,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-params["_staticOld","_unit","_staticNewClass","_staticItems"];
+params["_staticOld","_unit","_staticNewClass","_staticItems","_timeToPlace"];
 private ["_name, _progressText, _objectClassName"];
 
 //Get displayname of static weapon to be created. Used for progress bar text
@@ -31,4 +32,4 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call ace_common_fnc_doAnimation;
 };
 
-[15, [_staticOld,_unit,_staticNewClass,_staticItems], {(_this select 0) call FUNC(disassemble);}, {}, _progressText] call ace_common_fnc_progressBar;
+[_timeToPlace, [_staticOld,_unit,_staticNewClass,_staticItems,_timeToPlace], {(_this select 0) call FUNC(disassemble);}, {}, _progressText] call ace_common_fnc_progressBar;
