@@ -32,6 +32,6 @@
         };
 		class TransportBackpacks{
         	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_JTAC_L_A_SATCOM,2);
-        	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_Medic_H_A,2);
+        	MACRO_ADDBACKPACK(16aa_Carryall_16CSMR,2);
         };
 	};
