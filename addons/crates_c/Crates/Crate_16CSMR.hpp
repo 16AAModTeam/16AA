@@ -1,4 +1,4 @@
-	class 16AA_crate_section: 16aa_crate_empty {
+	class 16AA_crate_16CSMR: 16aa_crate_empty {
 		author = "3LSR";
 		displayName = "16CSMR";
 		vehicleClass = "16aa_Crates";
