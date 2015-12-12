@@ -77,10 +77,6 @@
                     type = "16AA_crate_ammo_misc";
                     amount = 2;
                 };
-                class 16AA_crate_ammo_misc {
-                    type = "16AA_crate_ammo_misc";
-                    amount = 2;
-                };
                 class 16AA_crate_ammo_bergen_section {
                     type = "16AA_crate_ammo_bergen_section";
                     amount = 6;
