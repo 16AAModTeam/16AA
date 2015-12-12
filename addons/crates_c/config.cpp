@@ -67,6 +67,7 @@ class CfgPatches {
 		author[] = {"Fletcher"};
         authorUrl = "";
         VERSION_CONFIG;
+	};
 	class 16AA_crate_csw {
 		units[] = {"16AA_crate_csw"};
 		requiredaddons[] = {"LSR_common","16aa_crates_a3"};
