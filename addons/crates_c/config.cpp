@@ -60,6 +60,13 @@ class CfgPatches {
         authorUrl = "";
         VERSION_CONFIG;
 	};
+	class 16AA_crate_16cmsr {
+		units[] = {"16AA_crate_16cmsr"};
+		requiredaddons[] = {"LSR_common","16aa_crates_a3"};
+		requiredversion = REQUIRED_VERSION;
+		author[] = {"Fletcher"};
+        authorUrl = "";
+        VERSION_CONFIG;
 	class 16AA_crate_csw {
 		units[] = {"16AA_crate_csw"};
 		requiredaddons[] = {"LSR_common","16aa_crates_a3"};
