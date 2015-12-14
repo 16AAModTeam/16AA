@@ -27,11 +27,6 @@
             MACRO_ADDITEM(16aa_tent_medical_roll_medium_item,4);
         };
         class TransportMagazines{
-        	MACRO_ADDMAGAZINE(SmokeShellGreen,10);
-        	MACRO_ADDMAGAZINE(SmokeShellPurple,10);
         };
-		class TransportBackpacks{
-        	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_JTAC_L_A_SATCOM,2);
-        	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_Medic_H_A,2);
-        };
+		
 	};
