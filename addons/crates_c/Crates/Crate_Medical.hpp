@@ -23,10 +23,8 @@
             MACRO_ADDITEM(ACE_personalAidKit,3);
             MACRO_ADDITEM(ACE_surgicalKit,2);
             MACRO_ADDITEM(ACE_bodyBag,25);
-            MACRO_ADDITEM(16aa_tent_medical_roll_small_item,4);
-            MACRO_ADDITEM(16aa_tent_medical_roll_medium_item,4);
         };
         class TransportMagazines{
         };
-		
+
 	};

@@ -11,6 +11,8 @@
             MACRO_ADDITEM(16aa_optic_LDS_pip,10);
             MACRO_ADDITEM(ACE_MapTools,10);
             MACRO_ADDITEM(ACE_bodyBag,10);
+            MACRO_ADDITEM(16aa_tent_medical_roll_small_item,4);
+            MACRO_ADDITEM(16aa_tent_medical_roll_medium_item,4);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Pellets,35);
