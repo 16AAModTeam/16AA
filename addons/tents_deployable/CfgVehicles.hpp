@@ -8,7 +8,7 @@ class CfgVehicles
                     //displayName = CSTRING(Placedown);
                     displayName = "Deploy Basher - Small";
                     condition = QUOTE([ARR_2(_player,'16aa_basha_roll_item')] call ace_common_fnc_hasItem);
-                    statement = QUOTE([ARR_3(_player,'16aa_basha_roll_item','16aa_Basha_Small')] call lsr_staticweapons_fnc_placeTimer);
+                    statement = QUOTE([ARR_4(_player,'16aa_basha_roll_item','16aa_Basha_Small',15)] call lsr_staticweapons_fnc_placeTimer);
                     showDisabled = 0;
                     priority = 2;
                     picture = "\16aa_tents\icon\Small.paa";
@@ -17,7 +17,7 @@ class CfgVehicles
                     //displayName = CSTRING(Placedown);
                     displayName = "Deploy Basher - Large";
                     condition = QUOTE([ARR_2(_player,'16aa_basha_roll_item')] call ace_common_fnc_hasItem);
-                    statement = QUOTE([ARR_3(_player,'16aa_basha_roll_item','16aa_Basha_Large')] call lsr_staticweapons_fnc_placeTimer);
+                    statement = QUOTE([ARR_4(_player,'16aa_basha_roll_item','16aa_Basha_Large',15)] call lsr_staticweapons_fnc_placeTimer);
                     showDisabled = 0;
                     priority = 2;
                     picture = "\16aa_tents\icon\Large.paa";
@@ -26,7 +26,7 @@ class CfgVehicles
                     //displayName = CSTRING(Placedown);
                     displayName = "Deploy Tent - Medical (Small)";
                     condition = QUOTE([ARR_2(_player,'16aa_tent_medical_roll_small_item')] call ace_common_fnc_hasItem);
-                    statement = QUOTE([ARR_3(_player,'16aa_tent_medical_roll_small_item','16aa_tent_medical_small')] call lsr_staticweapons_fnc_placeTimer);
+                    statement = QUOTE([ARR_4(_player,'16aa_tent_medical_roll_small_item','16aa_tent_medical_small',15)] call lsr_staticweapons_fnc_placeTimer);
                     showDisabled = 0;
                     priority = 2;
                     picture = "\16aa_tents\icon\Large.paa";
@@ -35,7 +35,7 @@ class CfgVehicles
                     //displayName = CSTRING(Placedown);
                     displayName = "Deploy Tent - Medical (Medium)";
                     condition = QUOTE([ARR_2(_player,'16aa_tent_medical_roll_medium_item')] call ace_common_fnc_hasItem);
-                    statement = QUOTE([ARR_3(_player,'16aa_tent_medical_roll_medium_item','16aa_tent_medical_medium')] call lsr_staticweapons_fnc_placeTimer);
+                    statement = QUOTE([ARR_4(_player,'16aa_tent_medical_roll_medium_item','16aa_tent_medical_medium',15)] call lsr_staticweapons_fnc_placeTimer);
                     showDisabled = 0;
                     priority = 2;
                     picture = "\16aa_tents\icon\Large.paa";
@@ -87,7 +87,7 @@ class CfgVehicles
                     displayName = "Disassemble Basha";
                     distance = 5;
                     condition = "true";
-                    statement = QUOTE([ARR_3(_target,_player,'16aa_basha_roll_item')] call lsr_staticweapons_fnc_pickupTimer);
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_basha_roll_item',15)] call lsr_staticweapons_fnc_pickupTimer);
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 5;
@@ -111,7 +111,7 @@ class CfgVehicles
                     displayName = "Disassemble Basha";
                     distance = 5;
                     condition = "true";
-                    statement = QUOTE([ARR_3(_target,_player,'16aa_basha_roll_item')] call lsr_staticweapons_fnc_pickupTimer);
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_basha_roll_item',15)] call lsr_staticweapons_fnc_pickupTimer);
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 4;
@@ -136,7 +136,7 @@ class CfgVehicles
                     displayName = "Disassemble Tent - Medical (Small)";
                     distance = 5;
                     condition = "true";
-                    statement = QUOTE([ARR_3(_target,_player,'16aa_tent_medical_roll_small_item')] call lsr_staticweapons_fnc_pickupTimer);
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_tent_medical_roll_small_item',15)] call lsr_staticweapons_fnc_pickupTimer);
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 4;
@@ -168,7 +168,7 @@ class CfgVehicles
                     displayName = "Disassemble Tent - Medical (Medium)";
                     distance = 5;
                     condition = "true";
-                    statement = QUOTE([ARR_3(_target,_player,'16aa_tent_medical_roll_medium_item')] call lsr_staticweapons_fnc_pickupTimer);
+                    statement = QUOTE([ARR_4(_target,_player,'16aa_tent_medical_roll_medium_item',15)] call lsr_staticweapons_fnc_pickupTimer);
                     showDisabled = 0;
                     exceptions[] = {};
                     priority = 4;
