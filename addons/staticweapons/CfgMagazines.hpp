@@ -1,6 +1,6 @@
 class CfgMagazines {
     class 100Rnd_127x99_mag_Tracer_red;
-    class 150Rnd_762x51_Box;
+    class 16aa_150Rnd_762x51_box_gpmg;
     class 32Rnd_40mm_G_belt;
     class 8Rnd_82mm_Mo_shells;
     class 8Rnd_82mm_Mo_Smoke_red;
@@ -18,7 +18,7 @@ class CfgMagazines {
         mass = 66;
         ammo = "16aa_127x99_Ball";
     };
-    class 16aa_static_magazine_ammobox_762 : 150Rnd_762x51_Box  {
+    class 16aa_static_magazine_ammobox_762 : 16aa_150Rnd_762x51_box_gpmg  {
         scope = 2;
         scopeCurator = 2;
         author = "3LSR";

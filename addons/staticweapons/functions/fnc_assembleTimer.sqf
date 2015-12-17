@@ -7,6 +7,7 @@
  * 1: unit <OBJECT>
  * 2: staticNewClass <STRING>
  * 3: staticItem <STRING>
+ * 4: timeToPlace <NUMBER>
  *
  * Return Value:
  * None
@@ -18,8 +19,9 @@
  */
 #include "script_component.hpp"
 
-params["_staticOld","_unit","_staticNewClass","_staticItem"];
+params["_staticOld","_unit","_staticNewClass","_staticItem","_timeToPlace"];
 private ["_name", "_progressText"];
+
 //Get displayname of the new static weapon to be spawned to be used in the progress bar text
 _name = getText (configFile >> "CfgVehicles" >> _staticNewClass >> "displayName");
 _progressText = format["Assembling: %1", _name];
@@ -29,4 +31,4 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call ace_common_fnc_doAnimation;
 };
 
-[15, [_staticOld,_unit,_staticNewClass,_staticItem], {(_this select 0) call FUNC(assemble);}, {}, _progressText] call ace_common_fnc_progressBar;
+[_timeToPlace, [_staticOld,_unit,_staticNewClass,_staticItem,_timeToPlace], {(_this select 0) call FUNC(assemble);}, {}, _progressText] call ace_common_fnc_progressBar;
