@@ -16,7 +16,7 @@
  */
 #include "script_component.hpp"
 
-params["_static","_unit"];
+params ["_static","_unit"];
 private "_canDisassemble";
 
 _canDisassemble = false;

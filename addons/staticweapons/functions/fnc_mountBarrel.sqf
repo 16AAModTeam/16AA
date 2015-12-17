@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-params["_static","_unit","_barrelClass"];
+params ["_static","_unit","_barrelClass"];
 //Remove barrel item to players inventory
 _unit removeItem _barrelClass;
 

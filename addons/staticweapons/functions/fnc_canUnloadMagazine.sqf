@@ -16,8 +16,8 @@
  */
 #include "script_component.hpp"
 
-params["_static","_unit"];
-private "_canUnloadMagazine,_hasBarrel";
+params ["_static","_unit"];
+private ["_canUnloadMagazine","_hasBarrel"];
 
 _canUnloadMagazine = false;
 _hasBarrel = _static getVariable [QGVAR(hasBarrel),true];

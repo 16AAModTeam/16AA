@@ -17,8 +17,8 @@
  */
 #include "script_component.hpp"
 
-params["_static","_unit","_magazineClassOptional"];
-private "_weapon,_currentMagazine,_count,_magazines,_magazineDetails,_listOfMagNames,_magazineClass,_magazineClassDetails,_parsed,_roundsLeft,_configMortar";
+params ["_static","_unit","_magazineClassOptional"];
+private ["_weapon","_currentMagazine","_count","_magazines","_magazineDetails","_listOfMagNames","_magazineClass","_magazineClassDetails","_parsed","_roundsLeft","_configMortar"];
 
 //Get weapon & magazine information of static weapon
 _weapon = (_static weaponsTurret [0]) select 0;

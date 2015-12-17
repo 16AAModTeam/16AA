@@ -17,7 +17,7 @@
  */
 #include "script_component.hpp"
 
-params["_static","_unit","_barrelClass"];
+params ["_static","_unit","_barrelClass"];
 
 //Add barrel item to player inventory
 [_unit, _barrelClass] call ace_common_fnc_addToInventory;
