@@ -17,8 +17,8 @@
  */
 #include "script_component.hpp"
 
-params["_static","_unit"];
-private "_weapon,_currentMagazine,_currentMagazineClass,_ammoCount";
+params ["_static","_unit"];
+private ["_weapon","_currentMagazine","_currentMagazineClass","_ammoCount"];
 
 //Get weapon & magazine information about static weapon
 _weapon = (_static weaponsTurret [0]) select 0;

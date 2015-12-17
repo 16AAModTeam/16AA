@@ -17,9 +17,9 @@
  */
 #include "script_component.hpp"
 
-params["_static","_unit","_magazineClassOptional","_timeToLoad"];
+params ["_static","_unit","_magazineClassOptional","_timeToLoad"];
 
-_progressText = "Loading Magazine";
+private _progressText = "Loading Magazine";
 //Move player into animation if player is standing
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
     [_unit, "AmovPercMstpSrasWrflDnon_diary", 1] call ace_common_fnc_doAnimation;

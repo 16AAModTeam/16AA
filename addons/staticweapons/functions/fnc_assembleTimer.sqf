@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-params["_staticOld","_unit","_staticNewClass","_staticItem"];
+params ["_staticOld","_unit","_staticNewClass","_staticItem"];
 private ["_name", "_progressText"];
 //Get displayname of the new static weapon to be spawned to be used in the progress bar text
 _name = getText (configFile >> "CfgVehicles" >> _staticNewClass >> "displayName");

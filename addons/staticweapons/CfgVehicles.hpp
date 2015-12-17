@@ -504,7 +504,7 @@ class CfgVehicles
                 distance = 5;
                 priority = 2;
                 class 16aa_Disassemble{
-                     distance = 5;
+                    distance = 5;
                     displayName = "Disassemble L16";
                     condition = QUOTE([ARR_2(_target,_player)] call FUNC(canDisassemble));
                     statement = QUOTE([ARR_4(_target,_player,'16aa_l16_baseplate_deployed',['16aa_static_item_l16_tube'])] call FUNC(disassembleTimer));
@@ -761,7 +761,7 @@ class CfgVehicles
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class 16aa_AdjustHeightUp_L2A1{
-                     condition = "false";
+                    condition = "false";
                 };
                 class 16aa_AdjustHeightUp_L2A1_Down: 16aa_AdjustHeightUp_L2A1{
                     displayName = "Lower Tripod";
@@ -888,7 +888,7 @@ class CfgVehicles
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class 16aa_AdjustHeightUp_GMG{
-                     condition = "false";
+                    condition = "false";
                 };
                 class 16aa_AdjustHeightDown_GMG: 16aa_AdjustHeightUp_GMG{
                     displayName = "Lower Tripod";
@@ -990,7 +990,7 @@ class CfgVehicles
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class 16aa_AdjustHeightUp_GPMG{
-                     condition = "false";
+                    condition = "false";
                 };
                 class 16aa_AdjustHeightDown_GPMG: 16aa_AdjustHeightUp_GPMG{
                     displayName = "Lower Tripod";
@@ -1092,7 +1092,7 @@ class CfgVehicles
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class 16aa_AdjustHeightUp_Javelin{
-                     condition = "false";
+                    condition = "false";
                 };
                 class 16aa_AdjustHeightDown_Javelin: 16aa_AdjustHeightUp_Javelin{
                     displayName = "Lower Tripod";

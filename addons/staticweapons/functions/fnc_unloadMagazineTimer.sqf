@@ -17,9 +17,9 @@
  */
 #include "script_component.hpp"
 
-params["_static","_unit"];
+params ["_static","_unit"];
 
-_progressText = "Unloading Magazine";
+private _progressText = "Unloading Magazine";
 
 //Move player into animation if player is standing
 if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
