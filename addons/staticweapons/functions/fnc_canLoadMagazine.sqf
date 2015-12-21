@@ -18,8 +18,8 @@
 
 #include "script_component.hpp"
 
-params["_static","_unit","_magazineClassOptional"];
-private "_canLoadMagazine,_currentMagazine,_weapon,_magazines,_listOfMagNames,_hasCompatibleMagazine,_hasBarrel,_count,_parsed";
+params ["_static","_unit","_magazineClassOptional"];
+private ["_canLoadMagazine","_currentMagazine","_weapon","_magazines","_listOfMagNames","_hasCompatibleMagazine","_hasBarrel","_count","_parsed"];
 
 _canLoadMagazine = false;
 _currentMagazine = (magazinesAllTurrets _static) select 1;

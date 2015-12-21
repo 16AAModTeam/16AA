@@ -24,8 +24,8 @@ params["_unit","_itemClass","_vehicleClass"];
 _unit removeItem _itemClass;
 
 [{
-    params["_unit","_vehicleClass"];
-    private ["_direction, _position, _vehicle"];
+    params ["_unit","_vehicleClass"];
+    private ["_direction", "_position", "_vehicle"];
 
     //Get position of the player
     _direction = getDir _unit;

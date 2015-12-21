@@ -17,12 +17,12 @@
  */
 #include "script_component.hpp"
 
-params["_staticOld","_staticNewClass","_unit"];
+params ["_staticOld","_staticNewClass","_unit"];
 
 [{
-    params["_staticOld","_staticNewClass","_unit"];
+    params ["_staticOld","_staticNewClass","_unit"];
 
-    private ["_direction,_position,_staticNew,_hasBarrelV,_configBarrel,_currentMagazine,_ammoCount,_hasMagazine,_defaultMag"];
+    private ["_direction","_position","_staticNew","_hasBarrelV","_configBarrel","_currentMagazine","_ammoCount","_hasMagazine","_defaultMag"];
     _direction = getDir _staticOld;
     _position = getPosASL _staticOld;
 

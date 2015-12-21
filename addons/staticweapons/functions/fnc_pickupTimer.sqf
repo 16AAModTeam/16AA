@@ -19,8 +19,8 @@
  */
 #include "script_component.hpp"
 
-params["_vehicle","_unit","_staticItem","_timeToPlace"];
-private ["_name, _progressText, _objectClassName"];
+params ["_vehicle","_unit","_staticItem","_timeToPlace"];
+private ["_name", "_progressText", "_objectClassName"];
 
 //Get displayname of static weapon to be picked up. Used for progress bar text
 _objectClassName = typeOf _vehicle;

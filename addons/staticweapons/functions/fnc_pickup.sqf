@@ -18,9 +18,9 @@
  */
 #include "script_component.hpp"
 
-params["_vehicle","_unit","_staticItem"];
+params ["_vehicle","_unit","_staticItem"];
 [{
-    params["_vehicle","_unit","_staticItem"];
+    params ["_vehicle","_unit","_staticItem"];
 
     //Add item to players inventory and delete the static weapon
     [_unit, _staticItem] call ace_common_fnc_addToInventory;

@@ -22,7 +22,7 @@
 
 #include "script_component.hpp"
 params ["_vehicle","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile"];
-private ["_static,_magazineName","_count"];
+private ["_static","_magazineName","_count"];
 _static = _this select 0;
 _magazineName = _this select 5;
 //Get ammo count of loaded magazine

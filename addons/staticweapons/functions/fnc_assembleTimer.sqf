@@ -19,7 +19,7 @@
  */
 #include "script_component.hpp"
 
-params["_staticOld","_unit","_staticNewClass","_staticItem","_timeToPlace"];
+params ["_staticOld","_unit","_staticNewClass","_staticItem","_timeToPlace"];
 private ["_name", "_progressText"];
 
 //Get displayname of the new static weapon to be spawned to be used in the progress bar text

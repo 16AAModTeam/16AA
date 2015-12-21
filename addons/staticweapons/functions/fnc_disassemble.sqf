@@ -18,12 +18,12 @@
  */
 #include "script_component.hpp"
 
-params["_staticOld","_unit","_staticNewClass","_staticItems"];
+params ["_staticOld","_unit","_staticNewClass","_staticItems"];
 
 [{
-    params["_staticOld","_unit","_staticNewClass","_staticItems"];
+    params ["_staticOld","_unit","_staticNewClass","_staticItems"];
 
-     private ["_direction", "_position"];
+    private ["_direction", "_position"];
     //Get position of old static weapon then delete it
     _direction = getDir _staticOld;
     _position = getPosASL _staticOld;

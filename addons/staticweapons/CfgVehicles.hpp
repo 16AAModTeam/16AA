@@ -18,7 +18,7 @@ class CfgVehicles
                     //displayName = CSTRING(Placedown);
                     displayName = "Place Base Plate";
                     condition = QUOTE([ARR_2(_player,'16aa_static_item_l16_baseplate')] call ace_common_fnc_hasItem);
-                    statement = QUOTE([ARR_4(_player,'16aa_static_item_l16_baseplate','16aa_l16_baseplate_deployed',8)] call FUNC(placeTimer));
+                    statement = QUOTE([ARR_4(_player,'16aa_static_item_l16_baseplate','16aa_l16_baseplate_deployed',5)] call FUNC(placeTimer));
                     showDisabled = 0;
                     priority = 2;
                     icon = PATHTOF(UI\w_l16_baseplate_ca.paa);

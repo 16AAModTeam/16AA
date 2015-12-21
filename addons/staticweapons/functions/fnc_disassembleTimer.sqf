@@ -19,8 +19,8 @@
  */
 #include "script_component.hpp"
 
-params["_staticOld","_unit","_staticNewClass","_staticItems","_timeToPlace"];
-private ["_name, _progressText, _objectClassName"];
+params ["_staticOld","_unit","_staticNewClass","_staticItems","_timeToPlace"];
+private ["_name", "_progressText", "_objectClassName"];
 
 //Get displayname of static weapon to be created. Used for progress bar text
 _objectClassName = typeOf _staticOld;

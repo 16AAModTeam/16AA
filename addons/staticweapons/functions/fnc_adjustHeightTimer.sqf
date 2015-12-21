@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-params["_staticOld","_staticNewClass","_unit","_timeToPlace"];
+params ["_staticOld","_staticNewClass","_unit","_timeToPlace"];
 
 private ["_name", "_progressText"];
 

@@ -18,7 +18,7 @@
  */
 #include "script_component.hpp"
 
-params["_staticOld","_unit","_staticNewClass","_staticItem"];
+params ["_staticOld","_unit","_staticNewClass","_staticItem"];
 
 //If staticItem is of a specific type then use the correct method to remove that item
 _staticItemType = [_staticItem] call ace_common_fnc_getWeaponType;
@@ -29,9 +29,9 @@ if (_staticItemtype == -1) then {
 };
 
 [{
-    params["_staticOld","_unit","_staticNewClass","_staticItem"];
+    param s["_staticOld","_unit","_staticNewClass","_staticItem"];
 
-     private ["_direction,_position,_configBarrel"];
+     private ["_direction","_position","_configBarrel"];
      //Get position of object called when assembling then delete it
     _direction = getDir _staticOld;
     _position = getPosASL _staticOld;
