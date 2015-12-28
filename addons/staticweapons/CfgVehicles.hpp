@@ -494,10 +494,102 @@ class CfgVehicles
             class ACE_MainActions;
         };
     };
-    class 16aa_L16_Mortar : B_Mortar_01_F {
+    class 16aa_L16_Mortar : Mortar_01_base_F {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                position = "[0,-0.1,-0.6]";
+                position = "[-0.1,-0.1,-0.6]";
+                condition = "true";
+                displayName = "Interact";
+                showDisabled = 0;
+                distance = 5;
+                priority = 2;
+                class 16aa_Disassemble{
+                     distance = 5;
+                    displayName = "Disassemble L16";
+                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canDisassemble));
+                    statement = QUOTE([ARR_5(_target,_player,'16aa_l16_baseplate_deployed',['16aa_static_item_l16_tube'],15)] call FUNC(disassembleTimer));
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 6;
+                    icon = PATHTOF(UI\w_assemble_ca.paa);
+                };
+            };
+            class 16aa_Magazines_Category{
+                    distance = 5;
+                    selection = "magazine";
+                    displayName = "Magazine";
+                    condition = true;
+                    statement = "";
+                    showDisabled = 0;
+                    exceptions[] = {};
+                    priority = 7;
+                    class 16aa_LoadMagazine_HE{
+                        distance = 5;
+                        displayName = "Load HE";
+                        condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_he')] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_4(_target,_player,'16aa_static_magazine_l16_he',1)] call FUNC(loadMagazineTimer));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
+                    };
+                    class 16aa_LoadMagazine_Illum{
+                        distance = 5;
+                        displayName = "Load Illum";
+                        condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_illum')] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_4(_target,_player,'16aa_static_magazine_l16_illum',1)] call FUNC(loadMagazineTimer));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
+                    };
+                    class 16aa_LoadMagazine_Smoke_White{
+                        distance = 5;
+                        displayName = "Load Smoke - White";
+                        condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_smoke_white')] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_4(_target,_player,'16aa_static_magazine_l16_smoke_white',1)] call FUNC(loadMagazineTimer));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
+                    };
+                    class 16aa_LoadMagazine_Smoke_Red{
+                        distance = 5;
+                        displayName = "Load Smoke - Red";
+                        condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_smoke_red')] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_4(_target,_player,'16aa_static_magazine_l16_smoke_red',1)] call FUNC(loadMagazineTimer));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
+                    };
+                    class 16aa_LoadMagazine_Smoke_Orange{
+                        distance = 5;
+                        displayName = "Load Smoke - Orange";
+                        condition = QUOTE([ARR_3(_target,_player,'16aa_static_magazine_l16_smoke_orange')] call FUNC(canLoadMagazine));
+                        statement = QUOTE([ARR_4(_target,_player,'16aa_static_magazine_l16_smoke_orange',1)] call FUNC(loadMagazineTimer));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 8;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
+                    };
+                     class 16aa_UnloadMagazine{
+                        distance = 5;
+                        displayName = "Unload Magazine";
+                        condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
+                        statement = QUOTE([ARR_2(_target,_player)] call FUNC(unloadMagazineTimer));
+                        showDisabled = 0;
+                        exceptions[] = {};
+                        priority = 9;
+                        icon = PATHTOF(UI\w_magazine_ca.paa);
+                    };
+                };
+        };
+    };
+    class 16aa_m6h_Mortar : Mortar_01_base_F {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                position = "[-0.1,-0.1,-0.6]";
                 condition = "true";
                 displayName = "Interact";
                 showDisabled = 0;
