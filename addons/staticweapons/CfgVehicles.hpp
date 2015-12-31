@@ -497,7 +497,8 @@ class CfgVehicles
     class 16aa_L16_Mortar : Mortar_01_base_F {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                position = "[-0.1,-0.1,-0.6]";
+                //position = "[-0.1,-0.1,-1]";
+                selection = "interact";
                 condition = "true";
                 displayName = "Interact";
                 showDisabled = 0;
@@ -589,7 +590,8 @@ class CfgVehicles
     class 16aa_m6h_Mortar : Mortar_01_base_F {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
-                position = "[-0.1,-0.1,-0.6]";
+                //position = "[0,0,0]";
+                selection = "interact";
                 condition = "true";
                 displayName = "Interact";
                 showDisabled = 0;
@@ -597,7 +599,7 @@ class CfgVehicles
                 priority = 2;
                 class 16aa_Disassemble{
                      distance = 5;
-                    displayName = "Disassemble L16";
+                    displayName = "Disassemble M6H";
                     condition = QUOTE([ARR_2(_target,_player)] call FUNC(canDisassemble));
                     statement = QUOTE([ARR_5(_target,_player,'16aa_l16_baseplate_deployed',['16aa_static_item_l16_tube'],15)] call FUNC(disassembleTimer));
                     showDisabled = 0;
