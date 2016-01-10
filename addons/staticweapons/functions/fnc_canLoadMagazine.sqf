@@ -19,10 +19,11 @@
 #include "script_component.hpp"
 
 params ["_static","_unit","_magazineClassOptional"];
-private ["_canLoadMagazine","_currentMagazine","_weapon","_magazines","_listOfMagNames","_hasCompatibleMagazine","_hasBarrel","_count","_parsed"];
+private ["_canLoadMagazine","_currentMagazine","_currentMagazineClass","_weapon","_magazines","_listOfMagNames","_hasCompatibleMagazine","_hasBarrel","_count","_parsed"];
 
 _canLoadMagazine = false;
 _currentMagazine = (magazinesAllTurrets _static) select 1;
+_currentMagazineClass = _currentMagazine select 0;
 _weapon = (_static weaponsTurret [0]) select 0;
 
 _magazines = magazines _unit;
@@ -45,7 +46,12 @@ if (_magazineClassOptional != "")then{
 //If static weapon has a magazine then find the ammo count
 if ((count (_static magazinesTurret [0])) > 0)then{
 	_count = _currentMagazine select 2;
+	//If current magazine is empty then just remove it.
+	if (_count == 0)then {
+		["16aa_staticweapons_removeMagazine", [_static, _currentMagazineClass]] call ace_common_fnc_globalEvent;
+	};
 };
+
 //If the static weapon doesn't have a magzine or a magazine with no bullets, the player has a compatible magazine and the static weapon has a barrel then you can load a magazine
 if ( ( ((count (_static magazinesTurret [0])) == 0) || (_count == 0) ) && _hasCompatibleMagazine && _hasBarrel) then {
 	_canLoadMagazine = true;
