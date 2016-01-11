@@ -17,6 +17,7 @@ class CfgMagazines {
         picture = PATHTOF(UI\w_ammobox_50cal_ca.paa);
         mass = 66;
         ammo = "16aa_127x99_Ball";
+
     };
     class 16aa_static_magazine_ammobox_762 : 16aa_150Rnd_762x51_box_gpmg  {
         scope = 2;
@@ -28,7 +29,6 @@ class CfgMagazines {
         picture = PATHTOF(UI\w_ammobox_762_ca.paa);
         mass = 44;
         count = 200;
-        ammo = "16aa_762x51_Ball";
     };
     class 16aa_static_magazine_ammobox_40mm : 32Rnd_40mm_G_belt  {
         scope = 2;
