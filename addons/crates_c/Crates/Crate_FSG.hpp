@@ -35,7 +35,8 @@
         	MACRO_ADDMAGAZINE(20Rnd_762x51_Mag,20);
         	MACRO_ADDMAGAZINE(1Rnd_HE_Grenade_shell,20);
         	MACRO_ADDMAGAZINE(1Rnd_SmokeYellow_Grenade_shell,40);
-        	MACRO_ADDMAGAZINE(16aa_javelin_m,10);
+            MACRO_ADDMAGAZINE(16aa_javelin_m,10);
+        	MACRO_ADDMAGAZINE(16aa_Stinger_M,10);
         	MACRO_ADDMAGAZINE(16aa_5x338_Mag,10);
         };
         class TransportBackpacks{
