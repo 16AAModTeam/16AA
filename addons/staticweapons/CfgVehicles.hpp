@@ -270,7 +270,30 @@ class CfgVehicles
         ace_dragging_canCarry = 0;
         class Turrets{};
         class AnimationSources {};
-         class ACE_Actions {
+        class UserActions
+        {
+            class RepairStaticWeapon
+            {
+                displayNameDefault = "Repair";
+                displayName = "Repair";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = QUOTE([ARR_2(player,'16aa_Toolkit')] call ace_common_fnc_hasItem && damage this > 0.1);
+                statement = QUOTE([ARR_2(this,player)] call FUNC(repair));
+            };
+            class PressXToFlipTheThing
+            {
+                displayNameDefault = "Flip";
+                displayName = "Flip";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = "alive this AND not canmove this AND count crew this == 0";
+                statement = "this setpos [getpos this select 0,getpos this select 1,(getpos this select 2)+1]";
+            };
+        };
+        class ACE_Actions {
             class ACE_MainActions {
                 selection = "";
                 distance = 5;
@@ -319,7 +342,6 @@ class CfgVehicles
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 position = "[0,0,0.4]";
-                class 16aa_Pickup: 16aa_Pickup {};
                 class 16aa_AdjustHeightUp: 16aa_Pickup {
                     selection = "";
                     displayName = "Raise Tripod";
@@ -363,7 +385,6 @@ class CfgVehicles
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 position = "[0,0,0.78]";
-                class 16aa_Pickup: 16aa_Pickup {};
                 class 16aa_AdjustHeightUp: 16aa_Pickup {
                     displayName = "Raise Tripod";
                     statement = QUOTE([ARR_4(_target,'16aa_tripod_raised',_player,5)] call FUNC(adjustHeightTimer));
@@ -406,7 +427,6 @@ class CfgVehicles
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 position = "[0,0,1.155]";
-                class 16aa_Pickup: 16aa_Pickup {};
                 class 16aa_AdjustHeightUp{
                     condition = "false";
                 };
@@ -431,7 +451,7 @@ class CfgVehicles
                     statement = QUOTE([ARR_5(_target,_player,'16aa_GPMG_Static_base_raised','16aa_l7a2',10)] call FUNC(assembleTimer));
                     icon = PATHTOF(UI\w_assemble_ca.paa);
                 };
-                 class 16aa_assemble_javelin: 16aa_assemble_javelin{
+                class 16aa_assemble_javelin: 16aa_assemble_javelin{
                     displayName = "Assemble Javelin";
                     statement = QUOTE([ARR_5(_target,_player,'16aa_Javelin_Static_raised','16aa_javelin_launcher',10)] call FUNC(assembleTimer));
                     icon = PATHTOF(UI\w_assemble_ca.paa);
@@ -482,19 +502,42 @@ class CfgVehicles
             class ACE_MainActions;
         };
     };
-    class Mortar_01_base_F: StaticMortar
+    class Mortar01_base_F: StaticMortar
     {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions;
         };
     };
-    class B_Mortar_01_F: Mortar_01_base_F
+    class B_Mortar01_F: Mortar01_base_F
     {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions;
         };
     };
-    class 16aa_L16_Mortar : Mortar_01_base_F {
+    class 16aa_L16_Mortar : Mortar01_base_F {
+        class UserActions
+        {
+            class RepairStaticWeapon
+            {
+                displayNameDefault = "Repair";
+                displayName = "Repair";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = QUOTE([ARR_2(player,'16aa_Toolkit')] call ace_common_fnc_hasItem && damage this > 0.1);
+                statement = QUOTE([ARR_2(this,player)] call FUNC(repair));
+            };
+            class PressXToFlipTheThing
+            {
+                displayNameDefault = "Flip";
+                displayName = "Flip";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = "alive this AND not canmove this AND count crew this == 0";
+                statement = "this setpos [getpos this select 0,getpos this select 1,(getpos this select 2)+1]";
+            };
+        };
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 //position = "[-0.1,-0.1,-1]";
@@ -505,7 +548,7 @@ class CfgVehicles
                 distance = 5;
                 priority = 2;
                 class 16aa_Disassemble{
-                     distance = 5;
+                    distance = 5;
                     displayName = "Disassemble L16";
                     condition = QUOTE([ARR_2(_target,_player)] call FUNC(canDisassemble));
                     statement = QUOTE([ARR_5(_target,_player,'16aa_l16_baseplate_deployed',['16aa_static_item_l16_tube'],15)] call FUNC(disassembleTimer));
@@ -584,10 +627,33 @@ class CfgVehicles
                         priority = 9;
                         icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
-                };
+            };
         };
     };
-    class 16aa_m6h_Mortar : Mortar_01_base_F {
+    class 16aa_m6h_Mortar : Mortar01_base_F {
+        class UserActions
+        {
+            class RepairStaticWeapon
+            {
+                displayNameDefault = "Repair";
+                displayName = "Repair";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = QUOTE([ARR_2(player,'16aa_Toolkit')] call ace_common_fnc_hasItem && damage this > 0.1);
+                statement = QUOTE([ARR_2(this,player)] call FUNC(repair));
+            };
+            class PressXToFlipTheThing
+            {
+                displayNameDefault = "Flip";
+                displayName = "Flip";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = "alive this AND not canmove this AND count crew this == 0";
+                statement = "this setpos [getpos this select 0,getpos this select 1,(getpos this select 2)+1]";
+            };
+        };
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 //position = "[0,0,0]";
@@ -598,7 +664,7 @@ class CfgVehicles
                 distance = 5;
                 priority = 2;
                 class 16aa_Disassemble{
-                     distance = 5;
+                    distance = 5;
                     displayName = "Disassemble M6H";
                     condition = QUOTE([ARR_2(_target,_player)] call FUNC(canDisassemble));
                     statement = QUOTE([ARR_5(_target,_player,'16aa_l16_baseplate_deployed',['16aa_static_item_l16_tube'],15)] call FUNC(disassembleTimer));
@@ -677,12 +743,34 @@ class CfgVehicles
                         priority = 9;
                         icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
-                };
+            };
         };
     };
     class 16aa_L118_base: StaticWeapon{
-         class ACE_Actions: ACE_Actions {
-            class ACE_MainActions;
+        class UserActions
+        {
+            class RepairStaticWeapon
+            {
+                displayNameDefault = "Repair";
+                displayName = "Repair";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = QUOTE([ARR_2(player,'16aa_Toolkit')] call ace_common_fnc_hasItem && damage this > 0.1);
+                statement = QUOTE([ARR_2(this,player)] call FUNC(repair));
+            };
+            class PressXToFlipTheThing
+            {
+                displayNameDefault = "Flip";
+                displayName = "Flip";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = "alive this AND not canmove this AND count crew this == 0";
+                statement = "this setpos [getpos this select 0,getpos this select 1,(getpos this select 2)+1]";
+            };
+        };
+        class ACE_Actions: ACE_Actions {
             class 16aa_Magazines_Category{
                     distance = 5;
                     selection = "magazine";
@@ -731,7 +819,7 @@ class CfgVehicles
                         priority = 8;
                         icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
-                     class 16aa_UnloadMagazine{
+                    class 16aa_UnloadMagazine{
                         distance = 5;
                         displayName = "Unload Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
@@ -741,11 +829,34 @@ class CfgVehicles
                         priority = 9;
                         icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
-                };
+            };
         };
     };
     //L2A1
     class 16aa_L2A1_Static_Base : StaticMGWeapon {
+        class UserActions
+        {
+            class RepairStaticWeapon
+            {
+                displayNameDefault = "Repair";
+                displayName = "Repair";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = QUOTE([ARR_2(player,'16aa_Toolkit')] call ace_common_fnc_hasItem && damage this > 0.1);
+                statement = QUOTE([ARR_2(this,player)] call FUNC(repair));
+            };
+            class PressXToFlipTheThing
+            {
+                displayNameDefault = "Flip";
+                displayName = "Flip";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = "alive this AND not canmove this AND count crew this == 0";
+                statement = "this setpos [getpos this select 0,getpos this select 1,(getpos this select 2)+1]";
+            };
+        };
         GVAR(enableBarrel) = 1;
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -789,7 +900,7 @@ class CfgVehicles
                         priority = 8;
                         icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
-                     class 16aa_UnloadMagazine{
+                    class 16aa_UnloadMagazine{
                         distance = 5;
                         displayName = "Unload Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
@@ -872,6 +983,29 @@ class CfgVehicles
     };
     //GMG
     class 16aa_GMG_Static_Base : StaticMGWeapon {
+        class UserActions
+        {
+            class RepairStaticWeapon
+            {
+                displayNameDefault = "Repair";
+                displayName = "Repair";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = QUOTE([ARR_2(player,'16aa_Toolkit')] call ace_common_fnc_hasItem && damage this > 0.1);
+                statement = QUOTE([ARR_2(this,player)] call FUNC(repair));
+            };
+            class PressXToFlipTheThing
+            {
+                displayNameDefault = "Flip";
+                displayName = "Flip";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = "alive this AND not canmove this AND count crew this == 0";
+                statement = "this setpos [getpos this select 0,getpos this select 1,(getpos this select 2)+1]";
+            };
+        };
         GVAR(enableBarrel) = 1;
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -916,7 +1050,7 @@ class CfgVehicles
                         priority = 8;
                         icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
-                     class 16aa_UnloadMagazine{
+                    class 16aa_UnloadMagazine{
                         distance = 5;
                         displayName = "Unload Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
@@ -999,6 +1133,29 @@ class CfgVehicles
     };
     //GPMG
     class 16aa_GPMG_Static_base : StaticMGWeapon {
+        class UserActions
+        {
+            class RepairStaticWeapon
+            {
+                displayNameDefault = "Repair";
+                displayName = "Repair";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = QUOTE([ARR_2(player,'16aa_Toolkit')] call ace_common_fnc_hasItem && damage this > 0.1);
+                statement = QUOTE([ARR_2(this,player)] call FUNC(repair));
+            };
+            class PressXToFlipTheThing
+            {
+                displayNameDefault = "Flip";
+                displayName = "Flip";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = "alive this AND not canmove this AND count crew this == 0";
+                statement = "this setpos [getpos this select 0,getpos this select 1,(getpos this select 2)+1]";
+            };
+        };
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class 16aa_AdjustHeightUp_GPMG {
@@ -1042,7 +1199,7 @@ class CfgVehicles
                         priority = 8;
                         icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
-                     class 16aa_UnloadMagazine{
+                    class 16aa_UnloadMagazine{
                         distance = 5;
                         displayName = "Unload Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
@@ -1052,7 +1209,7 @@ class CfgVehicles
                         priority = 9;
                         icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
-                };
+            };
         };
     };
     class 16aa_GPMG_Static_base_middle: 16aa_GPMG_Static_base{
@@ -1101,6 +1258,29 @@ class CfgVehicles
     };
     //Javelin
     class 16aa_Javelin_Static_base : StaticMGWeapon {
+        class UserActions
+        {
+            class RepairStaticWeapon
+            {
+                displayNameDefault = "Repair";
+                displayName = "Repair";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = QUOTE([ARR_2(player,'16aa_Toolkit')] call ace_common_fnc_hasItem && damage this > 0.1);
+                statement = QUOTE([ARR_2(this,player)] call FUNC(repair));
+            };
+            class PressXToFlipTheThing
+            {
+                displayNameDefault = "Flip";
+                displayName = "Flip";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = "alive this AND not canmove this AND count crew this == 0";
+                statement = "this setpos [getpos this select 0,getpos this select 1,(getpos this select 2)+1]";
+            };
+        };
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 class 16aa_AdjustHeightUp_Javelin {
@@ -1144,7 +1324,7 @@ class CfgVehicles
                         priority = 8;
                         icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
-                     class 16aa_UnloadMagazine{
+                    class 16aa_UnloadMagazine{
                         distance = 5;
                         displayName = "Unload Magazine";
                         condition = QUOTE([ARR_2(_target,_player)] call FUNC(canUnloadMagazine));
@@ -1154,7 +1334,7 @@ class CfgVehicles
                         priority = 9;
                         icon = PATHTOF(UI\w_magazine_ca.paa);
                     };
-                };
+            };
         };
     };
     class 16aa_Javelin_Static_middle: 16aa_Javelin_Static_base{
