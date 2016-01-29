@@ -81,8 +81,12 @@
                     type = "16AA_crate_ammo_bergen_section";
                     amount = 6;
                 };
-                class 16AA_crate_ammo_bergen_section_grenade {
-                    type = "16AA_crate_ammo_bergen_section_grenade";
+                class 16aa_crate_medical_resupply_basic {
+                    type = "16aa_crate_medical_resupply_basic";
+                    amount = 6;
+                };
+				class 16aa_crate_medical_resupply_advanced {
+                    type = "16aa_crate_medical_resupply_advanced";
                     amount = 6;
                 };
             };
