@@ -18,18 +18,15 @@
         	MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Pellets,35);
 			MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Slug,35);
 			MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,10);
-<<<<<<< HEAD
 			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,10);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,10);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Purple,10);
-=======
-			MACRO_ADDMAGAZINE(SmokeShellYellow,10);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Yellow,10);
 			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,10);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,10);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Purple,10);
 			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,10);
 			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Orange,10);
->>>>>>> 05ee3b71f2fc2ccfdf9b7bc133452d45e1d8a31e
         	MACRO_ADDMAGAZINE(chemlight_blue,10);
         	MACRO_ADDMAGAZINE(chemlight_red,10);
         	MACRO_ADDMAGAZINE(chemlight_green,10);
