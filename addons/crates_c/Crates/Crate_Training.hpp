@@ -41,6 +41,7 @@
         	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg_blank,50);
         	MACRO_ADDMAGAZINE(16aa_30Rnd_545x39_blank,50);
         	MACRO_ADDMAGAZINE(16aa_handgrenade_blank,150);
+<<<<<<< HEAD
             MACRO_ADDMAGAZINE(1Rnd_HE_Grenade_shell_blank,50);
         	MACRO_ADDMAGAZINE(ACE_M84,150);
             MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,200);
@@ -48,6 +49,18 @@
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,50);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,50);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Purple,50);
+=======
+        	MACRO_ADDMAGAZINE(SmokeShellYellow,200);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,200);
+        	MACRO_ADDMAGAZINE(1Rnd_SmokeRed_Grenade_shell,200);
+        	MACRO_ADDMAGAZINE(1Rnd_SmokeYellow_Grenade_shell,100);
+        	MACRO_ADDMAGAZINE(ACE_M84,150);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,50);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,50);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Orange,50);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Purple,50);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,50);
+>>>>>>> 05ee3b71f2fc2ccfdf9b7bc133452d45e1d8a31e
         	MACRO_ADDMAGAZINE(chemlight_blue,100);
         	MACRO_ADDMAGAZINE(chemlight_red,100);
         	MACRO_ADDMAGAZINE(chemlight_green,100);
@@ -104,12 +117,21 @@
         	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg_blank,50);
         	MACRO_ADDMAGAZINE(16aa_30Rnd_545x39_blank,50);
         	MACRO_ADDMAGAZINE(16aa_handgrenade_blank,40);
+<<<<<<< HEAD
             MACRO_ADDMAGAZINE(1Rnd_HE_Grenade_shell_blank,20);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,60);
             MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,20);
             MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,5);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Yellow,20);
         	MACRO_ADDMAGAZINE(ACE_M84,40);
+=======
+        	MACRO_ADDMAGAZINE(SmokeShellYellow,60);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,20);
+        	MACRO_ADDMAGAZINE(1Rnd_SmokeRed_Grenade_shell,40);
+        	MACRO_ADDMAGAZINE(1Rnd_SmokeYellow_Grenade_shell,20);
+        	MACRO_ADDMAGAZINE(ACE_M84,40);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,5);
+>>>>>>> 05ee3b71f2fc2ccfdf9b7bc133452d45e1d8a31e
         	MACRO_ADDMAGAZINE(chemlight_blue,20);
         	MACRO_ADDMAGAZINE(chemlight_red,20);
         	MACRO_ADDMAGAZINE(chemlight_green,20);

@@ -26,9 +26,17 @@
         	MACRO_ADDMAGAZINE(SatchelCharge_Remote_Mag,5);
         	MACRO_ADDMAGAZINE(B_IR_Grenade,8);
         	MACRO_ADDMAGAZINE(ACE_M84,20);
+<<<<<<< HEAD
             MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Yellow,10);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,10);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,10);
+=======
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,10);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,10);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,10);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,10);
+			MACRO_ADDMAGAZINE(16aa_Smoke_signalling_Orange,10);
+>>>>>>> 05ee3b71f2fc2ccfdf9b7bc133452d45e1d8a31e
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Purple,10);
         	MACRO_ADDMAGAZINE(chemlight_blue,30);
         	MACRO_ADDMAGAZINE(chemlight_red,30);

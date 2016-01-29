@@ -366,11 +366,20 @@
 		vehicleClass = "16aa_Crates_Ammo";
         model = "16aa_crates_a3\16aa_wooden_medium_grenades_smoke.p3d";
         class TransportMagazines{
+<<<<<<< HEAD
             MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,20);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,20);
             MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Yellow,20);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,20);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,20);
+=======
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,20);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,20);
+        	MACRO_ADDMAGAZINE(SmokeShellYellow,20);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,20);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,20);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Orange,20);
+>>>>>>> 05ee3b71f2fc2ccfdf9b7bc133452d45e1d8a31e
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Purple,20);
         };
 	};
@@ -518,7 +527,11 @@
         author = "3LSR";
         class TransportMagazines{
             MACRO_ADDMAGAZINE(16AA_HandGrenade,20);
+<<<<<<< HEAD
             MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,10);
+=======
+            MACRO_ADDMAGAZINE(SmokeShellYellow,10);
+>>>>>>> 05ee3b71f2fc2ccfdf9b7bc133452d45e1d8a31e
             MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,10);
             MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,10);
             MACRO_ADDMAGAZINE(chemlight_blue,10);
