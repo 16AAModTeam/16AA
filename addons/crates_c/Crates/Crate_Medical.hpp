@@ -36,6 +36,7 @@
             MACRO_ADDITEM(ACE_elasticBandage,25);
             MACRO_ADDITEM(ACE_tourniquet,15);
             MACRO_ADDITEM(ACE_morphine,15);
+			MACRO_ADDITEM(ACE_salineIV_500,7);
         };
         class TransportMagazines{};
 	};
@@ -46,13 +47,10 @@
         class TransportItems {
             MACRO_ADDITEM(ACE_atropine,15);
             MACRO_ADDITEM(ACE_epinephrine,15);
-            MACRO_ADDITEM(ACE_plasmaIV,7);
             MACRO_ADDITEM(ACE_salineIV,7);
-            MACRO_ADDITEM(ACE_bloodIV,7);
             MACRO_ADDITEM(ACE_quikClot,20);
-            MACRO_ADDITEM(ACE_personalAidKit,3);
-            MACRO_ADDITEM(ACE_surgicalKit,2);
-            MACRO_ADDITEM(ACE_bodyBag,25);
+            MACRO_ADDITEM(ACE_personalAidKit,1);
+            MACRO_ADDITEM(ACE_surgicalKit,1);
         };
         class TransportMagazines{};
 	};
