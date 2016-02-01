@@ -49,7 +49,7 @@ class CfgPatches {
 			"16aa_static_magazine_1Rnd_105mm_ILLUM"
         };
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"LSR_common","16aa_crates_a3","16aa_weapons_support","16aa_weapons_c"};
+        requiredAddons[] = {"LSR_common","16aa_crates_a3","16aa_weapons_support","16aa_mortar_L16"};
         author[] = {"Grey"};
         authorUrl = "";
         VERSION_CONFIG;
