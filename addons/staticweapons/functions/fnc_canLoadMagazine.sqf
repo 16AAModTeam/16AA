@@ -19,7 +19,11 @@
 #include "script_component.hpp"
 
 params ["_static","_unit","_magazineClassOptional"];
+<<<<<<< HEAD
 private ["_canLoadMagazine","_currentMagazine","_currentMagazineClass","_weapon","_magazines","_listOfMagNames","_hasCompatibleMagazine","_hasBarrel","_count","_parsed"];
+=======
+private ["_canLoadMagazine","_currentMagazine","_weapon","_magazines","_listOfMagNames","_hasCompatibleMagazine","_hasBarrel","_count","_parsed"];
+>>>>>>> 0d09b7dd26e9a1bd802388515dd3b7711a2471c8
 
 _canLoadMagazine = false;
 _currentMagazine = (magazinesAllTurrets _static) select 1;

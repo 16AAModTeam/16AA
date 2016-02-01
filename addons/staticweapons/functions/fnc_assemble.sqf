@@ -31,8 +31,13 @@ if (_staticItemtype == -1) then {
 [{
     params ["_staticOld","_unit","_staticNewClass","_staticItem"];
 
+<<<<<<< HEAD
     private ["_direction","_position","_configBarrel"];
     //Get position of object called when assembling then delete it
+=======
+     private ["_direction","_position","_configBarrel"];
+     //Get position of object called when assembling then delete it
+>>>>>>> 0d09b7dd26e9a1bd802388515dd3b7711a2471c8
     _direction = getDir _staticOld;
     _position = getPosASL _staticOld;
     deletevehicle _staticOld;

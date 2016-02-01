@@ -13,7 +13,9 @@ class CfgPatches {
     class 16AA_crate_ammo {
     	units[] = {
 			"16AA_container_ammo",
+			"16AA_container_ammo_csw",
 			"16AA_container_ammo_artillery_105",
+			"16AA_container_ammo_artillery_81",
 			"16AA_crate_csw_ammo",
 			"16AA_crate_csw_ammo_50cal",
 			"16AA_crate_csw_ammo_762",
@@ -46,11 +48,23 @@ class CfgPatches {
 			"16AA_crate_ammo_launcher_stinger",
 			"16AA_crate_ammo_launcher_javelin_tube",
 			"16AA_crate_ammo_launcher_javelin_clu",
-			"16AA_crate_ammo_misc"
+			"16AA_crate_ammo_misc",
+			"16AA_backpack_resupply_section",
+			"16AA_crate_ammo_bergen_section",
+			"16AA_backpack_resupply_section_grenade",
+			"16AA_crate_ammo_bergen_section_grenade"
 		};
 		requiredaddons[] = {"LSR_common","16aa_crates_a3"};
 		requiredversion = REQUIRED_VERSION;
 		author[] = {"Grey"};
+        authorUrl = "";
+        VERSION_CONFIG;
+	};
+	class 16AA_crate_16CSMR {
+		units[] = {"16AA_crate_16CSMR"};
+		requiredaddons[] = {"LSR_common","16aa_crates_a3"};
+		requiredversion = REQUIRED_VERSION;
+		author[] = {"Fletcher"};
         authorUrl = "";
         VERSION_CONFIG;
 	};
@@ -95,7 +109,7 @@ class CfgPatches {
         VERSION_CONFIG;
 	};
 	class 16AA_crate_medical {
-		units[] = {"16AA_crate_medical"};
+		units[] = {"16AA_crate_medical","16aa_crate_medical_resupply_basic","16aa_crate_medical_resupply_advanced"};
 		requiredaddons[] = {"LSR_common","16aa_crates_a3"};
 		requiredversion = REQUIRED_VERSION;
 		author[] = {"Grey"};

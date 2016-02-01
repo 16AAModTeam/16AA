@@ -19,7 +19,11 @@
  */
 #include "script_component.hpp"
 
+<<<<<<< HEAD
 params ["_staticOld","_unit","_staticNewClass","_staticItems","_timeToPlace"];
+=======
+params ["_staticOld","_unit","_staticNewClass","_staticItems"];
+>>>>>>> 0d09b7dd26e9a1bd802388515dd3b7711a2471c8
 private ["_name", "_progressText", "_objectClassName"];
 
 //Get displayname of static weapon to be created. Used for progress bar text

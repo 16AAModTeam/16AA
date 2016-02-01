@@ -1,6 +1,5 @@
 class CfgVehicles {
 	class 16aa_crate_empty;
-	class 16aa_crate_empty_artillery;
 	class 16aa_crate_empty_csw;
 	class 16aa_crate_empty_main;
 	class 16aa_crate_empty_medical;
@@ -9,9 +8,11 @@ class CfgVehicles {
 	class 16aa_crate_empty_wooden_small;
 	class 16aa_crate_empty_wooden_medium;
 	class 16aa_crate_empty_wooden_large;
-	class Land_Cargo20_military_green_F;
+	class 16aa_container_empty;
+	class 16aa_Carryall_2Para;
 	class Cargo_base_F;
 	class CargoNet_01_box_F;
+	#include "Crates\Crate_16CSMR.hpp"
 	#include "Crates\Crate_Ammo.hpp"
 	#include "Crates\Crate_CSW.hpp"
 	#include "Crates\Crate_Equipment.hpp"

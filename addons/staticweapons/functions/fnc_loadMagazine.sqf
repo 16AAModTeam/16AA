@@ -18,7 +18,11 @@
 #include "script_component.hpp"
 
 params ["_static","_unit","_magazineClassOptional"];
+<<<<<<< HEAD
 private ["_weapon","_currentMagazine","_magazines","_magazineDetails","_listOfMagNames","_magazineClass","_magazineClassDetails","_parsed","_roundsLeft","_configMortar"];
+=======
+private ["_weapon","_currentMagazine","_count","_magazines","_magazineDetails","_listOfMagNames","_magazineClass","_magazineClassDetails","_parsed","_roundsLeft","_configMortar"];
+>>>>>>> 0d09b7dd26e9a1bd802388515dd3b7711a2471c8
 
 //Get weapon & magazine information of static weapon
 _weapon = (_static weaponsTurret [0]) select 0;
@@ -62,4 +66,8 @@ if(_magazineClassOptional !="") then{
 		_unit removeMagazine _magazineClass;
 		["16aa_staticweapons_addMagazine", [_static, _magazineClass]] call ace_common_fnc_globalEvent;
 		["16aa_staticweapons_setAmmo", _static, [_static, _magazineClass,_roundsLeft]] call ace_common_fnc_targetEvent;
+<<<<<<< HEAD
 };
+=======
+	};
+>>>>>>> 0d09b7dd26e9a1bd802388515dd3b7711a2471c8

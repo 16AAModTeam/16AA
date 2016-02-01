@@ -1,7 +1,7 @@
 	class 16AA_crate_training_main: 16aa_crate_empty_main
 	{
 		scope = 2;
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Main";
 		vehicleClass = "16aa_Crates_Training";
 		class TransportWeapons {
@@ -38,29 +38,33 @@
         	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag_Blank,400);
         	MACRO_ADDMAGAZINE(sti_200Rnd_556x45_Blank,200);
         	MACRO_ADDMAGAZINE(20Rnd_762x51_Mag_Blank,120);
-        	MACRO_ADDMAGAZINE(150Rnd_762x51_Box_blank,50);
+        	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg_blank,50);
         	MACRO_ADDMAGAZINE(16aa_30Rnd_545x39_blank,50);
         	MACRO_ADDMAGAZINE(16aa_handgrenade_blank,150);
-        	MACRO_ADDMAGAZINE(SmokeShellYellow,200);
-        	MACRO_ADDMAGAZINE(SmokeShellRed,200);
+            MACRO_ADDMAGAZINE(1Rnd_HE_Grenade_shell_blank,50);
+        	MACRO_ADDMAGAZINE(ACE_M84,150);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,200);
+            MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,200);
+            MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Yellow,200);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,50);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,50);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Purple,50);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,200);
         	MACRO_ADDMAGAZINE(1Rnd_SmokeRed_Grenade_shell,200);
         	MACRO_ADDMAGAZINE(1Rnd_SmokeYellow_Grenade_shell,100);
         	MACRO_ADDMAGAZINE(ACE_M84,150);
-        	MACRO_ADDMAGAZINE(SmokeShellBlue,50);
-        	MACRO_ADDMAGAZINE(SmokeShellGreen,50);
-        	MACRO_ADDMAGAZINE(SmokeShellPurple,50);
         	MACRO_ADDMAGAZINE(chemlight_blue,100);
         	MACRO_ADDMAGAZINE(chemlight_red,100);
         	MACRO_ADDMAGAZINE(chemlight_green,100);
         	MACRO_ADDMAGAZINE(UGL_FlareRed_F,30);
         	MACRO_ADDMAGAZINE(UGL_FlareWhite_F,30);
-        	MACRO_ADDMAGAZINE(1Rnd_HE_Grenade_shell_blank,50);
+
         };
 	};
 	class 16AA_crate_training_section: 16aa_crate_empty
 	{
 		scope = 2;
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Section";
 		vehicleClass = "16aa_Crates_Training";
 		class TransportWeapons {
@@ -99,26 +103,31 @@
         	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag_Blank,100);
         	MACRO_ADDMAGAZINE(sti_200Rnd_556x45_Blank,30);
         	MACRO_ADDMAGAZINE(20Rnd_762x51_Mag_Blank,20);
-        	MACRO_ADDMAGAZINE(150Rnd_762x51_Box_blank,50);
+        	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg_blank,50);
         	MACRO_ADDMAGAZINE(16aa_30Rnd_545x39_blank,50);
         	MACRO_ADDMAGAZINE(16aa_handgrenade_blank,40);
-        	MACRO_ADDMAGAZINE(SmokeShellYellow,60);
-        	MACRO_ADDMAGAZINE(SmokeShellRed,20);
+            MACRO_ADDMAGAZINE(1Rnd_HE_Grenade_shell_blank,20);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,60);
+            MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,20);
+            MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,5);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Yellow,20);
+        	MACRO_ADDMAGAZINE(ACE_M84,40);
         	MACRO_ADDMAGAZINE(1Rnd_SmokeRed_Grenade_shell,40);
         	MACRO_ADDMAGAZINE(1Rnd_SmokeYellow_Grenade_shell,20);
         	MACRO_ADDMAGAZINE(ACE_M84,40);
-        	MACRO_ADDMAGAZINE(SmokeShellBlue,5);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,5);
         	MACRO_ADDMAGAZINE(chemlight_blue,20);
         	MACRO_ADDMAGAZINE(chemlight_red,20);
         	MACRO_ADDMAGAZINE(chemlight_green,20);
+            MACRO_ADDMAGAZINE(1Rnd_SmokeRed_Grenade_shell,40);
+            MACRO_ADDMAGAZINE(1Rnd_SmokeYellow_Grenade_shell,20);
         	MACRO_ADDMAGAZINE(UGL_FlareRed_F,5);
         	MACRO_ADDMAGAZINE(UGL_FlareWhite_F,5);
-        	MACRO_ADDMAGAZINE(1Rnd_HE_Grenade_shell_blank,20);
 		};
 	};
 	class 16AA_crate_csw_training: 16aa_crate_empty_csw {
 		scope = 2;
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "CSW";
 		vehicleClass = "16aa_Crates_Training";
 		class TransportMagazines{

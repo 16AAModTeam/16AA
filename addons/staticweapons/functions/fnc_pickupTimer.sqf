@@ -19,7 +19,11 @@
  */
 #include "script_component.hpp"
 
+<<<<<<< HEAD
 params ["_vehicle","_unit","_staticItem","_timeToPlace"];
+=======
+params ["_vehicle","_unit","_staticItem"];
+>>>>>>> 0d09b7dd26e9a1bd802388515dd3b7711a2471c8
 private ["_name", "_progressText", "_objectClassName"];
 
 //Get displayname of static weapon to be picked up. Used for progress bar text

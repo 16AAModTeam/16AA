@@ -11,7 +11,7 @@ class CfgWeapons {
         model = "\16aa_weapons_support\Tripod\tripod_item.p3d";
         picture = PATHTOF(UI\w_tripod_ca.paa);
         magazines[] = {};
-         class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: InventoryItem_Base_F {
             mass = 130;
         };
     };
@@ -24,7 +24,7 @@ class CfgWeapons {
         model = PATHTOF(data\l2a1_barrel.p3d);
         picture = PATHTOF(UI\w_l2a1_barrel_ca.paa);
         magazines[] = {};
-         class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: InventoryItem_Base_F {
             mass = 130;
         };
     };
@@ -37,7 +37,7 @@ class CfgWeapons {
         model = PATHTOF(data\l2a1_receiver.p3d);
         picture = PATHTOF(UI\w_l2a1_receiver_ca.paa);
         magazines[] = {};
-         class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: InventoryItem_Base_F {
             mass = 140;
         };
     };
@@ -50,7 +50,7 @@ class CfgWeapons {
         model = PATHTOF(data\gmg_barrel.p3d);
         picture = PATHTOF(UI\w_gmg_barrel_ca.paa);
         magazines[] = {};
-         class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: InventoryItem_Base_F {
             mass = 130;
         };
     };
@@ -63,7 +63,7 @@ class CfgWeapons {
         model = PATHTOF(data\gmg_receiver.p3d);
         picture = PATHTOF(UI\w_gmg_receiver_ca.paa);
         magazines[] = {};
-         class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: InventoryItem_Base_F {
             mass = 140;
         };
     };
@@ -76,7 +76,7 @@ class CfgWeapons {
         model = PATHTOF(data\l16_baseplate.p3d);
         picture = PATHTOF(UI\w_l16_baseplate_ca.paa);
         magazines[] = {};
-         class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: InventoryItem_Base_F {
             mass = 150;
         };
     };
@@ -89,7 +89,7 @@ class CfgWeapons {
         model = PATHTOF(data\l16_bipod.p3d);
         picture = PATHTOF(UI\w_l16_bipod_ca.paa);
         magazines[] = {};
-         class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: InventoryItem_Base_F {
             mass = 150;
         };
     };
@@ -102,7 +102,7 @@ class CfgWeapons {
         model = PATHTOF(data\l16_tube.p3d);
         picture = PATHTOF(UI\w_l16_tube_ca.paa);
         magazines[] = {};
-         class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: InventoryItem_Base_F {
             mass = 150;
         };
     };

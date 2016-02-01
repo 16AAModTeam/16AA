@@ -8,7 +8,7 @@ None
 */
 #include "script_component.hpp"
 	params ["_vehicle", "_turretIndex", "_magName"];
-	private ["_magName", "_listOfMags", "_listOfQuantities", "_i", "_quantity"];
+	private ["_magName, _listOfMags, _listOfQuantities, _i, _quantity"];
 
 	_listOfMags = getMagazineCargo _vehicle;
 	_listOfQuantities = _listOfMags select 1;
@@ -29,7 +29,7 @@ None
 	} forEach (_listOfMags select 0);
 
 
-	["16aa_jackals_addMagazine", [_vehicle,_magName ,_turretIndex]] call ace_common_fnc_globalEvent;
+	["16aa_vehicles_addMagazine", [_vehicle,_magName ,_turretIndex]] call ace_common_fnc_globalEvent;
 
 
 

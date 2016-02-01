@@ -15,6 +15,5 @@
             MACRO_ADDITEM(16aa_static_item_gmg_receiver,15);
             MACRO_ADDITEM(16aa_static_item_l16_baseplate,15);
             MACRO_ADDITEM(16aa_static_item_l16_tube,15);
-            MACRO_ADDITEM(ACE_Sandbag_empty,50);
         };
 	};

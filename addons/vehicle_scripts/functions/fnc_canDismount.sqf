@@ -16,9 +16,8 @@ None
 #include "script_component.hpp"
 
 params["_vehicle","_unit"];
-private "_canDismount,_commandersGun";
+private "_canDismount";
 _canDismount = false;
-_commandersGun = getObjectTextures _vehicle;
 
 if(_vehicle getVariable [QGVAR(hasGPMG),true])then {
 	_canDismount = true;

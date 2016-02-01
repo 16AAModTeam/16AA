@@ -1,5 +1,5 @@
 	class 16AA_crate_ordnance: 16aa_crate_empty_launchers {
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Ordnance";
 		vehicleClass = "16aa_Crates";
 		class TransportWeapons {

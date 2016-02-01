@@ -19,8 +19,13 @@
  */
 #include "script_component.hpp"
 
+<<<<<<< HEAD
 params ["_unit","_itemClass","_vehicleClass","_timeToPlace"];
 private ["_name", "_progressText"];
+=======
+params ["_unit","_itemClass","_vehicleClass"];
+private ["_name"," _progressText"];
+>>>>>>> 0d09b7dd26e9a1bd802388515dd3b7711a2471c8
 
 //Get displayname of the static weapon to be created. Used in progress bar text
 _name = getText (configFile >> "CfgVehicles" >> _vehicleClass >> "displayName");

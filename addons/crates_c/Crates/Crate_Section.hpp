@@ -1,5 +1,5 @@
 	class 16AA_crate_section: 16aa_crate_empty {
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Section";
 		vehicleClass = "16aa_Crates";
 		class TransportWeapons {
@@ -23,7 +23,6 @@
             MACRO_ADDITEM(RH_ta648,1);
             MACRO_ADDITEM(optic_TWS,1);
             MACRO_ADDITEM(ACE_MX2A,1);
-            MACRO_ADDITEM(RH_m145,1);
             MACRO_ADDITEM(ACE_MapTools,10);
             MACRO_ADDITEM(ACE_CableTie,20);
             MACRO_ADDITEM(ACE_bodyBag,10);
@@ -43,7 +42,13 @@
         	MACRO_ADDMAGAZINE(16AA_17Rnd_9x19_g17,10);
         	MACRO_ADDMAGAZINE(1Rnd_HE_Grenade_shell,30);
         	MACRO_ADDMAGAZINE(16AA_HandGrenade,30);
-        	MACRO_ADDMAGAZINE(SmokeShellYellow,40);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,40);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Yellow,30);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,30);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,30);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,30);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Orange,30);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Purple,30);
         	MACRO_ADDMAGAZINE(1Rnd_SmokeRed_Grenade_shell,20);
         	MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag,6);
         	MACRO_ADDMAGAZINE(ClaymoreDirectionalMine_Remote_Mag,3);

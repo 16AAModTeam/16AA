@@ -18,14 +18,18 @@
  */
 #include "script_component.hpp"
 
-params["_unit","_itemClass","_vehicleClass"];
+params ["_unit","_itemClass","_vehicleClass"];
 
 //Remove item needed to assemble static weapon
 _unit removeItem _itemClass;
 
 [{
     params ["_unit","_vehicleClass"];
+<<<<<<< HEAD
     private ["_direction", "_position", "_vehicle"];
+=======
+    private ["_direction", "_position"," _vehicle"];
+>>>>>>> 0d09b7dd26e9a1bd802388515dd3b7711a2471c8
 
     //Get position of the player
     _direction = getDir _unit;

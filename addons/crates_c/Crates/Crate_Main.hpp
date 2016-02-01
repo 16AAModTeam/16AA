@@ -1,6 +1,6 @@
 	class 16AA_crate_main: 16aa_crate_empty_main {
 		scope = 2;
-		author = "Adams & Beazley";
+		author = "3LSR";
 		displayName = "Main";
 		vehicleClass = "16aa_Crates";
 		class TransportWeapons {
@@ -21,7 +21,6 @@
             MACRO_ADDITEM(16aa_optic_LDS,10);
             MACRO_ADDITEM(16aa_optic_LDS_2d,10);
             MACRO_ADDITEM(16aa_optic_LDS_pip,10);
-            MACRO_ADDITEM(RH_m145,10);
             MACRO_ADDITEM(16aa_HMNVS,100);
             MACRO_ADDITEM(optic_NVS,35);
             MACRO_ADDITEM(optic_TWS,15);
@@ -68,12 +67,17 @@
         	MACRO_ADDMAGAZINE(1Rnd_SmokeYellow_Grenade_shell,100);
         	MACRO_ADDMAGAZINE(1Rnd_SmokeBlue_Grenade_shell,100);
         	MACRO_ADDMAGAZINE(1Rnd_SmokeRed_Grenade_shell,100);
-        	MACRO_ADDMAGAZINE(SmokeShellRed,100);
-        	MACRO_ADDMAGAZINE(SmokeShellYellow,100);
-        	MACRO_ADDMAGAZINE(SmokeShellBlue,100);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,100);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,100);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Yellow,100);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,100);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,100);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Orange,100);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Purple,100);
         	MACRO_ADDMAGAZINE(chemlight_blue,100);
         	MACRO_ADDMAGAZINE(chemlight_green,100);
         	MACRO_ADDMAGAZINE(B_IR_Grenade,100);
+            MACRO_ADDMAGAZINE(16aa_chemlight_ir,100);
         	MACRO_ADDMAGAZINE(ACE_M84,150);
         	MACRO_ADDMAGAZINE(SatchelCharge_Remote_Mag,20);
         	MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag,60);
