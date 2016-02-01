@@ -77,16 +77,16 @@
                     type = "16AA_crate_ammo_misc";
                     amount = 2;
                 };
-                class 16AA_crate_ammo_misc {
-                    type = "16AA_crate_ammo_misc";
-                    amount = 2;
-                };
                 class 16AA_crate_ammo_bergen_section {
                     type = "16AA_crate_ammo_bergen_section";
                     amount = 6;
                 };
-                class 16AA_crate_ammo_bergen_section_grenade {
-                    type = "16AA_crate_ammo_bergen_section_grenade";
+                class 16aa_crate_medical_resupply_basic {
+                    type = "16aa_crate_medical_resupply_basic";
+                    amount = 6;
+                };
+				class 16aa_crate_medical_resupply_advanced {
+                    type = "16aa_crate_medical_resupply_advanced";
                     amount = 6;
                 };
             };
@@ -366,11 +366,13 @@
 		vehicleClass = "16aa_Crates_Ammo";
         model = "16aa_crates_a3\16aa_wooden_medium_grenades_smoke.p3d";
         class TransportMagazines{
-        	MACRO_ADDMAGAZINE(SmokeShellRed,20);
-        	MACRO_ADDMAGAZINE(SmokeShellYellow,20);
-        	MACRO_ADDMAGAZINE(SmokeShellBlue,20);
-        	MACRO_ADDMAGAZINE(SmokeShellGreen,20);
-        	MACRO_ADDMAGAZINE(SmokeShellPurple,20);
+            MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,20);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,20);
+            MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Yellow,20);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,20);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,20);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Orange,20);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Purple,20);
         };
 	};
 	class 16AA_crate_ammo_grenades_frag : 16aa_crate_empty_wooden_small {
@@ -400,6 +402,7 @@
         	MACRO_ADDMAGAZINE(chemlight_blue,20);
         	MACRO_ADDMAGAZINE(chemlight_red,20);
         	MACRO_ADDMAGAZINE(chemlight_green,20);
+        	MACRO_ADDMAGAZINE(16aa_chemlight_ir,20);
         	MACRO_ADDMAGAZINE(B_IR_Grenade,20);
         };
 	};
@@ -517,9 +520,10 @@
         author = "3LSR";
         class TransportMagazines{
             MACRO_ADDMAGAZINE(16AA_HandGrenade,20);
-            MACRO_ADDMAGAZINE(SmokeShellYellow,10);
-            MACRO_ADDMAGAZINE(SmokeShellBlue,10);
-            MACRO_ADDMAGAZINE(SmokeShellGreen,10);
+            MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,10);
+            MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Yellow,10);
+            MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,10);
+            MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,10);
             MACRO_ADDMAGAZINE(chemlight_blue,10);
             MACRO_ADDMAGAZINE(chemlight_green,10);
             MACRO_ADDMAGAZINE(chemlight_red,10);

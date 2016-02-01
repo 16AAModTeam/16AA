@@ -12,6 +12,7 @@ class CfgVehicles {
 	class 16aa_Carryall_2Para;
 	class Cargo_base_F;
 	class CargoNet_01_box_F;
+	#include "Crates\Crate_16CSMR.hpp"
 	#include "Crates\Crate_Ammo.hpp"
 	#include "Crates\Crate_CSW.hpp"
 	#include "Crates\Crate_Equipment.hpp"

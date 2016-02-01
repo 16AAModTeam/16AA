@@ -42,7 +42,13 @@
         	MACRO_ADDMAGAZINE(16AA_17Rnd_9x19_g17,10);
         	MACRO_ADDMAGAZINE(1Rnd_HE_Grenade_shell,30);
         	MACRO_ADDMAGAZINE(16AA_HandGrenade,30);
-        	MACRO_ADDMAGAZINE(SmokeShellYellow,40);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,40);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Yellow,30);
+        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,30);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,30);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,30);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Orange,30);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Purple,30);
         	MACRO_ADDMAGAZINE(1Rnd_SmokeRed_Grenade_shell,20);
         	MACRO_ADDMAGAZINE(DemoCharge_Remote_Mag,6);
         	MACRO_ADDMAGAZINE(ClaymoreDirectionalMine_Remote_Mag,3);

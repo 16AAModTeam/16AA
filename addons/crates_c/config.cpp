@@ -60,6 +60,14 @@ class CfgPatches {
         authorUrl = "";
         VERSION_CONFIG;
 	};
+	class 16AA_crate_16CSMR {
+		units[] = {"16AA_crate_16CSMR"};
+		requiredaddons[] = {"LSR_common","16aa_crates_a3"};
+		requiredversion = REQUIRED_VERSION;
+		author[] = {"Fletcher"};
+        authorUrl = "";
+        VERSION_CONFIG;
+	};
 	class 16AA_crate_csw {
 		units[] = {"16AA_crate_csw"};
 		requiredaddons[] = {"LSR_common","16aa_crates_a3"};
@@ -101,7 +109,7 @@ class CfgPatches {
         VERSION_CONFIG;
 	};
 	class 16AA_crate_medical {
-		units[] = {"16AA_crate_medical"};
+		units[] = {"16AA_crate_medical","16aa_crate_medical_resupply_basic","16aa_crate_medical_resupply_advanced"};
 		requiredaddons[] = {"LSR_common","16aa_crates_a3"};
 		requiredversion = REQUIRED_VERSION;
 		author[] = {"Grey"};

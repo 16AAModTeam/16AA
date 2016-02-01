@@ -10,14 +10,13 @@
             MACRO_ADDWEAPON(16aa_l110a2_mk1,3);
             MACRO_ADDWEAPON(16aa_AT4CSHP,2);
             MACRO_ADDWEAPON(16aa_javelin_launcher,3);
-            MACRO_ADDWEAPON(16aa_l115a3,1);
+            MACRO_ADDWEAPON(16aa_L115A3,1);
 			MACRO_ADDWEAPON(16aa_Stinger_Launcher,4);
         };
         class TransportItems {
             MACRO_ADDITEM(tf_anprc152,5);
             MACRO_ADDITEM(Laserdesignator,2);
             MACRO_ADDITEM(Laserbatteries,6);
-            MACRO_ADDITEM(itemGPS,1);
             MACRO_ADDITEM(16aa_optic_LDS,4);
             MACRO_ADDITEM(16aa_optic_LDS_2d,4);
             MACRO_ADDITEM(16aa_optic_LDS_pip,4);
@@ -35,8 +34,12 @@
         	MACRO_ADDMAGAZINE(20Rnd_762x51_Mag,20);
         	MACRO_ADDMAGAZINE(1Rnd_HE_Grenade_shell,20);
         	MACRO_ADDMAGAZINE(1Rnd_SmokeYellow_Grenade_shell,40);
-        	MACRO_ADDMAGAZINE(16aa_javelin_m,10);
-        	MACRO_ADDMAGAZINE(16aa_5x338_Mag,10);
+            MACRO_ADDMAGAZINE(16aa_javelin_m,10);
+        	MACRO_ADDMAGAZINE(16aa_Stinger_M,10);
+            MACRO_ADDMAGAZINE(16aa_5rnd_308WM_FMJ_AWM,10);
+            MACRO_ADDMAGAZINE(16aa_5rnd_308WM_AP_AWM,10);
+            MACRO_ADDMAGAZINE(16aa_5rnd_308WM_BTSP_AWM,10);
+        	MACRO_ADDMAGAZINE(16aa_5rnd_308WM_mk248_AWM,10);
         };
         class TransportBackpacks{
         	MACRO_ADDBACKPACK(16aa_Carryall_2Para,2);
