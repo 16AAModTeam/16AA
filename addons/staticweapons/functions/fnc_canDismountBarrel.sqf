@@ -1,22 +1,27 @@
 /*
-Author: Grey
-
-Checks whether barrel can be dismounted from static weapon
-
-Arguments:
-0: static <OBJECT>
-1: unit <OBJECT>
-
-Return value:
-canDismount - True/False
-*/
+ * Author: Grey
+ * Checks whether a static weapon can have its barrel removed
+ *
+ * Arguments:
+ * 0: static <OBJECT>
+ * 1: unit <OBJECT>
+ *
+ * Return Value:
+ * canDismountBarrel <BOOL>
+ *
+ * Example:
+ * [_target,_player] call lsr_staticweapons_canDismountBarrel
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 
-params["_static","_unit"];
-private "_canDismount";
+params ["_static","_unit"];
+private "_canDismountBarrel";
 
-_canDismount = false;
+_canDismountBarrel = false;
+//If static weapon has a barrel, is alive, has no crew and no magazine then its barrel can be removed
 if((_static getVariable [QGVAR(hasBarrel),true]) && (alive _static) && ((count (_static magazinesTurret [0])) == 0) )then {
-    _canDismount = true;
+    _canDismountBarrel = true;
 };
-_canDismount
+_canDismountBarrel

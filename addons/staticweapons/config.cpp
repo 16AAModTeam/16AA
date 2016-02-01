@@ -42,10 +42,14 @@ class CfgPatches {
             "16aa_static_magazine_l16_illum",
             "16aa_static_magazine_l16_smoke_white",
             "16aa_static_magazine_l16_smoke_red",
-            "16aa_static_magazine_l16_smoke_orange"
+            "16aa_static_magazine_l16_smoke_orange",
+			"16aa_static_magazine_1Rnd_105mm_HE",
+			"16aa_static_magazine_1Rnd_105mm_WP",
+			"16aa_static_magazine_1Rnd_105mm_SMOKE",
+			"16aa_static_magazine_1Rnd_105mm_ILLUM"
         };
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"LSR_common","16aa_crates_a3","16aa_weapons_support"};
+        requiredAddons[] = {"LSR_common","16aa_crates_a3","16aa_weapons_support","16aa_weapons_c"};
         author[] = {"Grey"};
         authorUrl = "";
         VERSION_CONFIG;

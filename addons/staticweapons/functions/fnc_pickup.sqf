@@ -1,26 +1,29 @@
 /*
-Author: Grey
-
-Pick up tripod
-
-Arguments:
-0: tripod <OBJECT>
-1: unit <OBJECT>
-2: staticItem<String>
-
-Return Value:
-Nothing
-
-Return value:
-None
-*/
+ * Author: Grey
+ *
+ * Pick up static weapon
+ *
+ * Arguments:
+ * 0: vehicle <OBJECT>
+ * 1: unit <OBJECT>
+ * 2: staticItem <STRING>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [_target,_player,'16aa_tripod'] call lsr_staticweapons_pickup
+ *
+ * Public: Yes
+ */
 #include "script_component.hpp"
 
-params["_tripod","_unit","_staticItem"];
+params ["_vehicle","_unit","_staticItem"];
 [{
-    params["_tripod","_unit","_staticItem"];
+    params ["_vehicle","_unit","_staticItem"];
 
+    //Add item to players inventory and delete the static weapon
     [_unit, _staticItem] call ace_common_fnc_addToInventory;
-    deleteVehicle _tripod;
+    deleteVehicle _vehicle;
 
-}, [_tripod, _unit, _staticItem], 1, 0]call ace_common_fnc_waitAndExecute;
+}, [_vehicle, _unit, _staticItem], 1, 0]call ace_common_fnc_waitAndExecute;

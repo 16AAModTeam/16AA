@@ -36,4 +36,6 @@ PREP(unloadMagazine);
 PREP(unloadMagazineTimer);
 
 PREP(handleFiredMortar);
+
+PREP(repair);
 ADDON = true;
