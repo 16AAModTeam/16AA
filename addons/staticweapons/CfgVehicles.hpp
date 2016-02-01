@@ -514,7 +514,7 @@ class CfgVehicles
             class ACE_MainActions;
         };
     };
-    class 16aa_L16_Mortar : Mortar01_base_F {
+    class 16aa_L16_Mortar: Mortar01_base_F {
         class UserActions
         {
             class RepairStaticWeapon
@@ -630,7 +630,7 @@ class CfgVehicles
             };
         };
     };
-    class 16aa_m6h_Mortar : Mortar01_base_F {
+    class 16aa_m6h_Mortar: Mortar01_base_F {
         class UserActions
         {
             class RepairStaticWeapon
