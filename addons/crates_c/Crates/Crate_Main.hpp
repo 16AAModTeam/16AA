@@ -54,6 +54,7 @@
             MACRO_ADDITEM(16aa_G_Tactical_Yellow_ACE,20);
             MACRO_ADDITEM(16aa_G_Tactical_Black,20);
             MACRO_ADDITEM(16aa_G_Tactical_Black_ACE,20);
+			MACRO_ADDITEM(ACE_EntrenchingTool,20);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag,400);

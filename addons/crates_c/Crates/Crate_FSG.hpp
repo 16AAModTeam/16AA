@@ -27,6 +27,12 @@
             MACRO_ADDITEM(16aa_llm_mk3_lz,4);
             MACRO_ADDITEM(RH_ta648,2);
             MACRO_ADDITEM(ACE_MapTools,10);
+			MACRO_ADDITEM(16aa_FieldUniform1_ghillie,2);
+			MACRO_ADDITEM(16aa_ToolKit,1);
+			MACRO_ADDITEM(ACE_Kestrel4500,1);
+			MACRO_ADDITEM(16aa_tripod,2);
+			MACRO_ADDITEM(ACE_EntrenchingTool,8);
+			MACRO_ADDITEM(16aa_tripod,2);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg,20);
