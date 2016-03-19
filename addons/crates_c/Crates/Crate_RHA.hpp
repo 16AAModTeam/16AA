@@ -17,6 +17,10 @@
 			MACRO_ADDITEM(ACE_EntrenchingTool,5);
 			MACRO_ADDITEM(16aa_static_item_l16_baseplate,3);
             MACRO_ADDITEM(16aa_static_item_l16_tube,3);
+			MACRO_ADDITEM(ACE_SpraypaintBlue,2);
+			MACRO_ADDITEM(ACE_SpraypaintBlack,2);
+			MACRO_ADDITEM(ACE_SpraypaintGreen,2);
+			MACRO_ADDITEM(ACE_SpraypaintRed,2);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(16aa_Stinger_M,8);

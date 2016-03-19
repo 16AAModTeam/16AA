@@ -33,6 +33,10 @@
             MACRO_ADDITEM(16aa_G_Tactical_Yellow_ACE,10);
             MACRO_ADDITEM(16aa_G_Tactical_Black,10);
             MACRO_ADDITEM(16aa_G_Tactical_Black_ACE,10);
+			MACRO_ADDITEM(ACE_SpraypaintBlue,2);
+			MACRO_ADDITEM(ACE_SpraypaintBlack,2);
+			MACRO_ADDITEM(ACE_SpraypaintGreen,2);
+			MACRO_ADDITEM(ACE_SpraypaintRed,2);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag_Blank,400);
