@@ -25,7 +25,6 @@
             MACRO_ADDITEM(optic_NVS,4);
             MACRO_ADDITEM(16aa_llm_mk3_lz,4);
             MACRO_ADDITEM(RH_ta648,2);
-			MACRO_ADDITEM(16aa_FieldUniform1_ghillie,2);
 			MACRO_ADDITEM(16aa_ToolKit,1);
 			MACRO_ADDITEM(ACE_Kestrel4500,1);
 			MACRO_ADDITEM(16aa_tripod,2);
