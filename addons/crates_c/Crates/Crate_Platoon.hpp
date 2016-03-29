@@ -18,6 +18,10 @@
             MACRO_ADDITEM(ACE_MapTools,10);
 			MACRO_ADDITEM(ACE_MX2A,1);
 			MACRO_ADDITEM(ACE_EntrenchingTool,8);
+			MACRO_ADDITEM(ACE_SpraypaintBlue,2);
+			MACRO_ADDITEM(ACE_SpraypaintBlack,2);
+			MACRO_ADDITEM(ACE_SpraypaintGreen,2);
+			MACRO_ADDITEM(ACE_SpraypaintRed,2);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg,12);

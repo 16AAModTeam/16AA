@@ -20,7 +20,7 @@
             MACRO_ADDITEM(RAF_Fighter_Pilot_Outfit4,4);
             MACRO_ADDITEM(16aa_helmet_hivis_yellow,4);
             MACRO_ADDITEM(16aa_vest_hivis_yellow,4);
-			MACRO_ADDITEM(ACE_EntrenchingTool,8);
+			MACRO_ADDITEM(ACE_EntrenchingTool,6);
 			MACRO_ADDITEM(ACE_SpraypaintBlue,2);
 			MACRO_ADDITEM(ACE_SpraypaintBlack,2);
 			MACRO_ADDITEM(ACE_SpraypaintGreen,2);

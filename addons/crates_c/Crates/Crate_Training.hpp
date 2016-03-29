@@ -15,14 +15,14 @@
             MACRO_ADDWEAPON(16aa_ak74_bfa,20);
         };
         class TransportItems {
-            MACRO_ADDITEM(tf_anprc152,50);
-            MACRO_ADDITEM(16aa_optic_LDS,50);
-            MACRO_ADDITEM(16aa_optic_LDS_2d,50);
-            MACRO_ADDITEM(16aa_optic_LDS_pip,50);
+            MACRO_ADDITEM(tf_anprc152,30);
+            MACRO_ADDITEM(16aa_optic_LDS,30);
+            MACRO_ADDITEM(16aa_optic_LDS_2d,30);
+            MACRO_ADDITEM(16aa_optic_LDS_pip,30);
             MACRO_ADDITEM(RH_ta648,10);
-            MACRO_ADDITEM(16aa_HMNVS,50);
+            MACRO_ADDITEM(16aa_HMNVS,30);
             MACRO_ADDITEM(optic_NVS,15);
-            MACRO_ADDITEM(16aa_LLM_MK3_LZ,40);
+            MACRO_ADDITEM(16aa_LLM_MK3_LZ,30);
             MACRO_ADDITEM(optic_TWS,10);
             MACRO_ADDITEM(ACE_MapTools,10);
             MACRO_ADDITEM(16aa_helmet_hivis_yellow,10);
@@ -33,10 +33,11 @@
             MACRO_ADDITEM(16aa_G_Tactical_Yellow_ACE,10);
             MACRO_ADDITEM(16aa_G_Tactical_Black,10);
             MACRO_ADDITEM(16aa_G_Tactical_Black_ACE,10);
-			MACRO_ADDITEM(ACE_SpraypaintBlue,2);
-			MACRO_ADDITEM(ACE_SpraypaintBlack,2);
-			MACRO_ADDITEM(ACE_SpraypaintGreen,2);
-			MACRO_ADDITEM(ACE_SpraypaintRed,2);
+			MACRO_ADDITEM(ACE_EntrenchingTool,4);
+			MACRO_ADDITEM(ACE_SpraypaintBlue,4);
+			MACRO_ADDITEM(ACE_SpraypaintBlack,4);
+			MACRO_ADDITEM(ACE_SpraypaintGreen,4);
+			MACRO_ADDITEM(ACE_SpraypaintRed,4);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag_Blank,400);
