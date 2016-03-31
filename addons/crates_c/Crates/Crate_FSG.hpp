@@ -27,6 +27,7 @@
             MACRO_ADDITEM(RH_ta648,2);
 			MACRO_ADDITEM(16aa_ToolKit,1);
 			MACRO_ADDITEM(ACE_Kestrel4500,1);
+			MACRO_ADDITEM(ACE_ATragMX,1);
 			MACRO_ADDITEM(16aa_tripod,2);
 			MACRO_ADDITEM(ACE_EntrenchingTool,4);
 			MACRO_ADDITEM(16aa_tripod,2);
@@ -34,6 +35,7 @@
 			MACRO_ADDITEM(ACE_SpraypaintBlack,2);
 			MACRO_ADDITEM(ACE_SpraypaintGreen,2);
 			MACRO_ADDITEM(ACE_SpraypaintRed,2);
+			MACRO_ADDITEM(16aa_FieldUniform1_ghillie,2)
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg,20);
