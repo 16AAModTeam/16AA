@@ -1,0 +1,1 @@
+#include "\z\lsr\addons\staticweapons\script_component.hpp"
