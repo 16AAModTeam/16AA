@@ -35,7 +35,11 @@
 			MACRO_ADDITEM(ACE_SpraypaintBlack,2);
 			MACRO_ADDITEM(ACE_SpraypaintGreen,2);
 			MACRO_ADDITEM(ACE_SpraypaintRed,2);
-			MACRO_ADDITEM(16aa_FieldUniform1_ghillie,2)
+			MACRO_ADDITEM(16aa_FieldUniform1_ghillie,2);
+			MACRO_ADDITEM(US_Facepaint,8);
+			MACRO_ADDITEM(Serbian_Facepaint,8);
+			MACRO_ADDITEM(BW_Facepaint,8);
+			MACRO_ADDITEM(ACE_VMH3,4);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg,20);

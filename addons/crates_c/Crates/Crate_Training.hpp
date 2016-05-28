@@ -38,6 +38,10 @@
 			MACRO_ADDITEM(ACE_SpraypaintBlack,4);
 			MACRO_ADDITEM(ACE_SpraypaintGreen,4);
 			MACRO_ADDITEM(ACE_SpraypaintRed,4);
+			MACRO_ADDITEM(US_Facepaint,8);
+			MACRO_ADDITEM(Serbian_Facepaint,8);
+			MACRO_ADDITEM(BW_Facepaint,8);
+			MACRO_ADDITEM(ACE_VMH3,4);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag_Blank,400);

@@ -18,6 +18,9 @@
 			MACRO_ADDITEM(ACE_SpraypaintBlack,2);
 			MACRO_ADDITEM(ACE_SpraypaintGreen,2);
 			MACRO_ADDITEM(ACE_SpraypaintRed,2);
+			MACRO_ADDITEM(US_Facepaint,8);
+			MACRO_ADDITEM(Serbian_Facepaint,8);
+			MACRO_ADDITEM(BW_Facepaint,8);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Pellets,35);
