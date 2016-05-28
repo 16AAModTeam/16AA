@@ -9,16 +9,15 @@
             MACRO_ADDWEAPON(16aa_l110a2_mk1,2);
             MACRO_ADDWEAPON(16AA_L7A2,1);
             MACRO_ADDWEAPON(16aa_AT4CSHP,2);
-			MACRO_ADDITEM(16aa_LLM_MK3_LZ,3);
 			MACRO_ADDWEAPON(launch_NLAW_F,2);
         };
         class TransportItems {
-            MACRO_ADDITEM(tf_anprc152,5);
-            MACRO_ADDITEM(16aa_optic_LDS_2d,4);
-            MACRO_ADDITEM(16aa_optic_LDS_pip,4);
-            MACRO_ADDITEM(optic_NVS,4);
-            MACRO_ADDITEM(RH_ta648,1);
-            MACRO_ADDITEM(optic_TWS,1);
+			MACRO_ADDITEM(tf_anprc152,5);
+			MACRO_ADDITEM(16aa_optic_LDS_2d,4);
+			MACRO_ADDITEM(16aa_optic_LDS_pip,4);
+			MACRO_ADDITEM(optic_NVS,4);
+			MACRO_ADDITEM(RH_ta648,1);
+			MACRO_ADDITEM(optic_TWS,1);
             MACRO_ADDITEM(ACE_MX2A,1);
             MACRO_ADDITEM(ACE_CableTie,10);
             MACRO_ADDITEM(ACE_M26_Clacker,2);
@@ -37,6 +36,7 @@
 			MACRO_ADDITEM(Serbian_Facepaint,8);
 			MACRO_ADDITEM(BW_Facepaint,8);
 			MACRO_ADDITEM(ACE_VMH3,2);
+			MACRO_ADDITEM(16aa_LLM_MK3_LZ,3);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag,20);
