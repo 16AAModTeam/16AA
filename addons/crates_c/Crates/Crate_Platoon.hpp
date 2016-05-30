@@ -22,6 +22,10 @@
 			MACRO_ADDITEM(ACE_SpraypaintBlack,2);
 			MACRO_ADDITEM(ACE_SpraypaintGreen,2);
 			MACRO_ADDITEM(ACE_SpraypaintRed,2);
+			MACRO_ADDITEM(US_Facepaint,8);
+			MACRO_ADDITEM(Serbian_Facepaint,8);
+			MACRO_ADDITEM(BW_Facepaint,8);
+			MACRO_ADDITEM(ACE_VMH3,4);
         };
         class TransportMagazines{
 			MACRO_ADDMAGAZINE(16aa_200Rnd_762x51_belt_gpmg,12);

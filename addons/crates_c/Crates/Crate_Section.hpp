@@ -9,15 +9,15 @@
             MACRO_ADDWEAPON(16aa_l110a2_mk1,2);
             MACRO_ADDWEAPON(16AA_L7A2,1);
             MACRO_ADDWEAPON(16aa_AT4CSHP,2);
-            MACRO_ADDWEAPON(launch_NLAW_F,2);
+			MACRO_ADDWEAPON(launch_NLAW_F,2);
         };
         class TransportItems {
-            MACRO_ADDITEM(tf_anprc152,5);
-            MACRO_ADDITEM(16aa_optic_LDS_2d,4);
-            MACRO_ADDITEM(16aa_optic_LDS_pip,4);
-            MACRO_ADDITEM(optic_NVS,4);
-            MACRO_ADDITEM(RH_ta648,1);
-            MACRO_ADDITEM(optic_TWS,1);
+			MACRO_ADDITEM(tf_anprc152,5);
+			MACRO_ADDITEM(16aa_optic_LDS_2d,4);
+			MACRO_ADDITEM(16aa_optic_LDS_pip,4);
+			MACRO_ADDITEM(optic_NVS,4);
+			MACRO_ADDITEM(RH_ta648,1);
+			MACRO_ADDITEM(optic_TWS,1);
             MACRO_ADDITEM(ACE_MX2A,1);
             MACRO_ADDITEM(ACE_CableTie,10);
             MACRO_ADDITEM(ACE_M26_Clacker,2);
@@ -27,15 +27,20 @@
             MACRO_ADDITEM(16aa_G_Tactical_Yellow_ACE,10);
             MACRO_ADDITEM(16aa_G_Tactical_Black,10);
             MACRO_ADDITEM(16aa_G_Tactical_Black_ACE,10);
-			MACRO_ADDITEM(ACE_EntrenchingTool,8);
+			MACRO_ADDITEM(ACE_EntrenchingTool,6);
 			MACRO_ADDITEM(ACE_SpraypaintBlue,2);
 			MACRO_ADDITEM(ACE_SpraypaintBlack,2);
 			MACRO_ADDITEM(ACE_SpraypaintGreen,2);
 			MACRO_ADDITEM(ACE_SpraypaintRed,2);
+			MACRO_ADDITEM(US_Facepaint,8);
+			MACRO_ADDITEM(Serbian_Facepaint,8);
+			MACRO_ADDITEM(BW_Facepaint,8);
+			MACRO_ADDITEM(ACE_VMH3,2);
+			MACRO_ADDITEM(16aa_LLM_MK3_LZ,3);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag,20);
-        	MACRO_ADDMAGAZINE(20Rnd_762x51_Mag,4);
+        	MACRO_ADDMAGAZINE(20Rnd_762x51_Mag,10);
         	MACRO_ADDMAGAZINE(sti_200Rnd_556x45,4);
 			MACRO_ADDMAGAZINE(16aa_200Rnd_762x51_belt_gpmg,4);
 			MACRO_ADDMAGAZINE(16aa_50Rnd_762x51_belt_gpmg,4);
@@ -45,7 +50,7 @@
 			MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,10);
 			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Yellow,5);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,5);
-			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,5);
+			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,5);//
 			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,5);
 			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Orange,5);
 			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Purple,5);

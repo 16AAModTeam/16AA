@@ -20,18 +20,21 @@
             MACRO_ADDITEM(RAF_Fighter_Pilot_Outfit4,4);
             MACRO_ADDITEM(16aa_helmet_hivis_yellow,4);
             MACRO_ADDITEM(16aa_vest_hivis_yellow,4);
-			MACRO_ADDITEM(ACE_EntrenchingTool,6);
+			MACRO_ADDITEM(ACE_EntrenchingTool,4);
 			MACRO_ADDITEM(ACE_SpraypaintBlue,2);
 			MACRO_ADDITEM(ACE_SpraypaintBlack,2);
 			MACRO_ADDITEM(ACE_SpraypaintGreen,2);
 			MACRO_ADDITEM(ACE_SpraypaintRed,2);
+			MACRO_ADDITEM(US_Facepaint,8);
+			MACRO_ADDITEM(Serbian_Facepaint,8);
+			MACRO_ADDITEM(BW_Facepaint,8);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag,10);
         };
         class TransportBackpacks{
-        	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_Radio_L_B,10);
-        	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_JTAC_L_A_SATCOM,4);
+        	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_Radio_L_B,4);
+        	MACRO_ADDBACKPACK(16aa_B_Bergen_MTP_JTAC_L_A_SATCOM,6);
 			MACRO_ADDBACKPACK(B_Kitbag_MTP,4);
         };
 	};
