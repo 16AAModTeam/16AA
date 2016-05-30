@@ -24,7 +24,8 @@
 			MACRO_ADDITEM(ACE_SpraypaintRed,2);
         };
         class TransportMagazines{
-        	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg,12);
+			MACRO_ADDMAGAZINE(16aa_200Rnd_762x51_belt_gpmg,12);
+			MACRO_ADDMAGAZINE(16aa_50Rnd_762x51_belt_gpmg,12);
         	MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Pellets,35);
         	MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Slug,35);
         	MACRO_ADDMAGAZINE(ClaymoreDirectionalMine_Remote_Mag,3);

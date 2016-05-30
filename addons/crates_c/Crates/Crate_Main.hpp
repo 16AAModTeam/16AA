@@ -65,7 +65,8 @@
         	MACRO_ADDMAGAZINE(20Rnd_762x51_Mag,150);
         	MACRO_ADDMAGAZINE(16AA_17Rnd_9x19_g17,80);
         	MACRO_ADDMAGAZINE(sti_200Rnd_556x45,200);
-        	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg,100);
+			MACRO_ADDMAGAZINE(16aa_200Rnd_762x51_belt_gpmg,100);
+			MACRO_ADDMAGAZINE(16aa_50Rnd_762x51_belt_gpmg,100);
         	MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Pellets,100);
         	MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Slug,100);
         	MACRO_ADDMAGAZINE(1Rnd_HE_Grenade_shell,200);

@@ -37,7 +37,8 @@
         	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag,20);
         	MACRO_ADDMAGAZINE(20Rnd_762x51_Mag,4);
         	MACRO_ADDMAGAZINE(sti_200Rnd_556x45,4);
-        	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg,12);
+			MACRO_ADDMAGAZINE(16aa_200Rnd_762x51_belt_gpmg,4);
+			MACRO_ADDMAGAZINE(16aa_50Rnd_762x51_belt_gpmg,4);
         	MACRO_ADDMAGAZINE(16AA_17Rnd_9x19_g17,4);
         	MACRO_ADDMAGAZINE(1Rnd_HE_Grenade_shell,4);
         	MACRO_ADDMAGAZINE(16AA_HandGrenade,4);
