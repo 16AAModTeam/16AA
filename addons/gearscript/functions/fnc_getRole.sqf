@@ -137,23 +137,35 @@ if (isText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "ma
     _magModifier = getText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "magazineModifier");
 };
 
+//Ammunition modifications
+private "_ammunitionModifier";
+_ammunitionModifier = getNumber (configfile >> "LSR_gearManagement" >> "modifiers" >> "ammunition");
+if (isNumber (missionConfigFile >> "LSR_gearManagement" >> "modifiers" >> "ammunition")) then {
+    _ammunitionModifier = getNumber (missionConfigFile >> "LSR_gearManagement" >> "modifiers" >> "ammunition");
+};
+if (isNumber (configFile >> "LSR_gearManagement" >> "roles" >> _role >> "ammunitionModifier")) then {
+    _ammunitionModifier = getNumber (configFile >> "LSR_gearManagement" >> "roles" >> _role >> "ammunitionModifier");
+};
+if (isNumber (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "ammunitionModifier")) then {
+    _ammunitionModifier = getNumber (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "ammunitionModifier");
+};
 {
     private "_classname";
     _classname = [_x select 0, "[type]", _magModifier] call CBA_fnc_replace;
-    _classname = [_classname, _x select 1];
+    _classname = [_classname, ( round((_x select 1) * _ammunitionModifier) )];
     _uniformMagazines set [_forEachIndex, _classname];
 }foreach _uniformMagazines;
 {
-    private "_classname";
+    private ["_classname","_ammount"];
     _classname = [_x select 0, "[type]", _magModifier] call CBA_fnc_replace;
-    _classname = [_classname, _x select 1];
+    _classname = [_classname, ( round((_x select 1) * _ammunitionModifier) )];
     _vestMagazines set [_forEachIndex, _classname];
 }foreach _vestMagazines;
 
 {
     private "_classname";
     _classname = [_x select 0, "[type]", _magModifier] call CBA_fnc_replace;
-    _classname = [_classname, _x select 1];
+    _classname = [_classname, ( round((_x select 1) * _ammunitionModifier) )];
     _backpackMagazines set [_forEachIndex, _classname];
 }foreach _backpackMagazines;
 
