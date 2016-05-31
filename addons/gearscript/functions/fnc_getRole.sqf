@@ -13,7 +13,7 @@
 
 #include "script_component.hpp"
 
-private ["_role", "_config", "_primaryWeapon", "_secondiaryWeapon", "_pistolWeapon", "_primaryWeaponItems", "_secondiaryWeaponItems", "_pistolWeaponItems", "_uniform", "_vest", "_backpack", "_helmet", "_goggles", "_nvg", "_assignNVG", "_uniformMagazines", "_vestMagazines", "_backpackMagazines", "_uniformItems", "_vestItems", "_backpackItems", "_primaryWeaponData", "_secondiaryWeaponData", "_pistolData", "_uniformData", "_vestData", "_backpackData", "_miscData", "_standard", "_miscEquip", "_bino", "_bino"];
+private ["_role", "_config", "_primaryWeapon", "_secondaryWeapon", "_pistolWeapon", "_primaryWeaponItems", "_secondaryWeaponItems", "_pistolWeaponItems", "_uniform", "_vest", "_backpack", "_helmet", "_goggles", "_nvg", "_assignNVG", "_uniformMagazines", "_vestMagazines", "_backpackMagazines", "_uniformItems", "_vestItems", "_backpackItems", "_primaryWeaponData", "_secondaryWeaponData", "_pistolData", "_uniformData", "_vestData", "_backpackData", "_miscData", "_standard", "_miscEquip", "_bino", "_bino"];
 _role = _this select 0;
 
 _config = (configfile >> "LSR_gearManagement" >> "roles" >> _role);
@@ -24,11 +24,11 @@ if !(isclass _config) then {
 if !(isClass _config) exitwith {[]};
 
 _primaryWeapon = getArray (_config >> "primaryWeapon");
-_secondiaryWeapon = getArray (_config >> "secondaryWeapon");
+_secondaryWeapon = getArray (_config >> "secondaryWeapon");
 _pistolWeapon = getArray (_config >> "pistol");
 
 _primaryWeaponItems = getArray (_config >> "primaryWeaponItems");
-_secondiaryWeaponItems = getArray (_config >> "secondaryWeaponItems");
+_secondaryWeaponItems = getArray (_config >> "secondaryWeaponItems");
 _pistolWeaponItems = getArray (_config >> "pistolItems");
 
 _uniform = getArray (_config >> "uniform");
@@ -53,11 +53,11 @@ _backpackItems = getArray (_config >> "backpackItems");
 _config = (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role);
 if (isClass _config) then {
     _primaryWeapon = if (isArray (_config >> "primaryWeapon")) then { getArray (_config >> "primaryWeapon");} else {_primaryWeapon};
-    _secondiaryWeapon = if (isArray (_config >> "secondaryWeapon")) then { getArray (_config >> "secondaryWeapon");} else {_secondiaryWeapon};
+    _secondaryWeapon = if (isArray (_config >> "secondaryWeapon")) then { getArray (_config >> "secondaryWeapon");} else {_secondaryWeapon};
     _pistolWeapon = if (isArray (_config >> "pistol")) then { getArray (_config >> "pistol");} else {_pistolWeapon};
 
     _primaryWeaponItems = if (isArray (_config >> "primaryWeaponItems")) then { getArray (_config >> "primaryWeaponItems");} else {_primaryWeaponItems};
-    _secondiaryWeaponItems = if (isArray (_config >> "secondaryWeaponItems")) then { getArray (_config >> "secondaryWeaponItems");} else {_secondiaryWeaponItems};
+    _secondaryWeaponItems = if (isArray (_config >> "secondaryWeaponItems")) then { getArray (_config >> "secondaryWeaponItems");} else {_secondaryWeaponItems};
     _pistolWeaponItems = if (isArray (_config >> "pistolItems")) then { getArray (_config >> "pistolItems");} else {_pistolWeaponItems};
 
     _uniform = if (isArray (_config >> "uniform")) then { getArray (_config >> "uniform");} else {_uniform};
@@ -120,8 +120,8 @@ if (isText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "we
 {
     private "_classname";
     _classname = [_x, "[type]", _weaponModifier] call CBA_fnc_replace;
-    _secondiaryWeapon set [_forEachIndex, _classname];
-}foreach _secondiaryWeapon;
+    _secondaryWeapon set [_forEachIndex, _classname];
+}foreach _secondaryWeapon;
 
 
 // magazine modifications
@@ -159,11 +159,11 @@ if (isText (missionConfigFile >> "LSR_gearManagement" >> "roles" >> _role >> "ma
 
 // misc data
 _primaryWeaponData = [_primaryWeapon, _primaryWeaponItems];
-_secondiaryWeaponData = [_secondiaryWeapon, _secondiaryWeaponItems];
+_secondaryWeaponData = [_secondaryWeapon, _secondaryWeaponItems];
 _pistolData = [_pistolWeapon, _pistolWeaponItems];
 _uniformData = [_uniform, _uniformItems, _uniformMagazines];
 _vestData = [_vest, _vestItems, _vestMagazines];
 _backpackData = [_backpack, _backpackItems, _backpackMagazines];
 _miscData = [_nvg, _assignNVG, _goggles, _helmet, _standard, _miscEquip + _bino];
 
-[_primaryWeaponData, _secondiaryWeaponData, _pistolData, _uniformData, _vestData, _backpackData, _miscData];
+[_primaryWeaponData, _secondaryWeaponData, _pistolData, _uniformData, _vestData, _backpackData, _miscData];

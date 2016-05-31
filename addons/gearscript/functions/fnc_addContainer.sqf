@@ -17,7 +17,8 @@
 #define GET_AMOUNT(ARRAY) ARRAY select 1
 
 private ["_containerClass"];
-params ["_unit", "_type"];
+params ["_unit", "_type","_containerData"];
+_containerData params ["_classes"];
 
 _containerClass = "";
 if (typeName _classes == "ARRAY" && {count _classes > 0}) then {
