@@ -28,14 +28,14 @@ if (count _roleInfo == 0) then {
     _roleInfo = ["baseRole"] call FUNC(getRole);
 };
 if (count _roleInfo == 0) exitwith {};
-// diag_log format["%1 using %2. Assigning: %3", _unit, _unit getvariable QGVAR(role), _roleInfo];
+ //diag_log format["%1 using %2. Assigning: %3", _unit, _unit getvariable QGVAR(role), _roleInfo];
 
 [_unit] call FUNC(clearAllEquipment);
 
 [{
     params ["_unit", "_roleInfo"];
-    _unit setvariable [QGVAR(initalized),true,true]; // mark unit as initalized to avoid duplicate execution 
-    
+    _unit setvariable [QGVAR(initalized),true,true]; // mark unit as initalized to avoid duplicate execution
+
     _roleInfo params ["_primaryWeaponData", "_secondiaryWeaponData", "_pistolData", "_uniformData", "_vestData","_backpackData", "_miscData"];
     // handle containers
     [_unit, "uniform", _uniformData] call FUNC(addContainer);
@@ -54,6 +54,6 @@ if (count _roleInfo == 0) exitwith {};
     [_unit, _primaryWeaponData select 0, _primaryWeaponData select 1, 0] call FUNC(addWeapon);
     [_unit, _secondiaryWeaponData select 0, _secondiaryWeaponData select 1, 1] call FUNC(addWeapon);
     [_unit, _pistolData select 0, _pistolData select 1, 2] call FUNC(addWeapon);
-    
-    
+
+
 }, [_unit, _roleInfo]] call ace_common_fnc_executeNextFrame;
