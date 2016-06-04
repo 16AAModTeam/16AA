@@ -56,4 +56,4 @@ if (count _roleInfo == 0) exitwith {};
     [_unit, _pistolData select 0, _pistolData select 1, 2] call FUNC(addWeapon);
 
 
-}, [_unit, _roleInfo]] call ace_common_fnc_execNextFrame;
+}, [_unit, _roleInfo]] call CBA_fnc_waitUntilAndExecute;

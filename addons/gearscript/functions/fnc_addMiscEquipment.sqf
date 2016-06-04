@@ -1,15 +1,12 @@
 /*
  * Author: Glowbal
- * Called when the listbox selection is changed for an options (eg: chaning a setting from false to true)
+ * Adds misc equipment to a player
  *
  * Arguments:
  * None
  *
  * Return Value:
  * None
- *
- * Example:
- * [] call ACE_optionsmenu_fnc_onListBoxSettingsChanged
  *
  * Public: No
  */
