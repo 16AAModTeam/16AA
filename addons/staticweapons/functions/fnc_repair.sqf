@@ -32,4 +32,4 @@ params ["_vehicle","_unit"];
 		[_vehicle,(typeOf _vehicle),_unit] call lsr_staticweapons_adjustHeight;
 	};
 
-}, [_vehicle, _unit], 1, 0]call ace_common_fnc_waitAndExecute;
+}, [_vehicle, _unit], 1, 0]call CBA_fnc_waitAndExecute;

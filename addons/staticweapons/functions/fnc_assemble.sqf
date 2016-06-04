@@ -56,4 +56,4 @@ if (_staticItemtype == -1) then {
     _staticNew setPosASL _position;
     _unit reveal _staticNew;
 
-}, [_staticOld,_unit,_staticNewClass,_staticItem], 1, 0] call ace_common_fnc_waitAndExecute;
+}, [_staticOld,_unit,_staticNewClass,_staticItem], 1, 0] call CBA_fnc_waitAndExecute;

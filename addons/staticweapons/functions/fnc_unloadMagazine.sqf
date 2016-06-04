@@ -28,11 +28,11 @@ _ammoCount = _currentMagazine select 2;
 
 //If current magazine is empty then remove it otherwise remove it and add it to the players inventory
 if (_ammoCount == 0) then {
-	["16aa_staticweapons_removeMagazine", [_static, _currentMagazineClass]] call ace_common_fnc_globalEvent;
+	["16aa_staticweapons_removeMagazine", [_static, _currentMagazineClass]] call CBA_fnc_globalEvent;
 }else {
 	_pos = _unit modelToWorldVisual [0,1,0];
     _unit = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
     _unit addMagazineAmmoCargo [_currentMagazineClass, 1, _ammoCount];
     _unit setPosATL _pos;
-    ["16aa_staticweapons_removeMagazine", [_static, _currentMagazineClass]] call ace_common_fnc_globalEvent;
+    ["16aa_staticweapons_removeMagazine", [_static, _currentMagazineClass]] call CBA_fnc_globalEvent;
 };

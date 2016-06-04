@@ -68,8 +68,8 @@ params ["_staticOld","_staticNewClass","_unit"];
     };
     //If old static weapon had a magazine then set the new static weapon to use the same magazine
     if (_hasMagazine) then {
-        ["16aa_staticweapons_addMagazine", [_staticNew, _currentMagazine]] call ace_common_fnc_globalEvent;
-        ["16aa_staticweapons_setAmmo", _staticNew, [_staticNew, _currentMagazine,_ammoCount]] call ace_common_fnc_targetEvent;
+        ["16aa_staticweapons_addMagazine", [_staticNew, _currentMagazine]] call CBA_fnc_globalEvent;
+        ["16aa_staticweapons_setAmmo", _staticNew, [_staticNew, _currentMagazine,_ammoCount]] call CBA_fnc_targetEvent;
     };
     //If new static weapon is spawned into the ground then move it to surface level
     if ((getPosATL _staticNew select 2) - (getPos _staticNsew select 2) < 1E-5) then {
@@ -79,4 +79,4 @@ params ["_staticOld","_staticNewClass","_unit"];
     _staticNew setPosASL _position;
     _unit reveal _staticNew;
 
-}, [_staticOld,_staticNewClass,_unit], 1, 0] call ace_common_fnc_waitAndExecute;
+}, [_staticOld,_staticNewClass,_unit], 1, 0] call CBA_fnc_waitAndExecute;

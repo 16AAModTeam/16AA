@@ -30,5 +30,5 @@ _count = ((magazinesAllTurrets _static) select 1) select 2;
 
 //If magazine is empty then remove it
  if (_count == 0) then {
- 	["16aa_staticweapons_removeMagazine", [_static, _magazineName]] call ace_common_fnc_globalEvent;
+ 	["16aa_staticweapons_removeMagazine", [_static, _magazineName]] call CBA_fnc_globalEvent;
 };

@@ -26,4 +26,4 @@ params ["_vehicle","_unit","_staticItem"];
     [_unit, _staticItem] call ace_common_fnc_addToInventory;
     deleteVehicle _vehicle;
 
-}, [_vehicle, _unit, _staticItem], 1, 0]call ace_common_fnc_waitAndExecute;
+}, [_vehicle, _unit, _staticItem], 1, 0]call CBA_fnc_waitAndExecute;

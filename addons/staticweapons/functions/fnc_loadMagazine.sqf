@@ -42,7 +42,7 @@ _roundsLeft = 0;
 }forEach _magazines;
 //If the static weapon already has an empty magazine then remove it
 if (_count == 0) then {
-	["16aa_staticweapons_removeMagazine", [_staticNew, _currentMagazineClass]] call ace_common_fnc_globalEvent;
+	["16aa_staticweapons_removeMagazine", [_staticNew, _currentMagazineClass]] call CBA_fnc_globalEvent;
 };
 //Find out the ammo count of the compatible magazine found
 if (_magazineClassDetails != "") then{
@@ -57,9 +57,9 @@ if (_magazineClassDetails != "") then{
 //If function has been called with an optional classname hten add that magazine to the static weapon. Otherwise add the compatible magazine
 if(_magazineClassOptional !="") then{
 		_unit removeMagazine _magazineClassOptional;
-		["16aa_staticweapons_addMagazine", [_static, _magazineClassOptional]] call ace_common_fnc_globalEvent;
+		["16aa_staticweapons_addMagazine", [_static, _magazineClassOptional]] call CBA_fnc_globalEvent;
 	}else{
 		_unit removeMagazine _magazineClass;
-		["16aa_staticweapons_addMagazine", [_static, _magazineClass]] call ace_common_fnc_globalEvent;
-		["16aa_staticweapons_setAmmo", _static, [_static, _magazineClass,_roundsLeft]] call ace_common_fnc_targetEvent;
+		["16aa_staticweapons_addMagazine", [_static, _magazineClass]] call CBA_fnc_globalEvent;
+		["16aa_staticweapons_setAmmo", _static, [_static, _magazineClass,_roundsLeft]] call CBA_fnc_targetEvent;
 };

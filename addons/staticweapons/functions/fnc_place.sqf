@@ -42,4 +42,4 @@ _unit removeItem _itemClass;
     };
     _unit reveal _vehicle;
 
-}, [_unit, _vehicleClass], 1, 0] call ace_common_fnc_waitAndExecute;
+}, [_unit, _vehicleClass], 1, 0] call CBA_fnc_waitAndExecute;

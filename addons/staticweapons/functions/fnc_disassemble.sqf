@@ -53,4 +53,4 @@ params ["_staticOld","_unit","_staticNewClass","_staticItems"];
         };
     }foreach _staticItems;
 
-}, [_staticOld,_unit,_staticNewClass,_staticItems], 1, 0] call ace_common_fnc_waitAndExecute;
+}, [_staticOld,_unit,_staticNewClass,_staticItems], 1, 0] call CBA_fnc_waitAndExecute;
