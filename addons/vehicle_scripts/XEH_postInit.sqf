@@ -8,7 +8,7 @@
     } else {
         _vehicle removeWeaponTurret ["16aa_GPMG_veh",[0]];
     };
-}] call ace_common_fnc_addEventhandler;
+}] call CBA_fnc_addEventHandler;
 
 ["16aa_vehicles_addMagazine", {
     params ["_vehicle", "_magazine","_turretIndex"];
@@ -16,14 +16,14 @@
     _vehicle addMagazineTurret [_magazine,_turretIndex];
 
 
-}] call ace_common_fnc_addEventhandler;
+}] call CBA_fnc_addEventHandler;
 
 ["16aa_vehicles_removeMagazine", {
     params ["_vehicle", "_magazine","_turretIndex"];
 
     _vehicle removeMagazineTurret [_magazine,_turretIndex];
 
-}] call ace_common_fnc_addEventhandler;
+}] call CBA_fnc_addEventHandler;
 
 ["16AA", "16AA_Key_Reload_Vehicle_Weapon", localize LSTRING(ReloadWeapon),
 {
