@@ -1,14 +1,14 @@
 /*
-Author: Grey
-
-Adjusts SW & LR radio volume
-
-Arguments:
-0: unit <OBJECT>
-
-Return value:
-None
-*/
+ * Author: Grey
+ *
+ * Adjusts SW & LR radio volume
+ * 
+ * Arguments:
+ * 0: unit <OBJECT>
+ *
+ * Return value:
+ * None
+ */
 #include "script_component.hpp"
 
 #define VOLUME_NORMAL 8
