@@ -31,8 +31,8 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
 
     _unit removeWeapon '16aa_l7a2';
 
-    ["16aa_vehicles_setWeaponTurretGPMG", [_vehicle, true]] call ace_common_fnc_globalEvent;
+    ["16aa_vehicles_setWeaponTurretGPMG", [_vehicle, true]] call CBA_fnc_globalEvent;
 
 	_vehicle setObjectTextureGlobal [_textureIndex, "16aa_vehicles_common\weapons\gpmg\m240_co.paa"];
 
-}, [_vehicle, _unit,_textureIndex], 1, 0]call ace_common_fnc_waitAndExecute;
+}, [_vehicle, _unit,_textureIndex], 1, 0]call CBA_fnc_waitAndExecute;

@@ -29,7 +29,7 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
 [{
     params["_vehicle","_unit","_textureIndex"];
 
-    ["16aa_vehicles_setWeaponTurretGPMG", [_vehicle, false]] call ace_common_fnc_globalEvent;
+    ["16aa_vehicles_setWeaponTurretGPMG", [_vehicle, false]] call CBA_fnc_globalEvent;
 
     _pos = _unit modelToWorldVisual [0,1,0.05];
     _unit = createVehicle ["WeaponHolder_Single_F",_pos,[],0,"NONE"];
@@ -38,4 +38,4 @@ if ((_unit call CBA_fnc_getUnitAnim) select 0 == "stand") then {
 
 	_vehicle setObjectTextureGlobal [_textureIndex, ""];
 
-}, [_vehicle, _unit,_textureIndex], 1, 0]call ace_common_fnc_waitAndExecute;
+}, [_vehicle, _unit,_textureIndex], 1, 0]call CBA_fnc_waitAndExecute;
