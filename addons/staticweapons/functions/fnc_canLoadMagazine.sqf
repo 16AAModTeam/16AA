@@ -52,7 +52,7 @@ if ((count (_static magazinesTurret [0])) > 0)then{
 	_count = _currentMagazine select 2;
 	//If current magazine is empty then just remove it.
 	if (_count == 0)then {
-		["16aa_staticweapons_removeMagazine", [_static, _currentMagazineClass]] call ace_common_fnc_globalEvent;
+		["16aa_staticweapons_removeMagazine", [_static, _currentMagazineClass]] call CBA_fnc_globalEvent;
 	};
 };
 

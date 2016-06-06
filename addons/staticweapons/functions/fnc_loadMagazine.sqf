@@ -18,11 +18,8 @@
 #include "script_component.hpp"
 
 params ["_static","_unit","_magazineClassOptional"];
-<<<<<<< HEAD
-private ["_weapon","_currentMagazine","_magazines","_magazineDetails","_listOfMagNames","_magazineClass","_magazineClassDetails","_parsed","_roundsLeft","_configMortar"];
-=======
 private ["_weapon","_currentMagazine","_count","_magazines","_magazineDetails","_listOfMagNames","_magazineClass","_magazineClassDetails","_parsed","_roundsLeft","_configMortar"];
->>>>>>> 0d09b7dd26e9a1bd802388515dd3b7711a2471c8
+
 
 //Get weapon & magazine information of static weapon
 _weapon = (_static weaponsTurret [0]) select 0;
@@ -46,7 +43,7 @@ _roundsLeft = 0;
 }forEach _magazines;
 //If the static weapon already has an empty magazine then remove it
 if (_count == 0) then {
-	["16aa_staticweapons_removeMagazine", [_staticNew, _currentMagazineClass]] call ace_common_fnc_globalEvent;
+	["16aa_staticweapons_removeMagazine", [_staticNew, _currentMagazineClass]] call CBA_fnc_globalEvent;
 };
 //Find out the ammo count of the compatible magazine found
 if (_magazineClassDetails != "") then{
@@ -61,13 +58,9 @@ if (_magazineClassDetails != "") then{
 //If function has been called with an optional classname hten add that magazine to the static weapon. Otherwise add the compatible magazine
 if(_magazineClassOptional !="") then{
 		_unit removeMagazine _magazineClassOptional;
-		["16aa_staticweapons_addMagazine", [_static, _magazineClassOptional]] call ace_common_fnc_globalEvent;
+		["16aa_staticweapons_addMagazine", [_static, _magazineClassOptional]] call CBA_fnc_globalEvent;
 	}else{
 		_unit removeMagazine _magazineClass;
-		["16aa_staticweapons_addMagazine", [_static, _magazineClass]] call ace_common_fnc_globalEvent;
-		["16aa_staticweapons_setAmmo", _static, [_static, _magazineClass,_roundsLeft]] call ace_common_fnc_targetEvent;
-<<<<<<< HEAD
+		["16aa_staticweapons_addMagazine", [_static, _magazineClass]] call CBA_fnc_globalEvent;
+		["16aa_staticweapons_setAmmo", _static, [_static, _magazineClass,_roundsLeft]] call CBA_fnc_targetEvent;
 };
-=======
-	};
->>>>>>> 0d09b7dd26e9a1bd802388515dd3b7711a2471c8

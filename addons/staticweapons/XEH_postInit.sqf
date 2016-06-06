@@ -18,4 +18,4 @@
 
     _static setMagazineTurretAmmo [_magazine, _ammoCount, [0]];
 
-}] call ace_common_fnc_addEventhandler;
+}] call CBA_fnc_addEventHandler;
