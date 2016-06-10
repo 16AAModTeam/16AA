@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"LSR_common","ace_common"};
+        requiredAddons[] = {"LSR_common"};
         author[] = {"Glowbal"};
         authorUrl = "";
         VERSION_CONFIG;
