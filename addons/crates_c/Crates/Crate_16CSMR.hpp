@@ -11,8 +11,16 @@
             MACRO_ADDITEM(16aa_optic_LDS_pip,10);
             MACRO_ADDITEM(ACE_MapTools,10);
             MACRO_ADDITEM(ACE_bodyBag,10);
-            MACRO_ADDITEM(16aa_tent_medical_roll_small_item,4);
+			MACRO_ADDITEM(16aa_tent_medical_roll_small_item,4);
             MACRO_ADDITEM(16aa_tent_medical_roll_medium_item,4);
+			MACRO_ADDITEM(ACE_EntrenchingTool,4);
+			MACRO_ADDITEM(ACE_SpraypaintBlue,2);
+			MACRO_ADDITEM(ACE_SpraypaintBlack,2);
+			MACRO_ADDITEM(ACE_SpraypaintGreen,2);
+			MACRO_ADDITEM(ACE_SpraypaintRed,2);
+			MACRO_ADDITEM(US_Facepaint,8);
+			MACRO_ADDITEM(Serbian_Facepaint,8);
+			MACRO_ADDITEM(BW_Facepaint,8);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Pellets,35);
@@ -20,10 +28,7 @@
 			MACRO_ADDMAGAZINE(16aa_Smoke_Screening_White,10);
 			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,10);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,10);
-        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Purple,10);
 			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Yellow,10);
-			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Blue,10);
-        	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Green,10);
         	MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Purple,10);
 			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Red,10);
 			MACRO_ADDMAGAZINE(16aa_Smoke_Signalling_Orange,10);

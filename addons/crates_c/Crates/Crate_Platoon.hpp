@@ -16,9 +16,20 @@
             MACRO_ADDITEM(optic_NVS,2);
             MACRO_ADDITEM(optic_TWS,2);
             MACRO_ADDITEM(ACE_MapTools,10);
+			MACRO_ADDITEM(ACE_MX2A,1);
+			MACRO_ADDITEM(ACE_EntrenchingTool,8);
+			MACRO_ADDITEM(ACE_SpraypaintBlue,2);
+			MACRO_ADDITEM(ACE_SpraypaintBlack,2);
+			MACRO_ADDITEM(ACE_SpraypaintGreen,2);
+			MACRO_ADDITEM(ACE_SpraypaintRed,2);
+			MACRO_ADDITEM(US_Facepaint,8);
+			MACRO_ADDITEM(Serbian_Facepaint,8);
+			MACRO_ADDITEM(BW_Facepaint,8);
+			MACRO_ADDITEM(ACE_VMH3,4);
         };
         class TransportMagazines{
-        	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg,12);
+			MACRO_ADDMAGAZINE(16aa_200Rnd_762x51_belt_gpmg,12);
+			MACRO_ADDMAGAZINE(16aa_50Rnd_762x51_belt_gpmg,12);
         	MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Pellets,35);
         	MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Slug,35);
         	MACRO_ADDMAGAZINE(ClaymoreDirectionalMine_Remote_Mag,3);

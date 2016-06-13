@@ -10,6 +10,7 @@
             MACRO_ADDITEM(ACE_morphine,15);
             MACRO_ADDITEM(ACE_atropine,15);
             MACRO_ADDITEM(ACE_epinephrine,15);
+			MACRO_ADDITEM(ACE_adenosine,15);
             MACRO_ADDITEM(ACE_plasmaIV,7);
             MACRO_ADDITEM(ACE_plasmaIV_500,7);
             MACRO_ADDITEM(ACE_plasmaIV_250,7);

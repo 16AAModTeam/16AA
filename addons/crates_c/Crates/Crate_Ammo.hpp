@@ -346,7 +346,8 @@
 		vehicleClass = "16aa_Crates_Ammo";
         model = "16aa_crates_a3\16aa_wooden_small_762_link.p3d";
         class TransportMagazines{
-        	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg,10);
+        	MACRO_ADDMAGAZINE(16aa_200Rnd_762x51_belt_gpmg,6);
+			MACRO_ADDMAGAZINE(16aa_50Rnd_762x51_belt_gpmg,4);
         };
 	};
 	class 16AA_crate_ammo_12ga: 16aa_crate_empty_wooden_small {

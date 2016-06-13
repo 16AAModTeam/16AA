@@ -54,13 +54,22 @@
             MACRO_ADDITEM(16aa_G_Tactical_Yellow_ACE,20);
             MACRO_ADDITEM(16aa_G_Tactical_Black,20);
             MACRO_ADDITEM(16aa_G_Tactical_Black_ACE,20);
+			MACRO_ADDITEM(ACE_EntrenchingTool,20);
+			MACRO_ADDITEM(ACE_SpraypaintBlue,4);
+			MACRO_ADDITEM(ACE_SpraypaintBlack,4);
+			MACRO_ADDITEM(ACE_SpraypaintGreen,4);
+			MACRO_ADDITEM(ACE_SpraypaintRed,4);
+			MACRO_ADDITEM(US_Facepaint,8);
+			MACRO_ADDITEM(Serbian_Facepaint,8);
+			MACRO_ADDITEM(BW_Facepaint,8);
         };
         class TransportMagazines{
         	MACRO_ADDMAGAZINE(30Rnd_556x45_Stanag,400);
         	MACRO_ADDMAGAZINE(20Rnd_762x51_Mag,150);
         	MACRO_ADDMAGAZINE(16AA_17Rnd_9x19_g17,80);
         	MACRO_ADDMAGAZINE(sti_200Rnd_556x45,200);
-        	MACRO_ADDMAGAZINE(16aa_150Rnd_762x51_box_gpmg,100);
+			MACRO_ADDMAGAZINE(16aa_200Rnd_762x51_belt_gpmg,100);
+			MACRO_ADDMAGAZINE(16aa_50Rnd_762x51_belt_gpmg,100);
         	MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Pellets,100);
         	MACRO_ADDMAGAZINE(16aa_8Rnd_12Gauge_Slug,100);
         	MACRO_ADDMAGAZINE(1Rnd_HE_Grenade_shell,200);
