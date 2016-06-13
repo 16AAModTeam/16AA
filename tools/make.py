@@ -72,7 +72,7 @@ dssignfile = ""
 prefix = "LSR"
 pbo_name_prefix = "16AA_"
 signature_blacklist = ["16AA_server.pbo"]
-importantFiles = ["mod.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_LSR_ca.paa"]
+importantFiles = ["mod.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_16AA_ca.paa"]
 versionFiles = ["README.md", "mod.cpp"]
 
 ###############################################################################

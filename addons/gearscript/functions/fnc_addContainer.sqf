@@ -16,17 +16,12 @@
 #define GET_CLASSNAME(ARRAY) ARRAY select 0
 #define GET_AMOUNT(ARRAY) ARRAY select 1
 
-private ["_unit","_type","_containerData","_classes","_items", "_magazines", "_containerClass"];
-_unit = _this select 0;
-_type = _this select 1;
-_containerData = _this select 2;
-
-_classes = _containerData select 0;
-_items = _containerData select 1;
-_magazines = _containerData select 2;
+private ["_containerClass"];
+params ["_unit", "_type","_containerData"];
+_containerData params ["_classes"];
 
 _containerClass = "";
-if (typeName _classes == "ARRAY") then {
+if (typeName _classes == "ARRAY" && {count _classes > 0}) then {
     _containerClass = (_classes select (floor(random(count _classes))));
 };
 if (_containerClass == "") exitwith {}; // no container to add
